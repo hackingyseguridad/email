@@ -1,0 +1,33 @@
+telnet smtp.telefonica.net 25
+
+helo relayout03.e.movistar.es
+
+AUTH LOGIN
+usuario_en_base64
+clave_en_base64
+
+MAIL FROM: ADMINISTRACION<administracion@telefonica.com> 
+
+RCPT TO: antonio.taboadallufriu@telefonica.com
+RCPT TO: ezequiel.monteroramirez@telefonica.com
+RCPT TO: raquel.gonzalezcabello@telefonica.com
+RCPT TO: evamaria.marquezbenito@telefonica.com
+RCPT TO: patricia.casadolopez@telefonica.com
+RCPT TO: antonioalejandro.fontalbaruiz@telefonica.com
+RCPT TO: alejandro.lozanoblanco@telefonica.com
+RCPT TO: rosendo.quincosesalonso@telefonica.com
+RCPT TO: ignacio.gomezgomez@telefonica.com
+RCPT TO: samuel.castilloyelamo@telefonica.com
+RCPT TO: maria.orpezzafra@telefonica.com
+RCPT TO: adam.talbitalbi@telefonica.com
+RCPT TO: mariateresa.lallanasaldana@telefonica.com
+RCPT TO: edgar.sorianomarco@telefonica.com
+RCPT TO: sergio.martinezmourelle@telefonica.com
+data
+Subject: hackeado
+
+Esto es solo una prueba!  - Como evitar el SPAM y la suplantacion de correo electronico con registros DNS para un dominio; Hoy a las 16:30h, en TEAMS hacemos una demo y los registros a configurar para intentar evitar esto -- http://www.hackingyseguridad.com/
+
+.
+
+quit
