@@ -19,3 +19,8 @@ Testo del email -- http://www.hackingyseguridad.com/
 .
 
 quit
+QUIT
+
+
+mailq
+postqueue -f
