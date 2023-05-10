@@ -6,13 +6,16 @@ AUTH LOGIN
 usuario_en_base64
 clave_en_base64
 
-MAIL FROM: suplantación<suplantacion@dominio.com> 
+MAIL FROM: suplantación<suplantacion@dominio.com
 
 RCPT TO: antoniotaboada@hackingyseguridad.com
 RCPT TO: hackingyseguridad@hackingyseguridad.com
 
 data
+FROM: suplantación<suplantacion@dominio.com> 
 Subject: Asunto
+TO: antoniotaboada@hackingyseguridad.com
+TO: hackingyseguridad@hackingyseguridad.com
 
 Testo del email -- http://www.hackingyseguridad.com/
 
@@ -24,3 +27,6 @@ QUIT
 
 mailq
 postqueue -f
+
+Borrar toda la cola
+postsuper -d ALL
