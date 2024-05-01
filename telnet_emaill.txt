@@ -5,8 +5,8 @@ telnet smtp.servidor.net 25
 helo smtp.servidor.net
 
 AUTH LOGIN
-usuario_en_base64
-clave_en_base64
+usuario_en_base64  aGFja2luZ3lzZWd1cmlkYWRAaGFja2luZ3lzZWd1cmlkYWQuY29t
+clave_en_base64  Y2xhdmVfZW5fYmFzZTY0
 
 MAIL FROM: suplantación<suplantacion@dominio.com
 
