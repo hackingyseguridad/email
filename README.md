@@ -11,16 +11,9 @@ Puertos TCP:  25, 587, 465, 110, 143, 995, 993
 
 ***IMAP***  (Internet Message Access Protocol): 143, 993 con SSL/TLS
 
-
-
-
-
-
-
 # envio email desde consola linux
 
 echo "This is the body of the email" | mail -s "This is the subject line" your_email_address
-
 
 # Registros de seguridad:
 
