@@ -1,8 +1,8 @@
 
+Puertos TCP:
 
-
-SMTP puertos tcp más comunes: 25, 587 y 465 con SSL/TLS, 2525, 25025
-
+SMTP Simple Mail Trasport Protocol: 25, 587 y 465 con SSL/TLS, 2525, 25025
+POP3
 
 
 
