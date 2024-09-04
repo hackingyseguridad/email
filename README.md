@@ -7,7 +7,7 @@ Puertos TCP:
 
 ***POP3*** (Post Office Protocol)::110 y 995 con SSL/TLS
 
-***IMAP***  (Internet Message Access Protocol): 
+***IMAP***  (Internet Message Access Protocol): 143, 993 con SSL/TLS
 
 ***ESMTP*** (Extended Simple Mail Transfer Protocol), extension de SMTP con mas comandos de control
 
