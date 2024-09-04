@@ -1,16 +1,16 @@
 # email 
 
 
-Puertos TCP:
+Puertos TCP:  25, 587, 465, 110, 143, 995, 993
 
 ***SMTP*** Simple Mail Trasport Protocol: 25, 587 y 465 con SSL/TLS, 2525, 25025 
 ***ESMTP*** (Extended Simple Mail Transfer Protocol), extension de SMTP con mas comandos de control
+***S/MIME*** (Secure/Multipurpose Internet Mail Extensions): 
 
 ***POP3*** (Post Office Protocol)::110 y 995 con SSL/TLS
 
 ***IMAP***  (Internet Message Access Protocol): 143, 993 con SSL/TLS
 
-***S/MIME*** (Secure/Multipurpose Internet Mail Extensions): 
 
 
 
