@@ -1,12 +1,7 @@
 
 
 
-SMTP puertos tcp más comunes:
-Puerto 25:
-Puerto 587: con SSL/TLS.
-Puerto 465: con SSL/TLS. 
-2525, 25025: Variantes del puerto 25, a menudo utilizados por proveedores de servicios de correo electrónico.
-80, 443: En algunos casos, los puertos HTTP y HTTPS pueden utilizarse para SMTP, pero no es una práctica común.
+SMTP puertos tcp más comunes: 25, 587 y 465 con SSL/TLS, 2525, 25025
 
 
 
