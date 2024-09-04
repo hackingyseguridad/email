@@ -17,7 +17,7 @@ echo "This is the body of the email" | mail -s "This is the subject line" your_e
 
 # Registros de seguridad:
 
-***MX*** (Mail Exchanger):
+***MX*** (Mail Exchanger): tipo de registro DNS, que determinar el fqdm del servidor de correo electrónico para un dominio
 
 ***SPF***, (Sender Policy Framework) es un tipo de resgistro en DNS autoritativo del dominio, donde se especifica los hostname o IP de los servidores de correo saliente, SMTP autorizados.
 
