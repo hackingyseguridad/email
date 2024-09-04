@@ -11,6 +11,8 @@ Puertos TCP:
 
 ***ESMTP*** (Extended Simple Mail Transfer Protocol), extension de SMTP con mas comandos de control
 
+***S/MIME*** (Secure/Multipurpose Internet Mail Extensions): 
+
 
 
 
