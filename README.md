@@ -1,7 +1,32 @@
-# email 
+# envio email con telnet
 
+telnet smtp.hackingyseguridad.com 25
 
-Puertos TCP:  25, 587, 465, 110, 143, 995, 993
+helo smtp.hackingyseguridad.com
+
+starttls 
+
+AUTH LOGIN
+
+aGFja2luZ3lzZWd1cmlkYWRAaGFja2luZ3lzZWd1cmlkYWQuY29t
+
+UGFzc3dvcmQwMQ==
+
+MAIL FROM: PAPA-NOEL<happyhacking@hackingandseguridad.com> 
+
+RCPT TO: antonio.taboada@telefonica.net
+
+data
+
+Subject: HappyHacking
+
+@antonio_taboada  - http://www.hackingyseguridad.com/ 
+
+.
+
+quit
+
+# Puertos TCP:  25, 587, 465, 110, 143, 995, 993
 
 ***SMTP*** Simple Mail Trasport Protocol: 25, 587 y 465 con SSL/TLS, 2525, 25025 
 ***ESMTP*** (Extended Simple Mail Transfer Protocol), extension de SMTP con mas comandos de control
