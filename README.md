@@ -1,8 +1,9 @@
 
 Puertos TCP:
 
-SMTP Simple Mail Trasport Protocol: 25, 587 y 465 con SSL/TLS, 2525, 25025
-POP3
+***SMTP*** Simple Mail Trasport Protocol: 25, 587 y 465 con SSL/TLS, 2525, 25025
+
+***POP3*** 
 
 
 
