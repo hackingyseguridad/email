@@ -46,9 +46,13 @@ echo "This is the body of the email" | mail -s "This is the subject line" your_e
 
 dig mx hackingyseguridad.com +short
 
+nslookup -type=txt hackingyseguridad.com 
+
 ***SPF***, (Sender Policy Framework) es un tipo de resgistro en DNS autoritativo del dominio, donde se especifica los hostname o IP de los servidores de correo saliente, SMTP autorizados.
 
 dig txt hackingyseguridad.com +short
+
+nslookup -type=txt hackingyseguridad.com
 
 dig spf1 hackingyseguridad.com +short
 
