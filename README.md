@@ -30,9 +30,11 @@ QUIT
 
 
 mailq
+
 postqueue -f
 
 Borrar toda la cola
+
 postsuper -d ALL
 
 
