@@ -26,6 +26,16 @@ Subject: HappyHacking
 
 quit
 
+QUIT
+
+
+mailq
+postqueue -f
+
+Borrar toda la cola
+postsuper -d ALL
+
+
 # Puertos TCP:  25, 587, 465, 110, 143, 995, 993
 
 ***SMTP*** Simple Mail Trasport Protocol: 25, 587 y 465 con SSL/TLS, 2525, 25025 
