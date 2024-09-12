@@ -12,7 +12,7 @@ aGFja2luZ3lzZWd1cmlkYWRAaGFja2luZ3lzZWd1cmlkYWQuY29t
 
 UGFzc3dvcmQwMQ==
 
-MAIL FROM: PAPA-NOEL<happyhacking@hackingandseguridad.com> 
+MAIL FROM: <happyhacking@hackingandseguridad.com> 
 
 RCPT TO: antonio.taboada@telefonica.net
 
