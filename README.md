@@ -54,7 +54,7 @@ echo "This is the body of the email" | mail -s "This is the subject line" your_e
 
 # Registros DNS de seguridad, protocolos y firmas:
 
-
+MX "intercambio de correo" en un registro en la configuración DNS  de un dominio , apunta a los nombre de los servidores de correo electrónico. 
 
 SPF, DKIM y DMARC sirven para autentificar a los remitentes de correo electrónico y cerificar que los correos electrónicos proceden del dominio del que dicen proceder. Estos tres métodos de autenticación son importantes para evitar el spam, los ataques de phishing y otros riesgos de seguridad 
 
