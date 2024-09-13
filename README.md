@@ -52,6 +52,8 @@ postsuper -d ALL
 
 echo "This is the body of the email" | mail -s "This is the subject line" your_email_address
 
+echo -e 'Subject: prueba\n\nPrueba' | sendmail -v antonio.taboada@telefonica.net 
+
 # Registros DNS de seguridad, protocolos y firmas:
 
 ***MX*** (Mail Exchanger): tipo de registro DNS, que determinar el fqdm del servidor de correo electrónico para un dominio
