@@ -91,7 +91,7 @@ dig spf1 hackingyseguridad.com +short
 <img style="float:left" alt="Proceso de comprobacion del correo electronio " src="https://github.com/hackingyseguridad/email/blob/main/correo.png">
 
 
-Agregar relay a postfix:
+Agregar SMTP relay a postfix:
 
 vim /etc/postfix/main.cf
 
