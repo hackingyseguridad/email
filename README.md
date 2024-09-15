@@ -28,6 +28,7 @@ quit
 
 QUIT
 
+nc -v smtp.hackingyseguridad.com 25
 
 mailq
 
