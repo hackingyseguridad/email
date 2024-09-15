@@ -59,6 +59,10 @@ swaks --to hackingyseguridad@hackingyseguridad.com --server 192.168.1.200
 
 nc -v smtp.hackingyseguridad.com 25
 
+openssl s_client -starttls smtp -connect mail.hackingyseguridad.com:587
+
+gnutls-cli mail.hackingyseguridad.com -p 25
+
 # Registros DNS de seguridad, protocolos y firmas:
 
 ***MX*** (Mail Exchanger): tipo de registro DNS, que determinar el fqdm del servidor de correo electrónico para un dominio
