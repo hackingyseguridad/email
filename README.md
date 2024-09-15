@@ -57,6 +57,7 @@ echo -e 'Subject: prueba\n\nPrueba' | sendmail -v antonio.taboada@telefonica.net
 
 swaks --to hackingyseguridad@hackingyseguridad.com --server 192.168.1.200
 
+nc -v smtp.hackingyseguridad.com 25
 
 # Registros DNS de seguridad, protocolos y firmas:
 
