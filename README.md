@@ -55,7 +55,7 @@ echo "This is the body of the email" | mail -s "This is the subject line" your_e
 
 echo -e 'Subject: prueba\n\nPrueba' | sendmail -v antonio.taboada@telefonica.net 
 
-swaks --to hackingyseguridad@hackingyseguridad.com --server 192.168.1.200
+swaks  --from admin@hackingyseguridad.com --to hackingyseguridad@hackingyseguridad.com --server 192.168.1.200
 
 nc -v smtp.hackingyseguridad.com 25
 
