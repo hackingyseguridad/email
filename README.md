@@ -38,6 +38,19 @@ Borrar toda la cola
 
 postsuper -d ALL
 
+# leer email con telnet
+
+telnet pop3.hackingyseguridad.com 110
+
+user antonio25
+
+pass Passwd01
+
+list
+
+1
+
+quit
 
 # Puertos TCP:  25, 587, 465, 110, 143, 995, 993
 
