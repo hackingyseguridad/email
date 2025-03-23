@@ -1,6 +1,6 @@
 # envio email con telnet
 
-<img style="float:left" alt="web api estructura" src="https://github.com/hackingyseguridad/wemail/blob/master/smtp.png">
+<img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
 
 # 
 
