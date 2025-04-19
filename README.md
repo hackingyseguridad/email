@@ -1,4 +1,4 @@
-# envio email con telnet
+## envio email con telnet o netcat
 
 <img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
 
