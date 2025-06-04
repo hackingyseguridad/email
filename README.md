@@ -56,7 +56,7 @@ list
 
 quit
 
-# Puertos TCP:  25, 587, 465, 110, 143, 995, 993
+# puertos tcp:  25, 587, 465, 110, 143, 995, 993
 
 ***SMTP*** Simple Mail Trasport Protocol: 25, 587 y 465 con SSL/TLS, 2525, 25025 
 ***ESMTP*** (Extended Simple Mail Transfer Protocol), extension de SMTP con mas comandos de control
