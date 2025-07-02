@@ -74,6 +74,8 @@ echo -e 'Subject: prueba\n\nPrueba' | sendmail -v antonio.taboada@telefonica.net
 
 swaks  --from admin@hackingyseguridad.com --to hackingyseguridad@hackingyseguridad.com --server 192.168.1.200
 
+swaks --to antonio.taboada@telefonica.net --from antonio.taboada@telefonica.net --body "Mensaje de prueba"
+
 nc -v smtp.hackingyseguridad.com 25
 
 openssl s_client -starttls smtp -connect mail.hackingyseguridad.com:587
