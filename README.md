@@ -120,6 +120,7 @@ relayhost = IP_realy_smpt
 
 ### Envio de email, desde Linux modo X,  sin verificar el remitente
 
+swaks
 
 SendEmail (CLI)
 
