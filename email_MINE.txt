@@ -1,18 +1,18 @@
-telnet 10.51.90.20 25 
-helo 28SBCPCV02.telefonica.es
-MAIL FROM: Wang_Li@temu.com
-RCPT TO: antonio.taboadallufriu@telefonica.com
+telnet smtp.hackingyseguridad.com 25 
+helo SMTP.hackingyseguridad.com
+MAIL FROM: admin@hackingyseguridad.com
+RCPT TO: antonio.taboadallufriu@hackingyseguridad.com
 
 data
-From: Wang Li <WangLi@temu.com>
-To: Telefonica <destinatario@telefonica.com>
+Administrador TI <admin@hackingyseguridad.com>
+To: CEO <antonio.taboadallufriu@hackingyseguridad.com>
 Subject: Mobile Identity Checks Testing Request
 MIME-Version: 1.0
 Content-Type: text/html; charset=UTF-8
 
 <html>
 <body>
-<p>Hello Telefonica,</p>
+<p>Hello CEO,</p>
 <p>We would like to test the mobile identity checks you are providing for the following three countries:</p>
 <ul>
   <li>Spain</li>
