@@ -76,6 +76,10 @@ swaks  --from admin@hackingyseguridad.com --to hackingyseguridad@hackingysegurid
 
 swaks --to antonio.taboada@telefonica.net --from antonio.taboada@telefonica.net --body "Mensaje de prueba"
 
+echo "<html><body><h1>Hola</h1></body></html>" | sendmail -t -oi destinatario@example.com
+
+swaks --to destinatario@example.com --from tucorreo@example.com --server smtp.example.com --body "<html><body><h1>Hola</h1></body></html>" --h-Content-Type "text/html"
+
 nc -v smtp.hackingyseguridad.com 25
 
 openssl s_client -starttls smtp -connect mail.hackingyseguridad.com:587
