@@ -117,6 +117,16 @@ vim /etc/postfix/main.cf
 relayhost = IP_realy_smpt
 
 #
+
+### Envio de email, desde Linux modo X,  sin verificar el remitente
+
+
+SendEmail (CLI)
+
+
+
+
+#
 http://www.hackingyseguridad.com/
 #
 
