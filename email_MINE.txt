@@ -1,0 +1,34 @@
+telnet 10.51.90.20 25 
+helo 28SBCPCV02.telefonica.es
+MAIL FROM: Wang_Li@temu.com
+RCPT TO: antonio.taboadallufriu@telefonica.com
+
+data
+From: Wang Li <WangLi@temu.com>
+To: Telefonica <destinatario@telefonica.com>
+Subject: Mobile Identity Checks Testing Request
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+
+<html>
+<body>
+<p>Hello Telefonica,</p>
+<p>We would like to test the mobile identity checks you are providing for the following three countries:</p>
+<ul>
+  <li>Spain</li>
+  <li>France</li>
+  <li>Germany</li>
+</ul>
+<p>Could you please arrange for the necessary paperwork to be raised under our entity (the info of which you can find in our previous contract)?</p>
+<p align="left">Many Thanks,<br>Wang Li</p>
+<p align="left"><img src="temu.png" width="70" height="70"></p>
+<p align="left"><strong>Wang Li</strong><br>
+  Spoofed Business Development Manager | Business Development Team<br>
+  Email: WangLi@temu.com<br>
+Web: <a href="http://www.temu.com">www.temu.com</a></p>
+</body>
+</html>
+
+.
+.
+quit
