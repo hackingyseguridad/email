@@ -1,0 +1,19 @@
+
+telnet servidor_smtp 25 
+helo servidor_smtp
+
+MAIL FROM: origen@hackingyseguridad.com
+RCPT TO: destinatario@hackingyseguridad.com
+
+data
+From: ORIGEN <origen@hackingyseguridad.com>
+To: DESTINO <destino@hackingyseguridad.com>
+Subject: Asunto del email 
+
+Texto del email
+
++ texto del email
+
+.
+.
+quit
