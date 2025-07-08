@@ -4,7 +4,7 @@ MAIL FROM: admin@hackingyseguridad.com
 RCPT TO: antonio.taboadallufriu@hackingyseguridad.com
 
 data
-Administrador TI <admin@hackingyseguridad.com>
+Administrador <admin@hackingyseguridad.com>
 To: CEO <antonio.taboadallufriu@hackingyseguridad.com>
 Subject: Correo de prueba HTML
 MIME-Version: 1.0
