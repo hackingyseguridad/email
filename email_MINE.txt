@@ -4,31 +4,38 @@ MAIL FROM: admin@hackingyseguridad.com
 RCPT TO: antonio.taboadallufriu@hackingyseguridad.com
 
 data
-
 From: Administrador <admin@hackingyseguridad.com>
 To: CEO <antonio.taboadallufriu@hackingyseguridad.com>
-Subject: Correo de prueba HTML
-
+Subject: Ha sido hackeado !!
 MIME-Version: 1.0
-Content-Type: multipart/related; boundary="boundary-string"
+Content-Type: multipart/alternative; boundary="BOUNDARY123"
+--BOUNDARY123
 Content-Type: text/html; charset=utf-8
-Content-Transfer-Encoding: quoted-printable
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
 <body>
-<p>hola</p>
-<p>Esto es un correo de pruebas, en formato MIME HTML,<br>
-para inserstar texto e imagenenes,</p>
+<div style="font-family: Arial, sans-serif;">
+<b>¡Hola!</b><br><br>
+Este es un simple email de prueba <span style="color: #ff0000;">formato HTML</span> correctamente formateado.
+</div>
+
 <p>un saludo,<br>
 Antonio Taboada<br>
-<a href=3D"mailto:hackingyseguridad@hackingyseguridad.com">hackingyseguri=
-dad@hackingyseguridad.com</a></p>
-<p>LOGO</p>
+<a href=3D"mailto:hackingyseguridad@hackingyseguridad.com">hackingyseguridad@hackingyseguridad.com</a></p>
 <img src="http://hackingyseguridad.com/hacking.png" width="70" height="70">
-<p>LOGO</p>
-<p><a href=3D"http://wwww.hackingyseguridad.com/">http://wwww.hackingyseg=
-uridad.com/</a></p>
+<p><a href=3D"http://wwww.hackingyseguridad.com/">http://wwww.hackingyseguridad.com/</a></p>
+
 </body>
 </html>
+
+--BOUNDARY123--
+
+.
+quit
+
+
 
 
 
