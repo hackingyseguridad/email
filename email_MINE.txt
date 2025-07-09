@@ -2,35 +2,36 @@ telnet smtp.hackingyseguridad.com 25
 helo SMTP.hackingyseguridad.com
 MAIL FROM: admin@hackingyseguridad.com
 RCPT TO: antonio.taboadallufriu@hackingyseguridad.com
-
 data
 From: Administrador <admin@hackingyseguridad.com>
 To: CEO <antonio.taboadallufriu@hackingyseguridad.com>
-Subject: Ha sido hackeado !!
+Subject: has sido hackeado !!!
 MIME-Version: 1.0
 Content-Type: multipart/alternative; boundary="BOUNDARY123"
 --BOUNDARY123
 Content-Type: text/html; charset=utf-8
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv=Content-Type content="text/html; charset=unicode">
 </head>
-<body>
-<div style="font-family: Arial, sans-serif;">
-<b>¡Hola!</b><br><br>
-Este es un simple email de prueba <span style="color: #ff0000;">formato HTML</span> correctamente formateado.
-</div>
-
-<p>un saludo,<br>
+<body lang=ES link=blue vlink=purple style='word-wrap:break-word'>
+<div class=WordSection1>
+<p class=MsoNormal><b><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>¡Hola!</span></b><span
+style='font-size:11.0pt;font-family:"Arial",sans-serif'><br>
+<br>
+Este es solo un simple email de prueba <span style='color:red'>formato HTML</span>
+formateado. </span></p>
+<p><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>un saludo,<br>
 Antonio Taboada<br>
-<a href=3D"mailto:hackingyseguridad@hackingyseguridad.com">hackingyseguridad@hackingyseguridad.com</a></p>
-<img src="http://hackingyseguridad.com/hacking.png" width="70" height="70">
-<p><a href=3D"http://wwww.hackingyseguridad.com/">http://wwww.hackingyseguridad.com/</a></p>
-
+<a href="mailto:hackingyseguridad@hackingyseguridad.com?subject=hola!">hackingyseguridad@hackingyseguridad.com</a>
+</span></p>
+<p><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><img border=0
+width=70 height=70 src="http://hackingyseguridad.com/hacking.png"></span></p>
+<p><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+href="http://ww.hackingyseguridad.com/">http://www.hackingyseguridad.com/</a> </span></p>
+</div>
 </body>
 </html>
-
 --BOUNDARY123--
-
 .
 quit
