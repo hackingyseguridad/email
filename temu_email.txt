@@ -32,7 +32,7 @@ Subject: Asunto: PoC OpenGateway API KYC
     <p>Could you please arrange for the necessary paperwork to be raised under our entity (the info of which you can find in our previous contract)?</p>
     
     <p>Many Thanks,<br>Wang Li</p>
-<a href="mailto:hackingyseguridad@hackingyseguridad.com?subject=hola!">hackingyseguridad@hackingyseguridad.com</a>    
+<p><img border=0 width=70 height=70 src="https://aimg.kwcdn.com/upload_aimg/web/c9653751-0a91-46f1-806a-b639dd32931b.png.slim.png"></p>
     <div class="signature">
         <p>Wang Li</p>
         <p>Spoofed Business Development Manager | Business Development Team</p>
