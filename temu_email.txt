@@ -1,10 +1,8 @@
-
-
-
-
-
-
-
+telnet smtp.hackingyseguridad.com 25 
+helo SMTP.hackingyseguridad.com
+MAIL FROM: Wang_Li@temu.com
+RCPT TO: antonio.taboadallufriu@hackingyseguridad.com
+data
 MIME-Version: 1.0
 Content-Type: text/html; charset=utf-8
 From: Wang Li <Wang_Li@temu.com>
