@@ -1,0 +1,22 @@
+
+### Relay con servidor de correo saliente de GMAIL
+
+### /etc/postfix/main.cf
+
+relayhost = [smtp.gmail.com]:587
+
+smtp_sasl_auth_enable = yes
+
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+
+smtp_sasl_security_options = noanonymous
+
+smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+
+smtp_use_tls = yes
+
+### /etc/postfix/sasl_passwd
+
+[smtp.gmail.com]:587    botopc.es@gmail.com:Password00
+
+
