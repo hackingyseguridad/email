@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+From: Wang Li <WangLi@temu.com>
+To: Telefonica <destinatario@t.com>
+Subject: Asunto: PoC OpenGateway API KYC
+
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        ul { margin-top: 0; padding-left: 20px; }
+        .signature { margin-top: 20px; font-style: italic; }
+    </style>
+</head>
+<body>
+    <p>Hello Telefonica,</p>
+    
+    <p>We would like to test the mobile identity checks you are providing for the following three countries:</p>
+    <ul>
+        <li>Spain</li>
+        <li>France</li>
+        <li>Germany</li>
+    </ul>
+    
+    <p>Could you please arrange for the necessary paperwork to be raised under our entity (the info of which you can find in our previous contract)?</p>
+    
+    <p>Many Thanks,<br>Wang Li</p>
+    
+    <div class="signature">
+        <p>Wang Li</p>
+        <p>Spoofed Business Development Manager | Business Development Team</p>
+        <p>Email: <a href="mailto:WangLi@temu.com">WangLi@temu.com</a></p>
+        <p>Web: <a href="http://www.temu.com">www.temu.com</a></p>
+    </div>
+</body>
+</html>
