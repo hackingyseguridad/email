@@ -7,7 +7,7 @@
 
 MIME-Version: 1.0
 Content-Type: text/html; charset=utf-8
-From: Wang Li <WangLi@temu.com>
+From: Wang Li <Wang_Li@temu.com>
 To: Telefonica <destinatario@t.com>
 Subject: Asunto: PoC OpenGateway API KYC
 
