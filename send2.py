@@ -11,7 +11,7 @@ class EmailSender:
         self.smtp_server = "localhost"
         self.smtp_port = 25
         self.sender = "hackingyseguridad@hackingyseguridad.com"
-        self.recipient = "antonio.taboda@gmail.com"
+        self.recipient = "antonio.taboada@gmail.com"
 
     def simulate_spf(self, ip_address, domain):
         """Simula una verificación SPF básica"""
