@@ -1,3 +1,4 @@
+# envio de email, python  -hackingyseguridad.com
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -30,6 +31,6 @@ try:
     # Cerrar conexión
     servidor_smtp.quit()
 
-    print("Send")
+    print("Enviado!")
 except Exception as e:
     print(e)
