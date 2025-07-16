@@ -59,6 +59,8 @@ if (isset($_POST["send"])) {
 			</form> 
 
 			<p>An e-mail will be sent to the desired target with a spoofed From header when you click Submit.</p>
+			<p> </p>
+   			<p>http://www.hackingyseguridad.com/ </p>
 
 		</body>
 	</html>' ;
