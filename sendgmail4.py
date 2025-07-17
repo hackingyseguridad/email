@@ -31,32 +31,11 @@ class CustomSender:
         msg["Return-Path"] = self.custom_from[1]
 
         body = f"""
-        Estimado Cliente,
+        Holae,
 
-        Nos complace informarle que su pedido #12345 está siendo procesado.
-
-        Detalles:
-        - Producto: Smartphone XYZ
-        - Cantidad: 2
-        - Fecha estimada de envío: 30/05/2024
-
-        Gracias por elegir TEMU.
-
-        Atentamente,
-        {self.custom_from[0]}
-        Departamento de Atención al Cliente
-        TEMU
-        Tel: +86 123 456 789
-
-        ---- Ale, Como me habeis pedido, lo envio a tu email de gmail,. suplanto a TEMU
-        ---- Esto es una prueba de suplantacion de TEMU, con destino gmail,
-        ---- la suplantacion esta hecha desde fuera de Telefonica. con el mismo Google.
         ---- un  saludo, Atonio Taboada -
 
         """
-
-
-
 
         msg.attach(MIMEText(body, "plain"))
         return msg
