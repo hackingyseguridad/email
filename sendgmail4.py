@@ -18,7 +18,7 @@ class CustomSender:
         self.recipients = {
             'to': ["lbalex943@gmail.com", "lbalex943@gmail.com"],  # Destinatarios principales
             'cc': ["antonio.taboada@gmail.com"],  # Con copia
-            'bcc': ["antonio.taboada@gmail.com"] Copia oculta
+            'bcc': ["antonio.taboada@gmail.com"] # Copia oculta
         }
 
     def prepare_email(self):
