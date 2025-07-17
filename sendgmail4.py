@@ -35,7 +35,7 @@ class CustomSender:
         body = f"""
         Holae,
 
-        ---- un  saludo, Atonio Taboada -
+        ---- un  saludo, Antonio Taboada -
 
         """
 
