@@ -16,7 +16,7 @@ class CustomSender:
         # Remitente personalizado
         self.custom_from = ("Wang Li", "Wang_Li@temu.com")  # Nombre + email
         self.recipients = {
-            'to': ["lbalex943@gmail.com", "lbalex943@gmail.com"],  # Destinatarios principales
+            'to': ["antonio.taboada@gmail.com", "antonio.taboada@gmail.com"],  # Destinatarios principales
             'cc': ["antonio.taboada@gmail.com"],  # Con copia
             'bcc': ["antonio.taboada@gmail.com"] # Copia oculta
         }
