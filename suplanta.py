@@ -1,5 +1,5 @@
 # suplanta con postfix en localhost puerto 25 TCP
-#
+# suplanta email origen p.ej.:  self.custom_from = ("Wang_Lite@temu.com", "wang_li@temu.com")
 #  hackingyseguridad.com 2025
 
 import smtplib
