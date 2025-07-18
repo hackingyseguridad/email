@@ -1,3 +1,6 @@
+# Ejemplo de configuracion servidor de correo postfix
+
+
 # /etc/postfix/main.cf
 # See /usr/share/postfix/main.cf.dist for a commented, more complete version
 
