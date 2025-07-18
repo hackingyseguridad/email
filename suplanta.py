@@ -1,4 +1,6 @@
 # suplanta con postfix en localhost puerto 25 TCP
+#
+#  hackingyseguridad.com 2025
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
