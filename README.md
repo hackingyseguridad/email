@@ -113,6 +113,29 @@ dig spf1 hackingyseguridad.com +short
 
 <img style="float:left" alt="Proceso de comprobacion del correo electronio " src="https://github.com/hackingyseguridad/email/blob/main/correo.png">
 
+**Configuración:**
+- Registro **TXT** en el DNS
+- Nombre específico proporcionado por tu servicio de email
+- Contiene una clave pública para verificar firmas
+- Ejemplo: `selector._domainkey.tudominio.com`
+
+## **DMARC (Domain-based Message Authentication)**
+**Uso:** Define políticas para manejar emails que fallan SPF/DKIM y reporta resultados.
+
+**Configuración:**
+- Registro **TXT** en el DNS
+- Nombre: `_dmarc.tudominio.com`
+- Ejemplo: `v=DMARC1; p=quarantine; rua=mailto:reportes@tudominio.com`
+
+## **Resumen de ubicación:**
+| Registro | Tipo DNS | Donde se configura |
+|----------|----------|-------------------|
+| SPF | TXT | Panel DNS del dominio |
+| DKIM | TXT | Subdominio específico en DNS |
+| DMARC | TXT | `_dmarc` subdominio en DNS |
+
+**Importante:** Los tres trabajan juntos para mejorar la deliverabilidad y prevenir spoofing/phishing.
+
 
 Agregar SMTP relay a postfix:
 
