@@ -118,7 +118,7 @@ dig spf1 hackingyseguridad.com +short
 - Nombre: `_dmarc.tudominio.com`
 - Ejemplo: `v=DMARC1; p=quarantine; rua=mailto:reportes@tudominio.com`
 
-## **Resumen de ubicación:**
+### **Resumen de ubicación:**
 | Registro | Tipo DNS | Donde se configura |
 |----------|----------|-------------------|
 | SPF | TXT | Panel DNS del dominio |
