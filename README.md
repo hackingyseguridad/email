@@ -2,17 +2,15 @@
 
 **manipulando el campo "From"**. del email.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente. 
 
-**Modificación de cabeceras X-Mailer del correo **:Las cabeceras de un email (como "From", "Reply-To" o "Return-Path")  
+**Modificación de cabeceras X-Mailer del correo **: cabeceras del email (como "From", "Reply-To" o "Return-Path")  
 
 **Uso de servidores SMTP Open Relay ( sin autenticación), no seguros**: pueden usarse estos servidores de correo mal configurados o comprometidos para enviar emails, modificando el Form y cabeceras X-Mailer
 
 **Explotación de un servidor SMTP**, por fuerza bruta o explotando vulnerabilidades.
 
-Compromiso de cuentas reales:Si un atacante obtiene acceso a una cuenta de correo legítima (por ejemplo, mediante phishing o credenciales robadas), puede enviar correos desde esa cuenta, lo que técnicamente no es spoofing, pero logra el mismo efecto de engaño.
+""Compromiso de cuentas reales"" :Si un atacante obtiene acceso a una cuenta de correo legítima (por ejemplo, mediante phishing o credenciales robadas.
 
-Uso de herramientas automatizadas:Existen herramientas y scripts (como PHPMailer o programas de envío masivo) que facilitan la falsificación de correos. Estas herramientas permiten a los atacantes configurar fácilmente el campo "From" con cualquier dirección.
-
-
+**Uso de herramientas automatizadas ** : scripts (como PHPMailer o programas de envío masivo) que facilitan la falsificación de correos. 
 
 
 ## envio email con telnet o netcat
