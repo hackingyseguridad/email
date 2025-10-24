@@ -1,12 +1,12 @@
 ### suplantar dirección de email
 
-**manipulando el campo "From"**. en el envio del email.- algunos SMTP (Simple Mail Transfer Protocol) no verifican de manera estricta la autenticidad del remitente. 
+**manipulando el campo "From"**. del email.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente. 
 
-**Uso de servidores SMTP no seguros**:Los atacantes pueden usar servidores de correo mal configurados o comprometidos que permiten enviar emails sin autenticación. Esto les da libertad para falsificar el remitente.
+**Modificación de cabeceras X-Mailer del correo **:Las cabeceras de un email (como "From", "Reply-To" o "Return-Path")  
 
-**Modificación de cabeceras X del correo:Las cabeceras de un email (como "From", "Reply-To" o "Return-Path")  Un atacante puede alterar estas cabeceras para que el correo parezca legítimo en clientes de correo que no realizan verificaciones profundas.
+**Uso de servidores SMTP Open Relay ( sin autenticación), no seguros**: pueden usarse estos servidores de correo mal configurados o comprometidos para enviar emails, modificando el Form y cabeceras X-Mailer
 
-Explotación de dominios similares:Los atacantes pueden registrar dominios parecidos al original (por ejemplo, "b4nco.com" en lugar de "banco.com") y enviar correos desde allí. Esto no es suplantación directa, pero engaña al usuario por la similitud visual.
+**Explotación de un servidor SMTP**, por fuerza bruta o explotando vulnerabilidades.
 
 Compromiso de cuentas reales:Si un atacante obtiene acceso a una cuenta de correo legítima (por ejemplo, mediante phishing o credenciales robadas), puede enviar correos desde esa cuenta, lo que técnicamente no es spoofing, pero logra el mismo efecto de engaño.
 
