@@ -1,6 +1,7 @@
 ############################################
 # ejemplo de envio de email formato MINE
 # en modo consolaa conectado por telnet
+# http://www.hackingyseguridad.com/
 ############################################
 
 telnet smtp.hackingyseguridad.com 25 
