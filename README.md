@@ -2,13 +2,13 @@
 
 **manipulando el campo "From"**. del email.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente. 
 
-**Modificación de cabeceras X-Mailer del correo **: cabeceras del email (como "From", "Reply-To" o "Return-Path")  
+**Modificación de cabeceras X-Mailer del correo ** : cabeceras del email (como "From", "Reply-To" o "Return-Path")  
 
 **Uso de servidores SMTP Open Relay ( sin autenticación), no seguros**: pueden usarse estos servidores de correo mal configurados o comprometidos para enviar emails, modificando el Form y cabeceras X-Mailer
 
-**Explotación de un servidor SMTP**, por fuerza bruta o explotando vulnerabilidades.
+**Explotación de un servidor SMTP ** , por fuerza bruta o explotando vulnerabilidades.
 
-""Compromiso de cuentas reales"" :Si un atacante obtiene acceso a una cuenta de correo legítima (por ejemplo, mediante phishing o credenciales robadas.
+**Compromiso de cuentas reales**  :Si un atacante obtiene acceso a una cuenta de correo legítima (por ejemplo, mediante phishing o credenciales robadas.
 
 **Uso de herramientas automatizadas ** : scripts (como PHPMailer o programas de envío masivo) que facilitan la falsificación de correos. 
 
