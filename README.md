@@ -2,7 +2,7 @@
 
 **manipulando el campo "From"**. del email.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente. 
 
-**Modificación de cabeceras X-Mailer del correo ** : cabeceras del email (como "From", "Reply-To" o "Return-Path")  
+**Modificación de cabeceras X-Mailer del correo** : cabeceras del email (como "From", "Reply-To" o "Return-Path")  
 
 **Uso de servidores SMTP Open Relay ( sin autenticación), no seguros**: pueden usarse estos servidores de correo mal configurados o comprometidos para enviar emails, modificando el Form y cabeceras X-Mailer
 
