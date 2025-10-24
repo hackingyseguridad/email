@@ -1,5 +1,5 @@
 ##########################################
-#  Genera certificados 
+#  Genera certificados SSL
 #  http://www.hackingyseguridad.com/ 
 #########################################
 
