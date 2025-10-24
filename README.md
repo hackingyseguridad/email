@@ -1,4 +1,4 @@
-Cómo se suplanta una dirección de email
+### suplantar dirección de email
 
 Manipulación del campo "From" (De):Los protocolos de correo electrónico, como SMTP (Simple Mail Transfer Protocol), no verifican de manera estricta la autenticidad del remitente. Un atacante puede configurar un cliente de correo o un servidor para enviar un email con cualquier dirección en el campo "From", sin necesidad de acceso a la cuenta real.
 Por ejemplo, un atacante puede enviar un correo que parezca provenir de "tunombre@banco.com" aunque no tenga acceso a esa cuenta.
