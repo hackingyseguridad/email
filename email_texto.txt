@@ -1,3 +1,8 @@
+############################################
+# ejemplo de envio de email formato textp
+# en modo consolaa conectado por telnet
+# http://www.hackingyseguridad.com/
+############################################
 
 telnet servidor_smtp 25 
 helo servidor_smtp
