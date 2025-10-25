@@ -33,7 +33,7 @@ class CustomSender:
         if self.recipients['cc']:
             msg["Cc"] = ", ".join(self.recipients['cc'])
 
-        msg["Subject"] = "Actualización importante de su pedido Movistar"
+        msg["Subject"] = "Actualización importante de su pedido"
         msg["Reply-To"] = self.display_email
         msg["Return-Path"] = self.display_email
 
