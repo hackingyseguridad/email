@@ -1,6 +1,9 @@
-# envio basico de email, python  -hackingyseguridad.com
-# sin verificaciones de seguridad SPF, DMARK, DKIN
-# envio por locakhost puerto 25 TCP !!
+############################################################
+# envio basico de email, python3 - www.hackingyseguridad.com
+# sin verificaciones de seguridad SPF, DMARK, DKIN,
+# envio por locakhost puerto 25 TCP !! servidor SMTP local
+###########################################################
+
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
