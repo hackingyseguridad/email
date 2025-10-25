@@ -17,7 +17,7 @@
 ***IMAP***  (Internet Message Access Protocol): 143, 993 con SSL/TLS
 
 
-### Registros DNS de seguridad, protocolos y firmas; para evitar suplantacion SCAM/Spoofing
+### Registros DNS de seguridad, protocolos y firmas; para evitar suplantacion SCAM/Spoofing/Phissing
 
 ***MX*** (Mail Exchanger): tipo de registro DNS, que determinar el fqdm del servidor de correo electrónico para un dominio
 
