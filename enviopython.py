@@ -1,4 +1,9 @@
 
+#############################################################
+# envvia email con SMTP, puerto 25, auth login, sin cifrado
+# funciona para spoof!
+# http://wwww.hackingyseguridad.com 2025
+############################################################
 
 import socket
 import base64
@@ -58,7 +63,7 @@ To: antonio.taboadallufriu@hackingyseguridad.com, antonio.taboadallufriu@hacking
 Subject: Prueba de envio 
 Date: {}
 
-HappyHacking movistar.es!
+HappyHacking !
 
 @antonio_taboada  - http://www.hackingyseguridad.com/
 
