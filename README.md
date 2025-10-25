@@ -21,7 +21,8 @@
 
 **10º.- Uso de un smtp que este en el SPF de otros dominios**, comparta infraestructura e IPs
 
-## envio basico de email con telnet o netcat, conectado a SMTP
+
+### Envio basico de email con telnet o netcat, conectado a SMTP
 
 <img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
 
