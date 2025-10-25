@@ -53,9 +53,9 @@ def send_smtp_commands():
         send_command("data")
 
         # Cabeceras del email
-        message = """From: antonio.taboadallufriu@movistar.es
-To: antonio.taboadallufriu@telefonica.com, antonio.taboadallufriu@telefonica.net
-Subject: Prueba de conexión SMTP
+        message = """From: antonio.taboadallufriu@hackingyseguridad.com
+To: antonio.taboadallufriu@hackingyseguridad.com, antonio.taboadallufriu@hackingyseguridad.com
+Subject: Prueba de envio 
 Date: {}
 
 HappyHacking movistar.es!
