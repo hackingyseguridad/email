@@ -1,4 +1,4 @@
-### email SCAM/Spoofing/Phissing
+### Email SCAM/Spoofing/Phissing
 
 
 <img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
