@@ -1,7 +1,7 @@
 
 ### Suplantar dirección de email, correo electronico ( tecnicas ).
 
-**1º.- manipulando el campo "From"**. del email.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente. 
+**1º.- Manipulando el campo "From"**. del email.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente. 
 
 **2º.- Modificación de cabeceras X-Mailer del correo** : cabeceras del email (como "From", "Reply-To" o "Return-Path"), con scripts en python, bash shell..  
 
@@ -21,7 +21,7 @@
 
 **10º.- Uso de un smtp que este en el SPF de otros dominios**, comparta infraestructura e IPs
 
-## envio email con telnet o netcat
+## envio basico de email con telnet o netcat, conectado a SMTP
 
 <img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
 
