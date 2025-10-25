@@ -1,3 +1,25 @@
+## email
+
+
+<img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
+
+
+### Puertos usuales TCP:  25, 587, 465, 110, 143, 995, 993
+
+***SMTP*** Simple Mail Trasport Protocol: 25, 587 y 465 con SSL/TLS, 2525, 25025 
+
+***ESMTP*** (Extended Simple Mail Transfer Protocol), extension de SMTP con mas comandos de control
+
+***S/MIME*** (Secure/Multipurpose Internet Mail Extensions): 
+
+***POP3*** (Post Office Protocol)::110 y 995 con SSL/TLS
+
+***IMAP***  (Internet Message Access Protocol): 143, 993 con SSL/TLS
+
+
+
+
+
 
 ### Suplantar dirección de email, correo electronico ( tecnicas ).
 
@@ -23,8 +45,6 @@
 
 
 ### Envio basico de email con telnet o netcat, conectado a SMTP
-
-<img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
 
 # 
 
@@ -80,17 +100,8 @@ list
 
 quit
 
-# puertos tcp:  25, 587, 465, 110, 143, 995, 993
 
-***SMTP*** Simple Mail Trasport Protocol: 25, 587 y 465 con SSL/TLS, 2525, 25025 
-***ESMTP*** (Extended Simple Mail Transfer Protocol), extension de SMTP con mas comandos de control
-***S/MIME*** (Secure/Multipurpose Internet Mail Extensions): 
-
-***POP3*** (Post Office Protocol)::110 y 995 con SSL/TLS
-
-***IMAP***  (Internet Message Access Protocol): 143, 993 con SSL/TLS
-
-# envio email desde consola linux
+### Envio simple de email desde consola linux, con comandos
 
 echo "This is the body of the email" | mail -s "This is the subject line" your_email_address
 
