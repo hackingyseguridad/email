@@ -31,7 +31,7 @@ def send_smtp_commands():
         send_command()  # Banner inicial
 
         # HELO
-        send_command("helo relayout03.e.movistar.es")
+        send_command("helo relay.hackingyseguridad.com")
 
         # AUTH LOGIN
         send_command("AUTH LOGIN")
@@ -60,7 +60,7 @@ def send_smtp_commands():
         # Cabeceras del email
         message = """From: antonio.taboadallufriu@hackingyseguridad.com
 To: antonio.taboadallufriu@hackingyseguridad.com, antonio.taboadallufriu@hackingyseguridad.com
-Subject: Prueba de envio 
+Subject: Prueba de envio y spoof
 Date: {}
 
 HappyHacking !
