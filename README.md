@@ -62,7 +62,7 @@ dig spf1 hackingyseguridad.com +short
 
 
 
-### Suplantar dirección de email, correo electronico ( tecnicas ).
+### Suplantar dirección de email, correo electronico ( tecnicas SCAM/Spoofing/Phissing ).
 
 **1º.- Manipulando el campo "From"**. del email, con script de envio.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente. 
 
