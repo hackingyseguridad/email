@@ -32,10 +32,10 @@ def send_smtp_commands():
         send_command("AUTH LOGIN")
 
         # Usuario (ya en base64)
-        send_command("YW50b25pby50YWJvYWRhbGx1ZnJpdUB0ZWxlZm9uaWNhLm5ldA==")
+        send_command("aGFja2luZ3lzZWd1cmlkYWRAaGFja2luZ3lzZWd1cmlkYWQuY29t")
 
         # Contraseña (ya en base64)
-        send_command("YWRtaW5p")
+        send_command("UGFzc3dkMDA=")
 
         # MAIL FROM
         send_command("MAIL FROM: antonio.taboadallufriu@hackingyseguridad.com")
