@@ -7,7 +7,7 @@ import time
 def send_smtp_commands():
     try:
         # Conectar al servidor SMTP
-        print("Conectando a smtp.telefonica.net:25...")
+        print("Conectando a smtp.hackingyseguridad.com:25...")
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.connect(("smtp.telefonica.net", 25))
 
@@ -38,12 +38,12 @@ def send_smtp_commands():
         send_command("YWRtaW5p")
 
         # MAIL FROM
-        send_command("MAIL FROM: antonio.taboadallufriu@movistar.es")
+        send_command("MAIL FROM: antonio.taboadallufriu@hackingyseguridad.com")
 
         # RCPT TO - múltiples destinatarios
         recipients = [
-            "antonio.taboadallufriu@telefonica.com",
-            "antonio.taboadallufriu@telefonica.net",
+            "antonio.taboadallufriu@hackingyseguridad.com",
+            "antonio.taboadallufriu@hackingyseguridad.com",
         ]
 
         for recipient in recipients:
