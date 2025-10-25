@@ -13,7 +13,7 @@
 
 **6º.- Uso de herramientas automatizadas** : scripts (como PHPMailer o programas de envío masivo) que facilitan la falsificación de correos. 
 
-**7º.- Uso de un dominio muy parecido** ; que visualmente sea disficil de notar que existe un caracter distitno.
+**7º.- Uso de un dominio muy parecido** ; que visualmente sea disficil de notar que existe un caracter distinto.
 
 **8º.- Uso de un servidor SMTP, DNS, propio**, adhoc que simule las cuentas y dominio, falsifique SPF, DKIM, DMARK. ( DMARK 3 modos ).
 
