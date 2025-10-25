@@ -66,7 +66,7 @@ Borrar toda la cola
 
 postsuper -d ALL
 
-# leer email con telnet
+### Leer email con telnet, desde consola
 
 telnet pop3.hackingyseguridad.com 110
 
