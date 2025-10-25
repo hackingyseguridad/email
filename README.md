@@ -17,6 +17,47 @@
 ***IMAP***  (Internet Message Access Protocol): 143, 993 con SSL/TLS
 
 
+### Registros DNS de seguridad, protocolos y firmas; para evitar suplantacion SCAM/Spoofing
+
+***MX*** (Mail Exchanger): tipo de registro DNS, que determinar el fqdm del servidor de correo electrónico para un dominio
+
+dig mx hackingyseguridad.com +short
+
+nslookup -type=txt hackingyseguridad.com 
+
+MX "intercambio de correo" en un registro en la configuración DNS  de un dominio , apunta a los nombre de los servidores de correo electrónico. 
+
+SPF, DKIM y DMARC sirven para autentificar a los remitentes de correo electrónico y cerificar que los correos electrónicos proceden del dominio del que dicen proceder. Estos tres métodos de autenticación son importantes para evitar el spam, los ataques de phishing y otros riesgos de seguridad 
+
+***SPF***, (Sender Policy Framework) es un tipo de resgistro en DNS autoritativo del dominio, donde se especifica los hostname o IP de los servidores de correo saliente, SMTP autorizados.
+
+dig txt hackingyseguridad.com +short
+
+nslookup -type=txt hackingyseguridad.com
+
+dig spf1 hackingyseguridad.com +short
+
+***DKIN***, (DomainKeys Identified Mail) protocolo de identidad, integridad que inserta firma cifrada en la cabecera del email, que certifica al destinatario que es veridico.
+
+<img style="float:left" alt="Proceso de comprobacion del correo electronio " src="https://github.com/hackingyseguridad/email/blob/main/correo.png">
+
+***DMARK***,  (Domain-based Message Authentication, Reporting, and Conformance) es una política de correo electrónico que combina, tiene en cuenta SPF y DKIN, para confirmar la legitimidad del dominio en el origen FROM del email, la autenticación coincida con el dominio del «From:». 
+**Uso:** Define políticas para manejar emails que fallan SPF/DKIM y reporta resultados.
+
+**Configuración:**
+- Registro **TXT** en el DNS
+- Nombre: `_dmarc.tudominio.com`
+- Ejemplo: `v=DMARC1; p=quarantine; rua=mailto:reportes@tudominio.com`
+
+### **Resumen de ubicación:**
+| Registro | Tipo DNS | Donde se configura |
+|----------|----------|-------------------|
+| SPF | TXT | Panel DNS del dominio |
+| DKIM | TXT | Subdominio específico en DNS |
+| DMARC | TXT | `_dmarc` subdominio en DNS |
+
+**Importante:** Los tres trabajan juntos para mejorar la deliverabilidad y prevenir spoofing/phishing.
+
 
 
 
@@ -121,47 +162,8 @@ openssl s_client -starttls smtp -connect mail.hackingyseguridad.com:587
 
 gnutls-cli mail.hackingyseguridad.com -p 25
 
-# Registros DNS de seguridad, protocolos y firmas:
 
-***MX*** (Mail Exchanger): tipo de registro DNS, que determinar el fqdm del servidor de correo electrónico para un dominio
-
-dig mx hackingyseguridad.com +short
-
-nslookup -type=txt hackingyseguridad.com 
-
-MX "intercambio de correo" en un registro en la configuración DNS  de un dominio , apunta a los nombre de los servidores de correo electrónico. 
-
-SPF, DKIM y DMARC sirven para autentificar a los remitentes de correo electrónico y cerificar que los correos electrónicos proceden del dominio del que dicen proceder. Estos tres métodos de autenticación son importantes para evitar el spam, los ataques de phishing y otros riesgos de seguridad 
-
-***SPF***, (Sender Policy Framework) es un tipo de resgistro en DNS autoritativo del dominio, donde se especifica los hostname o IP de los servidores de correo saliente, SMTP autorizados.
-
-dig txt hackingyseguridad.com +short
-
-nslookup -type=txt hackingyseguridad.com
-
-dig spf1 hackingyseguridad.com +short
-
-***DKIN***, (DomainKeys Identified Mail) protocolo de identidad, integridad que inserta firma cifrada en la cabecera del email, que certifica al destinatario que es veridico.
-
-<img style="float:left" alt="Proceso de comprobacion del correo electronio " src="https://github.com/hackingyseguridad/email/blob/main/correo.png">
-
-***DMARK***,  (Domain-based Message Authentication, Reporting, and Conformance) es una política de correo electrónico que combina, tiene en cuenta SPF y DKIN, para confirmar la legitimidad del dominio en el origen FROM del email, la autenticación coincida con el dominio del «From:». 
-**Uso:** Define políticas para manejar emails que fallan SPF/DKIM y reporta resultados.
-
-**Configuración:**
-- Registro **TXT** en el DNS
-- Nombre: `_dmarc.tudominio.com`
-- Ejemplo: `v=DMARC1; p=quarantine; rua=mailto:reportes@tudominio.com`
-
-### **Resumen de ubicación:**
-| Registro | Tipo DNS | Donde se configura |
-|----------|----------|-------------------|
-| SPF | TXT | Panel DNS del dominio |
-| DKIM | TXT | Subdominio específico en DNS |
-| DMARC | TXT | `_dmarc` subdominio en DNS |
-
-**Importante:** Los tres trabajan juntos para mejorar la deliverabilidad y prevenir spoofing/phishing.
-
+## Configuraciones servidor SMTP Postfix
 
 Agregar SMTP relay a postfix:
 
