@@ -1,5 +1,8 @@
+#################################################################################
+# Scruot eb Pyhton 3 , para envio de correo con SMTP en localhost 
+# puerto 25/tcp localhost
 # envio de enail simulando y chequeando las verficiones SPF, DKIN y DMARK
-
+#################################################################################
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
