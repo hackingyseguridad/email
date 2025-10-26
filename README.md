@@ -1,5 +1,7 @@
 ### Email/SCAM/Spoofing/Phissing
 
+SMTP (Simple Mail Transfer Protocol) es un protocolo de comunicación estándar de Internet para dar salida, enviar correos electrónicos (email).
+
 
 <img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
 
