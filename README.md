@@ -86,7 +86,7 @@ dig spf1 hackingyseguridad.com +short
 
 **9º.- Uso de SMPT de otros proveedores paraa engañar**, simular la descripcion del email origen en el Form, si este SMTP no imprime datos del email origen real. 
 
-**10º.- Uso de un smtp que este en el SPF de otros dominios**, comparta infraestructura e IPs
+**10º.- Uso de un servidor SMTP, que este en el SPF de otros dominios**, comparta infraestructura e IPs permitidas.
 
 
 ### Envio basico de email con telnet o netcat, conectado a SMTP
