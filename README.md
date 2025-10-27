@@ -46,7 +46,9 @@ dig spf1 hackingyseguridad.com +short
 <img style="float:left" alt="Proceso de comprobacion del correo electronio " src="https://github.com/hackingyseguridad/email/blob/main/correo.png">
 
 ***DMARK***,  (Domain-based Message Authentication, Reporting, and Conformance) es una política de correo electrónico que combina, tiene en cuenta SPF y DKIN, para confirmar la legitimidad del dominio en el origen FROM del email, la autenticación coincida con el dominio del «From:». 
-**Uso:** Define políticas para manejar emails que fallan SPF/DKIM y reporta resultados.
+**Uso:** Define políticas para manejar emails que fallan SPF/DKIM y reporta resultados.  DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (Poner en Cuarentena) 3º.- (Rechazar)
+
+<img style="float:left" alt="DMARK " src="https://github.com/hackingyseguridad/email/blob/main/DMARK.png">
 
 **Configuración:**
 - Registro **TXT** en el DNS
