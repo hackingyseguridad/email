@@ -89,7 +89,7 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 
 **9º.- Uso de SMPT de otros proveedores paraa engañar**, simular la descripcion del email origen en el Form, si este SMTP no imprime datos del email origen real. 
 
-**10º.- Uso de un servidor SMTP, que este en el SPF de otros dominios**, comparte infraestructura e IPs permitidas.
+**10º.- Uso de un servidor SMTP, que este en el SPF de otros dominios**, comparte infraestructura e IPs permitidas (diseño de la arquitectura de red).
 
 
 ### Envio basico de email con telnet o netcat, conectado a SMTP
