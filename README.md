@@ -85,7 +85,7 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 
 **7º.- Uso de un dominio muy parecido** ; que visualmente sea disficil de notar que existe un caracter distinto.
 
-**8º.- Uso de un servidor SMTP, DNS, propio**, adhoc que simule las cuentas y dominio, falsifique SPF, DKIM, DMARK. ( DMARK 3 modos ).
+**8º.- Uso de un servidor SMTP, DNS, propio**, adhoc que simule las cuentas y dominio, falsifique SPF, DKIM, DMARK. ( DMARK modo, dejar pasar ).
 
 **9º.- Uso de SMPT de otros proveedores paraa engañar**, simular la descripcion del email origen en el Form, si este SMTP no imprime datos del email origen real. 
 
