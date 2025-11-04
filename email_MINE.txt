@@ -4,7 +4,7 @@
 # o con netcat nc
 # http://www.hackingyseguridad.com/
 ############################################
-mc -V smtp.hackingyseguridad.com 25
+mc -v smtp.hackingyseguridad.com 25
 telnet smtp.hackingyseguridad.com 25 
 helo SMTP.hackingyseguridad.com
 MAIL FROM: admin@hackingyseguridad.com
