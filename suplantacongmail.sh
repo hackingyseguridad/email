@@ -1,5 +1,5 @@
 ############################################################
-# Script en Python3 qye usa el SMTP de gmail 
+# Script simple en Python3 qye usa el SMTP de gmail 
 # Suplanta en el Form, con email spoof
 # funciona!
 # http://www.hackingyseguridad.com
