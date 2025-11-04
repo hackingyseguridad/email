@@ -1,5 +1,5 @@
 ##############################################################################
-# Simple Script en Python version 3
+# Simple Script en Python version 3,   Puerto 587 con STARTTLS
 # envia correo con smtp.mail.com y spoof origen, en la descripcion del FORM:
 # simple Spoffing modificando el FORM del email
 # (R) hackingyseguridad.com 2025
