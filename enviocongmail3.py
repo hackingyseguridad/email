@@ -1,4 +1,9 @@
-# Simple Spoof email con gmail - Funciona!!
+##############################################################################
+# Simple Script en Python version 3, 
+# envia correo con smtp.mail.com y spoof origen, en la descripcion del FORM:
+# simple Spoffing modificando el FORM del email
+# (R) hackingyseguridad.com 2025
+##############################################################################
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
