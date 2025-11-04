@@ -1,4 +1,4 @@
-# Spoof email - Funciona!!
+# Simple Spoof email con gmail - Funciona!!
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -13,8 +13,8 @@ class CustomSender:
         self.gmail_account = "antonio.taboada@gmail.com"  # Tu cuenta Gmail REAL
         self.app_password = "satk lnxi lpti vav"  # Contraseña de aplicación
 
-        # Remitente personalizado
-        self.custom_from = ("Wang Li", "Wang_Li@temu.com")  # Nombre + email
+        # Remitente personalizado, suplantado
+        self.custom_from = ("Wang Li", "Wang_Li@temu.com")  # Nombre + email origen suplantado
         self.recipients = {
             'to': ["antonio.taboada@gmail.com", "antonio.taboada@gmail.com"],  # Destinatarios principales
             'cc': ["antonio.taboada@gmail.com"],  # Con copia
