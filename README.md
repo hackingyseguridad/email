@@ -200,15 +200,15 @@ relayhost = IP_realy_smpt
 
 ### Proveedores gratuitos de envio de email.
 
-***Yahoo***    		smtp.mail.yahoo.com:587
+***Yahoo :***    		smtp.mail.yahoo.com:587
 
-***Hotmail***			smtp.live.com:587
+***Hotmail :***			smtp.live.com:587
 
-***Gmail de Google***		smtp.gmail.com:25
+***Gmail de Google :***		smtp.gmail.com:25
 
-***Gmail de Google*** 	smtp-relay.gmail.com:25
+***Gmail de Google :*** 	smtp-relay.gmail.com:25
 
-***Microsoft Office 365***	smtp.office365.com:587	
+***Microsoft Office 365 :***	smtp.office365.com:587	
 
 
 ###
