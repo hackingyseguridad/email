@@ -41,11 +41,9 @@ Tipos principales de registros DNS:
 
 **NS :** Indica qué servidores DNS son autoritativos para el dominio
 
-**MX** (Mail Exchanger): tipo de registro DNS, MX: Especifica servidores de correo electrónico. que determina el fqdm del servidor de correo electrónico para un dominio. 
+**MX** (Mail Exchanger): tipo de registro DNS, MX: Especifica servidores de correo electrónico. que determina el fqdm del servidor de correo electrónico para un dominio. MX "intercambio de correo" en un registro en la configuración DNS  de un dominio , apunta a los nombre de los servidores de correo electrónico. 
 
-MX "intercambio de correo" en un registro en la configuración DNS  de un dominio , apunta a los nombre de los servidores de correo electrónico. 
-
-TXT: Almacena información textual (verificaciones, seguridad)
+**TXT :** Almacena información textual (verificaciones, seguridad)
 
 **SPF, DKIM y DMARC** sirven para autentificar a los remitentes de correo electrónico y cerificar que los correos electrónicos proceden del dominio del que dicen proceder. Estos tres métodos de autenticación son importantes para evitar el spam, los ataques de phishing y otros riesgos de seguridad 
 
