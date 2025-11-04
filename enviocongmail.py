@@ -1,8 +1,8 @@
 ##############################################################################
 # Simple Script en Python version 3
-# envia correo  con smtp.mail.com y spoof origen, en la descripcion del form
+# envia correo con smtp.mail.com y spoof origen, en la descripcion del FORM:
 # simple Spoffing modificando el FORM del email
-# hackingyseguridad.com 2025
+# (R) hackingyseguridad.com 2025
 ##############################################################################
 
 
@@ -77,5 +77,3 @@ class CustomSender:
 if __name__ == "__main__":
     sender = CustomSender()
     sender.send_email()
-
-
