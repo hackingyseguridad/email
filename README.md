@@ -106,6 +106,8 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 
 # 
 
+nc -v smtp.hackingyseguridad.com 25
+
 telnet smtp.hackingyseguridad.com 25
 
 helo smtp.hackingyseguridad.com
@@ -134,13 +136,15 @@ quit
 
 QUIT
 
-nc -v smtp.hackingyseguridad.com 25
+### Ordenaes para el servidor, conectado a SMTP
+
+*ver correos en cola, pendientes de enviar**
 
 mailq
 
 postqueue -f
 
-Borrar toda la cola
+**Borrar toda la cola**
 
 postsuper -d ALL
 
@@ -159,7 +163,7 @@ list
 quit
 
 
-### Envio simple de email desde consola linux, con comandos
+### Envio simple de email desde consola linux, con comandos basicos
 
 echo "This is the body of the email" | mail -s "This is the subject line" your_email_address
 
