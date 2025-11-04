@@ -138,7 +138,7 @@ QUIT
 
 ### Ordenaes para el servidor, conectado a SMTP
 
-***ver correos en cola, pendientes de enviar***
+**Ver correos en cola, pendientes de enviar**
 
 mailq
 
