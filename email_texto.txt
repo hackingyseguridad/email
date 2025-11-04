@@ -4,6 +4,7 @@
 # http://www.hackingyseguridad.com/
 ############################################
 
+nc -v servidor_smtp 25
 telnet servidor_smtp 25 
 helo servidor_smtp
 
