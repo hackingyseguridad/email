@@ -1,4 +1,8 @@
-# funciona!!
+##############################################################################
+# El mas simple Script en Python version 3, - Funciona !!!
+# envia correo con Google smtp.mail.com 
+# (R) hackingyseguridad.com 2025
+##############################################################################
 
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -30,7 +34,7 @@ class GmailSender:
                 msg = MIMEMultipart()
                 msg["From"] = self.sender_email
                 msg["To"] = self.recipient
-                msg["Subject"] = "Prueba de correo seguro"
+                msg["Subject"] = "Prueba de correo "
 
                 body = "Este es un correo de prueba enviado usando autenticación segura."
                 msg.attach(MIMEText(body, "plain"))
