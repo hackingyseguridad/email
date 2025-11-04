@@ -14,8 +14,8 @@ class GmailSender:
         self.smtp_server = "smtp.gmail.com"
         self.smtp_port = 587
         self.sender_email = "antonio.taboada@gmail.com"  # Tu email REAL
-        self.app_password = "satk lnxi lpti vavw"  # La contraseña de aplicación generada
-        self.recipient = "antonio.taboada@gmail.com"
+        self.app_password = "satk lnxi lpti vavw"  # La contraseña de aplicación generada por Google
+        self.recipient = "antonio.taboada@telefonica.net"  # La direccion de correo del destinatario
 
     def send_email(self):
         try:
