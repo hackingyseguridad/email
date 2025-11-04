@@ -164,7 +164,7 @@ Auto-Submitted: auto-generated""".format(
             pass
 
 def main():
-    print("=== SISTEMA DE NOTIFICACIONES MOVISTAR ===")
+    print("=== SISTEMA DE NOTIFICACIONES ===")
     print("Optimizado para entrega en Outlook y filtros antispam")
     print("Servidor: smtp.telefonica.net:25")
     print("=" * 60)
