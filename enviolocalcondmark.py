@@ -1,5 +1,5 @@
 #################################################################################
-# Script en Python version 3, para envio desde (postfix) 
+# Script en Python version 3, para envio desde (postfix) a Google Gmail
 # Envio de email, a traves de servidor SMTP en localhost, en local
 # Simula, falsifica las verificaciones SPF, DKIN, DMARK, para envio a Gmail.
 # Las firmas DKIM son simuladas, no válidas.  Requiere configuracion DNS valida
