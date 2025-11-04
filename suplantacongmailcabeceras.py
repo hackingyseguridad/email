@@ -195,16 +195,10 @@ class AdvancedEmailSpoofing:
 
         return working_servers
 
-
 # USO CON PRECAUCIONES - SOLO PARA FINES EDUCATIVOS
 if __name__ == "__main__":
-    print("=== SCRIPT AVANZADO DE PRUEBAS DE SEGURIDAD EMAIL ===")
-    print("⚠️  ADVERTENCIA: SOLO PARA FINES EDUCATIVOS Y PRUEBAS AUTORIZADAS")
-    print("🔒 El uso malintencionado de estas técnicas es ILEGAL")
     print()
-
     sender = AdvancedEmailSpoofing()
-
     # Probar conexiones primero
     print("🔍 Probando conexiones SMTP disponibles...")
     working_servers = sender.test_all_connections()
@@ -212,19 +206,3 @@ if __name__ == "__main__":
     if working_servers:
         print(f"\n🎯 Enviando email de prueba...")
         success = sender.send_with_best_smtp()
-
-        if success:
-            print("\n📊 RESUMEN EJECUCIÓN:")
-            print("✅ Email enviado con técnicas avanzadas de ofuscación")
-            print("✅ Cabeceras personalizadas para evitar detección")
-            print("✅ HTML ofuscado para parecer legítimo")
-            print("✅ Múltiples servidores SMTP probados")
-        else:
-            print("\n💥 Todos los intentos de envío fallaron")
-    else:
-        print("\n❌ No hay conexiones SMTP disponibles. Verifica:")
-        print("   • Credenciales de email")
-        print("   • Contraseñas de aplicación")
-        print("   • Conexión a internet")
-        print("   • Puertos SMTP habilitados")
-
