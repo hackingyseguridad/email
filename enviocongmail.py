@@ -1,5 +1,5 @@
 ###########################################################################
-# Script en Python version 3
+# Simple Script en Python version 3
 # envia correo  con smtp.mail.com y spoof origen, en la descripcion del form
 # simple Spoffing modificando el FORM del email
 # hackingyseguridad.com 2025
