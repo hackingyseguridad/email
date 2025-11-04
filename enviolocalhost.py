@@ -1,7 +1,8 @@
 ############################################################
-# envio basico de email, python3 - www.hackingyseguridad.com
+# envio basico de email, python3 
 # sin verificaciones de seguridad SPF, DMARK, DKIN,
 # envio por locakhost puerto 25 TCP !! servidor SMTP local
+# (R) hackingyseguridad.com 2025
 ###########################################################
 
 import smtplib
