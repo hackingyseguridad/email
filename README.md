@@ -31,19 +31,29 @@ SMTP (Simple Mail Transfer Protocol) es un protocolo de comunicación estándar 
 
 ### Registros DNS de seguridad, protocolos y firmas; para evitar suplantacion SCAM/Spoofing/Phissing
 
-[DNS](https://github.com/hackingyseguridad/dns)
+[DNS](https://github.com/hackingyseguridad/dns) autoritativos; son los servidores maestros que contienen la información oficial y definitiva de un dominio.
 
-***MX*** (Mail Exchanger): tipo de registro DNS, que determinar el fqdm del servidor de correo electrónico para un dominio
+Tipos principales de registros DNS:
 
-dig mx hackingyseguridad.com +short
+**A/AAAA :** Asocian dominio → IPv4 (A) o IPv6 (AAAA)
 
-nslookup -type=txt hackingyseguridad.com 
+**CNAME :** Crea alias (ej: www apunta a dominio principal)
+
+**NS :** Indica qué servidores DNS son autoritativos para el dominio
+
+**MX** (Mail Exchanger): tipo de registro DNS, MX: Especifica servidores de correo electrónico. que determina el fqdm del servidor de correo electrónico para un dominio. 
 
 MX "intercambio de correo" en un registro en la configuración DNS  de un dominio , apunta a los nombre de los servidores de correo electrónico. 
 
-SPF, DKIM y DMARC sirven para autentificar a los remitentes de correo electrónico y cerificar que los correos electrónicos proceden del dominio del que dicen proceder. Estos tres métodos de autenticación son importantes para evitar el spam, los ataques de phishing y otros riesgos de seguridad 
+TXT: Almacena información textual (verificaciones, seguridad)
 
-***SPF***, (Sender Policy Framework) es un tipo de resgistro en DNS autoritativo del dominio, donde se especifica los hostname o IP de los servidores de correo saliente, SMTP autorizados, para enviar con el nombre de ese dominio.
+**SPF, DKIM y DMARC** sirven para autentificar a los remitentes de correo electrónico y cerificar que los correos electrónicos proceden del dominio del que dicen proceder. Estos tres métodos de autenticación son importantes para evitar el spam, los ataques de phishing y otros riesgos de seguridad 
+
+**SPF**, (Sender Policy Framework) es un tipo de resgistro en DNS autoritativo del dominio, donde se especifica los hostname o IP de los servidores de correo saliente, SMTP autorizados, para enviar con el nombre de ese dominio.
+
+  $dig mx hackingyseguridad.com +short
+
+  $nslookup -type=txt hackingyseguridad.com 
 
   $dig TXT hackingyseguridad.com | grep "spf
 
