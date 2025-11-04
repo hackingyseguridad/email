@@ -2,6 +2,7 @@
 # Scruot eb Pyhton 3 , para envio de correo con SMTP en localhost 
 # puerto 25/tcp localhost
 # envio de enail simulando y chequeando las verficiones SPF, DKIN y DMARK
+# (R) hackingyseguridad.com 2025
 #################################################################################
 
 import smtplib
@@ -14,10 +15,10 @@ import base64
 
 class EmailSender:
     def __init__(self):
-        self.smtp_server = "localhost"
-        self.smtp_port = 25
-        self.sender = "hackingyseguridad@hackingyseguridad.com"
-        self.recipient = "antonio.taboada@gmail.com"
+        self.smtp_server = "localhost"  # servidor SMTP^
+        self.smtp_port = 25  # puerto tcp SMTP
+        self.sender = "hackingyseguridad@hackingyseguridad.com" # direccion email origen 
+        self.recipient = "antonio.taboada@gmail.com" # direccion email destino
 
     def simulate_spf(self, ip_address, domain):
         """Simula una verificación SPF básica"""
