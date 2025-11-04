@@ -1,3 +1,12 @@
+#################################################################################
+# Script en Python version 3, para envio desde (postfix) 
+# Envio de email, a traves de servidor SMTP en localhost, en local
+# Simula, falsifica las verificaciones SPF, DKIN, DMARK, para envio a Gmail.
+# Las firmas DKIM son simuladas, no válidas.  Requiere configuracion DNS valida
+# Las firmas DKIM requieren claves criptográficas reales
+# (r) hackingyseguridad.com 2025
+#################################################################################
+
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
