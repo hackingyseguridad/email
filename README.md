@@ -62,7 +62,7 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 <img style="float:left" alt="DMARK " src="https://github.com/hackingyseguridad/email/blob/main/dmark.png">
 
 **Configuración:**
-- Registro **TXT** en el DNS
+- Registro **TXT** en el DNS autoritativo del dominio
 - Nombre: `_dmarc.tudominio.com`
 - Ejemplo: `v=DMARC1; p=quarantine; rua=mailto:reportes@tudominio.com`
 
