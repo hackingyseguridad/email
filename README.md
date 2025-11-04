@@ -190,12 +190,13 @@ gnutls-cli mail.hackingyseguridad.com -p 25
 
 [mail.cf.txt](https://github.com/hackingyseguridad/email/blob/main/mail.cf.txt)
 
-***Agregar SMTP relay a postfix:***
+***Agregar SMTP relay de  Google a postfix:***
 
 vim /etc/postfix/main.cf
 
 relayhost = IP_realy_smpt
 
+[postfix_relay_gmail.txt](https://github.com/hackingyseguridad/email/blob/main/postfix_relay_gmail.txt)
 
 ### Proveedores gratuitos de envio de email.
 
