@@ -43,13 +43,13 @@ SPF, DKIM y DMARC sirven para autentificar a los remitentes de correo electróni
 
 ***SPF***, (Sender Policy Framework) es un tipo de resgistro en DNS autoritativo del dominio, donde se especifica los hostname o IP de los servidores de correo saliente, SMTP autorizados, para enviar con el nombre de ese dominio.
 
-$dig TXT hackingyseguridad.com | grep "spf
+  $dig TXT hackingyseguridad.com | grep "spf
 
-$dig txt hackingyseguridad.com +short
+  $dig txt hackingyseguridad.com +short
 
-$nslookup -type=txt hackingyseguridad.com
+  $nslookup -type=txt hackingyseguridad.com
 
-$dig spf1 hackingyseguridad.com +short
+  $dig spf1 hackingyseguridad.com +short
 
 ***DKIN***, (DomainKeys Identified Mail) protocolo de identidad, integridad que inserta firma cifrada en la cabecera del email, que certifica al destinatario que es veridico.
 
