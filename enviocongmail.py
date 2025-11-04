@@ -1,8 +1,8 @@
 ###########################################################################
 # Script en Python version 3
-# envia correo desde gmail y spoof origen, en la descripcion del form
-# simple spoff
-# hackingyseguridad.com 20025
+# envia correo  con smtp.mail.com y spoof origen, en la descripcion del form
+# simple Spoffing modificando el FORM del email
+# hackingyseguridad.com 2025
 ############################################################################
 
 
