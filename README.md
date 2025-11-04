@@ -138,7 +138,7 @@ QUIT
 
 ### Ordenaes para el servidor, conectado a SMTP
 
-*ver correos en cola, pendientes de enviar**
+***ver correos en cola, pendientes de enviar***
 
 mailq
 
@@ -186,7 +186,12 @@ gnutls-cli mail.hackingyseguridad.com -p 25
 
 ## Configuraciones servidor SMTP Postfix
 
-Agregar SMTP relay a postfix:
+***Postfx como servidor SMTP***
+
+
+
+
+***Agregar SMTP relay a postfix:***
 
 vim /etc/postfix/main.cf
 
