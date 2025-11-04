@@ -31,7 +31,7 @@ SMTP (Simple Mail Transfer Protocol) es un protocolo de comunicación estándar 
 
 ### Registros DNS de seguridad, protocolos y firmas; para evitar suplantacion SCAM/Spoofing/Phissing
 
-https://github.com/hackingyseguridad/dns/
+[DNS](https://github.com/hackingyseguridad/dns)
 
 ***MX*** (Mail Exchanger): tipo de registro DNS, que determinar el fqdm del servidor de correo electrónico para un dominio
 
