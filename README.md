@@ -83,7 +83,7 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 | DKIM | TXT | Subdominio específico en DNS |
 | DMARC | TXT | `_dmarc` subdominio en DNS |
 
-**Importante:** Los tres en conjunto  mejoran la deliverabilidad y evitan la suplantacion/spoofing/phishing.
+**Importante:** Los tres trabajan juntos para mejorar la deliverabilidad y prevenir spoofing/phishing.
 
 
 
@@ -92,9 +92,9 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 ### Suplantar dirección de email, correo electronico (tecnicas SCAM/Spoofing/Phissing).
 
 **1º.- Manipulando el campo "From"**. del email, con script de envio.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente FORM.
-https://github.com/hackingyseguridad/email/blob/main/enviopythonsmtp.py 
+[https://github.com/hackingyseguridad/email/blob/main/enviopythonsmtp.py ](https://github.com/hackingyseguridad/email/blob/main/envioconsmtp.py)
 
-**2º.- Modificación de cabeceras X-Mailer del correo** : cabeceras del email como: "From", "Reply-To" o "Return-Path",.. con scripts de envio ... https://github.com/hackingyseguridad/email/blob/main/suplantacongmailcabeceras.py  
+**2º.- Modificación de cabeceras X-Mailer del correo** : cabeceras del email como: "From", "Reply-To" o "Return-Path",.. con scripts de envio ... [https://github.com/hackingyseguridad/email/blob/main/suplantacongmailcabeceras.py  ](https://github.com/hackingyseguridad/email/blob/main/enviocongmail3.py)
 
 **3º.- Uso de servidores SMTP Open Relay (sin autenticación), no seguros**: pueden usarse estos servidores de correo mal configurados o comprometidos para enviar emails, de forma libre, modificando el FROM y/o cabeceras X-Mailer 
 
@@ -106,7 +106,7 @@ https://github.com/hackingyseguridad/email/blob/main/enviopythonsmtp.py
 
 **7º.- Uso de un dominio muy parecido** ; que visualmente sea disficil de notar que existe un caracter distinto.
 
-**8º.- Uso de un servidor SMTP, DNS, propio**, ad hoc que simule las cuentas, dominio, falsifique registros SPF, DKIM, DMARK. ( DMARK modo, dejar pasar ). https://github.com/hackingyseguridad/email/blob/main/enviolocalhostdnark2.py
+**8º.- Uso de un servidor SMTP, DNS, propio**, ad hoc que simule las cuentas, dominio, falsifique registros y verificaciones: SPF, DKIM, DMARK. (DMARK modo, dejar pasar). https://github.com/hackingyseguridad/email/blob/main/enviolocalhostdnark2.py
 
 **9º.- Uso de SMPT de otros proveedores paraa engañar**, simular la descripcion del email origen en el Form, si este SMTP no imprime datos del email origen real. 
 
@@ -226,6 +226,6 @@ relayhost = IP_realy_smpt
 #
 http://www.hackingyseguridad.com/
 #
-#
+###
 
 
