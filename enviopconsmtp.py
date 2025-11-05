@@ -1,4 +1,3 @@
-
 #############################################################
 # Simple script en Python version 3
 # envvia email con SMTP, puerto 25, auth login, sin cifrado
