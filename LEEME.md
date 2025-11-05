@@ -94,7 +94,7 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 **1º.- Manipulando el campo "From"**. del email, con script de envio.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente FORM.
 https://github.com/hackingyseguridad/email/blob/main/enviopythonsmtp.py 
 
-**2º.- Modificación de cabeceras X-Mailer del correo** : cabeceras del email como: "From", "Reply-To" o "Return-Path",.. con scripts de envio ... https://github.com/hackingyseguridad/email/blob/main/suplantacongmailcabeceras.py  
+**2º.- Modificación de cabeceras X-Mailer del correo** : cabeceras del email como: "From", "Reply-To" o "Return-Path",.. con scripts de envio ... [https://github.com/hackingyseguridad/email/blob/main/suplantacongmailcabeceras.py  ](https://github.com/hackingyseguridad/email/blob/main/enviocongmail3.py)
 
 **3º.- Uso de servidores SMTP Open Relay (sin autenticación), no seguros**: pueden usarse estos servidores de correo mal configurados o comprometidos para enviar emails, de forma libre, modificando el FROM y/o cabeceras X-Mailer 
 
