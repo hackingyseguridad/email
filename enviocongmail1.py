@@ -19,7 +19,7 @@ class CustomSender:
         self.app_password = "satk lnxi lpti vav"  # Contraseña de aplicación
 
         # Remitente personalizado, suplantado
-        self.custom_from = ("Wang Li", "Wang_Li@temu.com")  # Nombre + email origen suplantado
+        self.custom_from = ("Email suplantado", "email_suplantado@hackingyseguridad.com")  # Nombre + email origen suplantado
         self.recipients = {
             'to': ["antonio.taboada@gmail.com", "antonio.taboada@gmail.com"],  # Destinatarios principales
             'cc': ["antonio.taboada@gmail.com"],  # Con copia
