@@ -106,7 +106,7 @@ https://github.com/hackingyseguridad/email/blob/main/enviopythonsmtp.py
 
 **7º.- Uso de un dominio muy parecido** ; que visualmente sea disficil de notar que existe un caracter distinto.
 
-**8º.- Uso de un servidor SMTP, DNS, propio**, ad hoc que simule las cuentas, dominio, falsifique registros SPF, DKIM, DMARK. ( DMARK modo, dejar pasar ). https://github.com/hackingyseguridad/email/blob/main/enviolocalhostdnark2.py
+**8º.- Uso de un servidor SMTP, DNS, propio**, ad hoc que simule las cuentas, dominio, falsifique registros y verificaciones: SPF, DKIM, DMARK. (DMARK modo, dejar pasar). https://github.com/hackingyseguridad/email/blob/main/enviolocalhostdnark2.py
 
 **9º.- Uso de SMPT de otros proveedores paraa engañar**, simular la descripcion del email origen en el Form, si este SMTP no imprime datos del email origen real. 
 
