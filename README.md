@@ -83,7 +83,7 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 | DKIM | TXT | Subdominio específico en DNS |
 | DMARC | TXT | `_dmarc` subdominio en DNS |
 
-**Importante:** Los tres trabajan juntos para mejorar la deliverabilidad y prevenir spoofing/phishing.
+**Importante:** Los tres en conjunto  mejoran la deliverabilidad y evitan la suplantacion/spoofing/phishing.
 
 
 
