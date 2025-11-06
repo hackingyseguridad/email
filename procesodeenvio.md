@@ -7,7 +7,7 @@ Proceso de envío de un correo electrónico:
    Subject: asunto del email
    Texto: correo electronico ..  
 
-2. Conexión y autenticación con el servidor de correo saliente SMTP, antes de "Enviar", ha autenticado con cuenta de usuario y password cuenta.origen@dominio1.com.
+2. Conexión con el servidor de correo saliente SMTP, antes de "Enviar", ha autenticado con usuario cuenta.origen@dominio1.com y password.
 
 3. Consultas al DNS: 
 Consulta el dominio origen: registro MX, el registro A que apunta a la IP.
