@@ -1,11 +1,11 @@
 
 Proceso de envío de un correo electrónico; 
-1. Composición del Correo: en el Cliente de Correo "Pesado",  en el cliente Web "ligero", ó con un script en pythom, Bash Shell,..
-Se detalla la dirección de email del destinatario TO:, asunto Subject: y texto del correo...
+1. Composición del Correo: en el Cliente de Correo "pesado",  en el cliente Web "ligero", ó con un script en pythom, Bash Shell,..
+Nuestra dirección de email de origen FORM: lo pone nuestro servidor SMTP - indicamos la **dirección de email del destinatario TO:**, Subject: asunto y texto del correo electronico...  
 
-2. Conexión y autenticación con nuestro servidor de salida de correo SMTP.- Antes de enviar "Enviar", el cliente conecta y autentica con SMTP .- Configurado: Autenticas con el nombre de la cuenta@dominio y contraseña.
+3. Conexión y autenticación con nuestro servidor de salida de correo SMTP.- Antes de enviar "Enviar", el cliente conecta y autentica con SMTP .- Configurado: Autenticas con el nombre de la cuenta@dominio y contraseña.
 
-3. Consultas DNS: 
+4. Consultas DNS: 
 Consulta el dominio origen: registro MX, el registro A que apunta a la IP.
 Consulta el dominio destino: consulta MX: el servidor SMTP pregunta al DNS: registro MX. El DNS responde con uno o más fqdn de servidores de correo. Consulta A/AAAA: para obtener la dirección IP del servidor destino;
 
