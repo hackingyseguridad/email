@@ -10,11 +10,15 @@
 
 ### Email/SCAM/Spoofing/Phissing
 
+La suplantación real de email, depende en gran medida de:
+
 1.- la configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y de los DNS autoritativos.
 
 2.- De la posibilidad de modificar el valor del campo FRORM del email origen;
 
 3.- De los filtros, de la política DMARK en el servidor de entrada en destino.
+
+el engaño y phissing en email, depende de los X-Mail, servidores fake o manipulacon de caracteres.
 
 
 SMTP (Simple Mail Transfer Protocol) es un protocolo de comunicación estándar de Internet para dar salida, enviar correos electrónicos (email).
