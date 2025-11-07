@@ -36,7 +36,7 @@ El engaño y phissing en email, depende de: los X-Mail, servidores fake o manipu
 Consulta el dominio origen: registro MX, el registro A que apunta a la IP.
 Consulta el dominio destino: consulta MX: el servidor SMTP pregunta al DNS: registro MX. El DNS responde con uno o más fqdn de servidores de correo. Consulta A/AAAA: para obtener la dirección IP del servidor destino;
 
-3. Bis. Verificaciones DNS: El servidor SMTP realiza varias consultas, verificaciones para asegurar la entrega e impedir la suplanación/spam.
+3. Verificaciones DNS: El servidor SMTP realiza varias consultas, verificaciones para asegurar la entrega e impedir la suplanación/spam.
 Registro TXT, SPF (Sender Policy Framework): El servidor del destino verifica en el DNS del dominio origen si la IP del servidor SMTP que está enviando el correo está autorizada para enviar correos en nombre de dominio1.com. Esto genera una verficiacion SPF, para evitar la suplantación de identidad (spoofing).
 Registro TXT, DKIM (DomainKeys Identified Mail): Es una "firma digital" del mensaje que también se verifica contra un registro DNS del dominio origen, garantiza la integridad.
 Registro TXT, DMARC (Domain-based Message Authentication, Reporting & Conformance): Política publicada en DNS que le dice al receptor qué hacer si fallan SPF o DKIM (ej: rechazar el correo).
