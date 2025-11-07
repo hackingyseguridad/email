@@ -16,7 +16,7 @@ La suplantación real de email, depende en gran medida de:
 
 1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio.
 
-2.- De la posibilidad de modificar el valor del campo FRORM del email origen; 
+2.- De la posibilidad de modificar el valor del campo FRORM del email origen; El servidor de correo destino no siempre verifica la direccion email origen; 
 
 3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas.
 
