@@ -10,7 +10,42 @@
 
 ### Email/SCAM/Spoofing/Phissing
 
-SMTP (Simple Mail Transfer Protocol) es un protocolo de comunicación estándar de Internet para dar salida, enviar correos electrónicos (email).
+**Introduccion :** 
+
+La suplantación real de email, depende en gran medida de:
+
+1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio.
+
+2.- De la posibilidad de modificar el valor del campo FRORM del email origen;
+
+3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas.
+
+El engaño y phissing en email, depende de: los X-Mail, servidores fake o manipulacon de caracteres.
+
+**Proceso de envio de correo :**
+
+1. Composición del Correo: cliente de correo ( outlook, thunderbird, "pesado", cliente Web "ligero" ó con  script en pythom, Bash Shell,..
+   FORM: cuenta.origen@dominio1.com, por defecto lo imprime nuestro servidor SMTP
+   TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**,
+   Subject: asunto del email
+   Texto: correo electronico ..  
+
+2. Conexión con el servidor de correo saliente SMTP, antes de "enviar", ha autenticado con usuario cuenta.origen@dominio1.com y password.
+
+3. Consultas al DNS: 
+Consulta el dominio origen: registro MX, el registro A que apunta a la IP.
+Consulta el dominio destino: consulta MX: el servidor SMTP pregunta al DNS: registro MX. El DNS responde con uno o más fqdn de servidores de correo. Consulta A/AAAA: para obtener la dirección IP del servidor destino;
+
+3. Verificaciones DNS: El servidor SMTP realiza varias consultas, verificaciones para asegurar la entrega e impedir la suplanación/spam.
+Registro TXT, SPF (Sender Policy Framework): El servidor del destino verifica en el DNS del dominio origen si la IP del servidor SMTP que está enviando el correo está autorizada para enviar correos en nombre de dominio1.com. Esto genera una verficiacion SPF, para evitar la suplantación de identidad (spoofing).
+Registro TXT, DKIM (DomainKeys Identified Mail): Es una "firma digital" del mensaje que también se verifica contra un registro DNS del dominio origen, garantiza la integridad.
+Registro TXT, DMARC (Domain-based Message Authentication, Reporting & Conformance): Política publicada en DNS que le dice al receptor qué hacer si fallan SPF o DKIM (ej: rechazar el correo).
+
+4. Envio del email, protocolo SMTP; una vez tiene la IP del servidor de destino, el servidor SMTP envia email al servidor de entrada de destino. 
+
+5. Entrega y almacena en la caperta de la cuenta de destino; El servidor de destino POP3, IMAP de entrada si su politica permite: acepta el mensaje, lo pone en cuarentena o elimina; - Si pasa la politica de entrada, guarda el email en la caperta de entrada del buzón del destinatario. El destinatario al autenticarse con su cuenta.destino@dominio2.com y abrir su cliente de correo, descargará o verá el email. 
+
+**SMTP (Simple Mail Transfer Protocol)** es un protocolo de comunicación estándar de Internet para dar salida, enviar correos electrónicos (email).
 
 
 <img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
