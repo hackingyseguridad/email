@@ -20,7 +20,7 @@ La suplantación real de email, depende en gran medida de:
 
 3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas.
 
-El engaño y phissing en email, depende de: los X-Mail, servidores fake o manipulacon de caracteres.
+El engaño y phissing en email, depende de: las cabeceras X-Mail, servidores fake o manipulacon visual de caracteres.
 
 **Proceso de envio de correo :**
 
