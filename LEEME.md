@@ -12,7 +12,7 @@
 
 La suplantación real de email, depende en gran medida de:
 
-1.- la configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y de los DNS autoritativos.
+1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio.
 
 2.- De la posibilidad de modificar el valor del campo FRORM del email origen;
 
