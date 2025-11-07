@@ -16,7 +16,7 @@ La suplantación real de email, depende en gran medida de:
 
 1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio.
 
-2.- De la posibilidad de modificar el valor del campo FRORM del email origen;
+2.- De la posibilidad de modificar el valor del campo FRORM del email origen; 
 
 3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas.
 
@@ -26,7 +26,7 @@ El engaño y phissing en email, depende de: los X-Mail, servidores fake o manipu
 
 1. Composición del Correo: cliente de correo ( outlook, thunderbird, "pesado", cliente Web "ligero" ó con  script en pythom, Bash Shell,..
    
-   FORM: cuenta.origen@dominio1.com, por defecto lo imprime nuestro servidor SMTP
+   FORM: cuenta.origen@dominio1.com, por defecto lo imprime el servidor SMTP
 
    TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**,
 
