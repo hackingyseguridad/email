@@ -18,7 +18,9 @@ La suplantación real de email, depende en gran medida de:
 
 3.- De los filtros, de la política DMARK en el servidor de entrada en destino.
 
-el engaño y phissing en email, depende de los X-Mail, servidores fake o manipulacon de caracteres.
+El engaño y phissing en email, depende de los X-Mail, servidores fake o manipulacon de caracteres.
+
+
 
 
 SMTP (Simple Mail Transfer Protocol) es un protocolo de comunicación estándar de Internet para dar salida, enviar correos electrónicos (email).
