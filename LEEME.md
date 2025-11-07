@@ -16,23 +16,27 @@ La suplantación real de email, depende en gran medida de:
 
 1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio.
 
-2.- De la posibilidad de modificar el valor del campo FRORM del email origen;
+2.- De la posibilidad de modificar el valor del campo FRORM del email origen; El servidor de correo destino no siempre verifica la direccion email origen; 
 
 3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas.
 
-El engaño y phissing en email, depende de: los X-Mail, servidores fake o manipulacon de caracteres.
+El engaño y phissing en email, depende de: las cabeceras X-Mail, servidores fake o manipulacon visual de caracteres.
 
 **Proceso de envio de correo :**
 
 1. Composición del Correo: cliente de correo ( outlook, thunderbird, "pesado", cliente Web "ligero" ó con  script en pythom, Bash Shell,..
-   FORM: cuenta.origen@dominio1.com, por defecto lo imprime nuestro servidor SMTP
+   
+   FORM: cuenta.origen@dominio1.com, por defecto lo imprime el servidor SMTP
+
    TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**,
+
    Subject: asunto del email
+
    Texto: correo electronico ..  
 
-2. Conexión con el servidor de correo saliente SMTP, antes de "enviar", ha autenticado con usuario cuenta.origen@dominio1.com y password.
+3. Conexión con el servidor de correo saliente SMTP, antes de "enviar", autenticado con cuenta de usuario y password; cuenta.origen@dominio1.com.
 
-3. Consultas al DNS: 
+4. Consultas al DNS: 
 Consulta el dominio origen: registro MX, el registro A que apunta a la IP.
 Consulta el dominio destino: consulta MX: el servidor SMTP pregunta al DNS: registro MX. El DNS responde con uno o más fqdn de servidores de correo. Consulta A/AAAA: para obtener la dirección IP del servidor destino;
 
@@ -262,4 +266,3 @@ relayhost = IP_realy_smpt
 http://www.hackingyseguridad.com/
 #
 ###
-
