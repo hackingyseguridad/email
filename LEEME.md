@@ -10,6 +10,8 @@
 
 ### Email/SCAM/Spoofing/Phissing
 
+**Introduccion :** 
+
 La suplantación real de email, depende en gran medida de:
 
 1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio.
@@ -19,6 +21,9 @@ La suplantación real de email, depende en gran medida de:
 3.- De los filtros, de la política DMARK en el servidor de entrada en destino, con verificaciones falsas (permitir, cuarentena o denegar).
 
 El engaño y phissing en email, depende de los X-Mail, servidores fake o manipulacon de caracteres.
+
+**Proceso de envio de correo :**
+
 
 
 
