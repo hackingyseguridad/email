@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# hackingyseguridad.com
+
 HOST="localhost"
 PORT="25"
 
@@ -62,6 +64,20 @@ send_email_with_retry() {
 }
 
 send_email_with_retry
+
+echo
+echo
+mailq
+postqueue -f
+echo
+echo "borra la cola de envio .."
+echo
+echo "postsuper -d ALL "
+echo
+echo ".."
+echo "..."
+echo
+echo
 
 
 
