@@ -1,6 +1,7 @@
 # Ejemplo de configuracion servidor de correo postfix
-# con salida a internet
-# (2025) http://www.hackingyseguridad.com 
+# con salida a internet, para envio de email
+# (R) http://www.hackingyseguridad.com 2025
+# @antonio_taboada
 
 # /etc/postfix/main.cf
 # See /usr/share/postfix/main.cf.dist for a commented, more complete version
@@ -49,3 +50,4 @@ mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
 inet_protocols = all
+
