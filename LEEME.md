@@ -260,6 +260,9 @@ relayhost = IP_realy_smpt
 
 ***Microsoft Office 365 :***	smtp.office365.com:587	
 
+### Tracear un email con "ver correo original" en Gmail
+
+https://support.google.com/mail/answer/29436?hl=es
 
 ###
 #
