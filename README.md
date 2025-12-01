@@ -10,8 +10,6 @@
 
 ### Email/SCAM/Spoofing/Phissing 
 
-https://github.com/hackingyseguridad/email/blob/main/LEEME.md
-
 **Introduccion :** 
 
 La suplantación real de email, depende en gran medida de:
@@ -262,6 +260,7 @@ relayhost = IP_realy_smpt
 
 ***Microsoft Office 365 :***	smtp.office365.com:587	
 
+https://github.com/hackingyseguridad/email/blob/main/LEEME.md
 
 ###
 #
