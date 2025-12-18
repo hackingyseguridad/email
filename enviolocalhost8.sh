@@ -16,7 +16,7 @@ postsuper -d ALL
 
 send_email_swaks() {
     local from_email="notificaciones@google.com"
-    local to_email="antonio.taboada@gmail.com"
+    local to_email="antonio.taboada@telefonica.net"
 
     # Generar timestamp para DKIM
     local dkim_timestamp=$(date +%s)
