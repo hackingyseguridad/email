@@ -1,6 +1,16 @@
 #!/bin/bash
+##################################################
+# Prueba de concepto POC
+# suplanta a 
+# Añade cabeceras X-Mailer modificadas
+# Añade verificaciones SPF, DKIN, DMARK
+# (R) hackingyseguridad.com 2025
+# @antonio_taboada
+################################################
 
+# elimian correos encolados en el servidor SMTP
 postsuper -d ALL
+
 # requiere tener instlado smarks
 # simple script envia correo electronico de prueba con todas las verificaciones de seguridad suplantadas. ;) http://www.hackingyseguridad.com/
 # @antonio_taboada 2025
