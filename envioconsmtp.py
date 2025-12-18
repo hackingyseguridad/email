@@ -1,6 +1,6 @@
 #############################################################
 # Simple script en Python version 3
-# envvia email con SMTP, puerto 25, auth login, sin cifrado
+# envvia email con SMTP externo, auth login, sin cifrado! 
 # funciona para spoof basico!
 # http://wwww.hackingyseguridad.com 2025
 ############################################################
@@ -11,12 +11,12 @@ import time
 
 def send_smtp_commands():
     try:
-        # Conectar al servidor SMTP
+        # Conecta al servidor SMTP externo puerto 25/tcp
         print("Conectando a smtp.hackingyseguridad.com:25...")
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.connect(("smtp.telefonica.net", 25))
 
-        # Función para enviar comandos y recibir respuestas
+        # Función para enviar comandos SMTP y recibir respuestas
         def send_command(command=None):
             if command:
                 print(f"Enviando: {command}")
