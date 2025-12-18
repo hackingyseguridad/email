@@ -1,8 +1,9 @@
 #!/bin/bash
+
 postsuper -d ALL
-# requiere smarks
-# (r) hackingyseguridad.com 2025
-# @antonio_taboada
+# requiere tener instlado smarks
+# simple script envia correo electronico de prueba con todas las verificaciones de seguridad suplantadas. ;) http://www.hackingyseguridad.com/
+# @antonio_taboada 2025
 
 send_email_swaks() {
     local from_email="notificaciones@movistar.es"
