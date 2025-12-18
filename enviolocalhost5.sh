@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# Prueba de concepto
+# Prueba de concepto POC
 # suplanta a google[.]com 
 # Añade cabeceras X-Mailer modificadas
-# Añade verificaciones SPF, DJIN, DMARK
+# Añade fasifica verificaciones SPF, DJIN, DMARK
 # (R) hackingyseguridad.com 2025
 # @antonio_taboada
 
