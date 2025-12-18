@@ -1,11 +1,12 @@
 #!/bin/sh
-
+##############################################################
 # Prueba de concepto POC
-# suplanta a google[.]com 
+# suplanta a google[.]com   con envio por smtp en loclahost 
 # Añade cabeceras X-Mailer modificadas
-# Añade fasifica verificaciones SPF, DJIN, DMARK
+# Añade fasifica verificaciones SPF, DKIN, DMARK
 # (R) hackingyseguridad.com 2025
 # @antonio_taboada
+#############################################################
 
 # Elimina otros email en la cola de envio del servidor SMTP
 postsuper -d ALL
@@ -64,22 +65,8 @@ send_email_with_retry() {
             echo "QUIT"
         ) | telnet $HOST $PORT 2>&1 > /tmp/email_result.txt
 
-        # Verificar si fue exitoso
-        if grep -q "250 OK" /tmp/email_result.txt; then
-            echo "Email enviado exitosamente en el intento $attempt"
-            return 0
-        elif grep -q "Greylisting" /tmp/email_result.txt; then
-            echo "Greylisting detectado. Esperando $retry_delay segundos..."
-            if [ $attempt -lt $max_retries ]; then
-                sleep $retry_delay
-            fi
-        else
-            echo "Error en el envío. Ver /tmp/email_result.txt para detalles"
-        fi
-    done
-
-    echo "No se pudo enviar el email después de $max_retries intentos"
-    return 1
+        done
+        return 1
 }
 
 send_email_with_retry
@@ -105,5 +92,6 @@ sleep 3
 mailq
 echo "...."
 echo
+
 
 
