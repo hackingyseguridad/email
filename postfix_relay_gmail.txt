@@ -1,5 +1,7 @@
 ### Notas para la configuracion SMTP Postfix en localhost y envio de email desde consola Kali Linux
 ### Utilizar como relay el servidor de correo saliente de Google SMTP GMAIL
+### http://www.hackingyseguridad.com 2025
+### @antonio_taboada
 
 ### /etc/postfix/main.cf  ejemplo de fichero main.cf para envio con gmail
 
