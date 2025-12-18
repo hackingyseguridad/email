@@ -264,6 +264,10 @@ relayhost = IP_realy_smpt
 
 https://support.google.com/mail/answer/29436?hl=es
 
+### Temporal email para pruebas
+
+https://temp-mail.org/es/ 
+
 ###
 #
 http://www.hackingyseguridad.com/
