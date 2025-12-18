@@ -1,8 +1,10 @@
-#########################################
-# simpla prueba desde localhost de
-# envio desde consola Linux Debian
-# http://www.hackingyseguridad.com/
-########################################
-
 #!/bin/sh
-echo "This is the body of the email" | mail -s "This is the subject line" $your_email_address
+
+#############################################################
+# simpla prueba desde localhost de
+# envio sumple desde consola lina de comando conLinux Debian
+# Uso.: $ ./envioconsola.sh antonio.taboada@telefonica.net
+# http://www.hackingyseguridad.com/
+############################################################
+
+echo " Mensaje del correo electronico " | mail -s "Asunto del correo electronico " $your_email_address
