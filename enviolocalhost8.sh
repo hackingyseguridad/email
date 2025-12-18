@@ -64,4 +64,4 @@ echo ""
 sleep 3
 mailq
 echo "..."
-echo "POC completada - Correo suplantando a Google enviado"
+echo 
