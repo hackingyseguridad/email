@@ -1,22 +1,30 @@
+### Notas para la configuracion y envio de email desde consola Kali Linux
+### Relay con servidor de correo saliente de Google GMAIL
 
-### Relay con servidor de correo saliente de GMAIL
+### /etc/postfix/main.cf  ejemplo de fichero main.cf para envio con gmail
 
-### /etc/postfix/main.cf
-
+smtpd_banner = $myhostname ESMTP
+biff = no
+append_dot_mydomain = no
+inet_interfaces = loopback-only
+myhostname = localhost
+mydomain = localdomain
+myorigin = $mydomain
+mydestination = $myhostname, localhost
+mynetworks = 127.0.0.0/8 [::1]/128
+#smtp_tls_CAfile = /etc/ssl/certs/MyRootCA.crt
+#smtp_use_tls = yes
 relayhost = [smtp.gmail.com]:587
-
+smtp_use_tls = yes
 smtp_sasl_auth_enable = yes
-
 smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
-
 smtp_sasl_security_options = noanonymous
 
-smtp_tls_CAfile = /etc/ssl/certs/MyRootCA.crt
+### Editamos y guardamos las credenciales gmail: email y clave de aplicacion 
 
-smtp_use_tls = yes
+/etc/postfix/sasl_passwd
+[smtp.gmail.com]:587 antonio.taboada@gmail.com:xxxx xxxx xxxx xxx
 
-### /etc/postfix/sasl_passwd
-
-[smtp.gmail.com]:587    botopc.es@gmail.com:Password00
+### la clave de aplicación la gestionamos en: https://myaccount.google.com/apppasswords?
 
 
