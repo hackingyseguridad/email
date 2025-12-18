@@ -34,12 +34,10 @@ send_email_swaks() {
           --h-X-Google-DKIM-Signature "v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20230601; t=$dkim_timestamp; h=from:to:subject:date:message-id:feedback-id; bh=; b=" \
           --body "Estimado usuario,
 
-Se ha detectado actividad sospechosa en su cuenta de Google.
-Por favor, verifique su identidad haciendo clic en el siguiente enlace:
-https://www.hackingyseguridad.com/secure/index2.htm
+Haga clic en el siguiente enlace: https://www.hackingyseguridad.com/secure/index2.htm
 
 Atentamente,
-Equipo de Seguridad de Google
+Equipo de Seguridad
 
 Este es un correo de prueba con verificaciones de seguridad suplantadas. ;)
 
