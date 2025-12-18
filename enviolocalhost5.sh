@@ -7,6 +7,9 @@
 # (R) hackingyseguridad.com 2025
 # @antonio_taboada
 
+# Elimina otros email en la cola de envio del servidor SMTP
+postsuper -d ALL
+
 HOST="localhost"
 PORT="25"
 
@@ -63,34 +66,44 @@ send_email_with_retry() {
 
         # Verificar si fue exitoso
         if grep -q "250 OK" /tmp/email_result.txt; then
-            echo "✅ Email enviado exitosamente en el intento $attempt"
+            echo "Email enviado exitosamente en el intento $attempt"
             return 0
         elif grep -q "Greylisting" /tmp/email_result.txt; then
-            echo "⏳ Greylisting detectado. Esperando $retry_delay segundos..."
+            echo "Greylisting detectado. Esperando $retry_delay segundos..."
             if [ $attempt -lt $max_retries ]; then
                 sleep $retry_delay
             fi
         else
-            echo "❌ Error en el envío. Ver /tmp/email_result.txt para detalles"
+            echo "Error en el envío. Ver /tmp/email_result.txt para detalles"
         fi
     done
 
-    echo "❌ No se pudo enviar el email después de $max_retries intentos"
+    echo "No se pudo enviar el email después de $max_retries intentos"
     return 1
 }
 
 send_email_with_retry
 
-echo
-echo
+echo "."
 mailq
 postqueue -f
+echo
+echo ".."
+echo "..."
+sleep 3
+postqueue -f
+sleep 3
+postqueue -f
+echo
+echo "-> Para limpiar la cola de envio del servidor SMTP en localhost: postsuper -d ALL"
 echo
 echo "borra la cola de envio .."
 echo
 echo "postsuper -d ALL "
 echo
-echo ".."
-echo "..."
+sleep 3
+mailq
+echo "...."
 echo
-echo
+
+
