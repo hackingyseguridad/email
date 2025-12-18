@@ -1,5 +1,5 @@
-### Notas para la configuracion y envio de email desde consola Kali Linux
-### Relay con servidor de correo saliente de Google GMAIL
+### Notas para la configuracion SMTP Postfix en localhost y envio de email desde consola Kali Linux
+### Utilizar como relay el servidor de correo saliente de Google SMTP GMAIL
 
 ### /etc/postfix/main.cf  ejemplo de fichero main.cf para envio con gmail
 
@@ -14,11 +14,12 @@ mydestination = $myhostname, localhost
 mynetworks = 127.0.0.0/8 [::1]/128
 #smtp_tls_CAfile = /etc/ssl/certs/MyRootCA.crt
 #smtp_use_tls = yes
-relayhost = [smtp.gmail.com]:587
-smtp_use_tls = yes
-smtp_sasl_auth_enable = yes
-smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
-smtp_sasl_security_options = noanonymous
+relayhost = [smtp.gmail.com]:587            # - Usa Gmail como relay
+smtp_use_tls = yes                          # - Habilita TLS
+smtp_sasl_auth_enable = yes                  # - Habilita autenticación
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd      # ← Credenciales
+smtp_sasl_security_options = noanonymous                   # ← Sin anónimos
+
 
 ### Editamos y guardamos las credenciales gmail: email y clave de aplicacion 
 
