@@ -124,8 +124,13 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 
 **Importante:** Los tres trabajan juntos para mejorar la deliverabilidad y prevenir spoofing/phishing.
 
+**Limitaciones: ** 
 
+Hotmail/Outlook es muy estricto: Requiere autenticación completa (SPF+DKIM+DMARC), para superar los filtros de entrada
 
+IP residencial: Las IP de casa suelen estar bloqueadas para envío SMTP, https://mxtoolbox.com/blacklists.aspx
+
+El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos reputación
 
 
 ### Suplantar dirección de email, correo electronico (tecnicas SCAM/Spoofing/Phissing).
