@@ -8,7 +8,7 @@
 ╚══════╝╚═╝      ╚═════╝  ╚═════╝ ╚═╝         ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
 ```
 
-### Email/SCAM/Spoofing/Phissing 
+### Email/SCAM/Spoofing/Phissing
 
 **Introduccion :** 
 
@@ -19,6 +19,8 @@ La suplantación real de email, depende en gran medida de:
 2.- De la posibilidad de modificar el valor del campo FRORM del email origen; El servidor de correo destino no siempre verifica la direccion email origen; 
 
 3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas.
+
+4.- De Los DNS resolver, utilizados!  p.ej. algunos si hacen las verificaciones en los auth del dominio, pero otros DNS resolver no ..
 
 El engaño y phissing en email, depende de: las cabeceras X-Mail, servidores fake o manipulacon visual de caracteres.
 
@@ -124,8 +126,13 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 
 **Importante:** Los tres trabajan juntos para mejorar la deliverabilidad y prevenir spoofing/phishing.
 
+**Limitaciones: ** 
 
+Google/Gmail, Hotmail/Outlook: son mas estrictos: Requiere autenticación completa (SPF+DKIM+DMARC), para superar los filtros de entrada y que se entregue el correo.
 
+IP residencial: Las IP de casa suelen estar bloqueadas para envío SMTP, https://mxtoolbox.com/blacklists.aspx
+
+El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos reputación
 
 
 ### Suplantar dirección de email, correo electronico (tecnicas SCAM/Spoofing/Phissing).
@@ -260,12 +267,21 @@ relayhost = IP_realy_smpt
 
 ***Microsoft Office 365 :***	smtp.office365.com:587	
 
-https://github.com/hackingyseguridad/email/blob/main/LEEME.md
+### Tracear un email con "ver correo original" en Gmail
+
+https://support.google.com/mail/answer/29436?hl=es
+
+### Temporal email para pruebas
+
+https://temp-mail.org/es/ 
 
 ###
 #
 http://www.hackingyseguridad.com/
 #
 ###
+
+
+
 
 
