@@ -1,5 +1,5 @@
 ############################################################
-# envio basico de email, python3 
+# envio basico de email, python3
 # sin verificaciones de seguridad SPF, DMARK, DKIN,
 # envio por locakhost puerto 25 TCP !! servidor SMTP local
 # (R) hackingyseguridad.com 2025
@@ -15,8 +15,8 @@ try:
     smtp_port = 25
 
     # Datos del remitente y destinatario
-    remite = "hackingyseguridad@hackingyseguridad.com"
-    destinatario = "antonio.taboada@gmail.com"
+    remite = "notificaciones@google.com"
+    destinatario = "antonio.taboada@telefonica.net"
 
     # Crear el mensaje
     mensaje = MIMEMultipart()
