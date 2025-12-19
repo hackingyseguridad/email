@@ -5,7 +5,7 @@
 # simula cabeceras X-Mailer modificadas
 # simula verificaciones SPF, DKIN, DMARK
 # (R) hackingyseguridad.com 2025
-# @antonio_taboada
+# @antonio_taboada solo con fines educativos
 ################################################
 #
 
