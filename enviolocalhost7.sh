@@ -38,7 +38,7 @@ mailq
 echo "..."
 echo
 
-echo "Ver ultimos logs postfix : "
+echo "Ver ultimos logs Postfix . Vemos si nuestra IP esta lista negra de SPAM : "
 echo "========================================================================"
     if command -v journalctl &>/dev/null; then
         journalctl -u postfix -n 20 --since "1 minute ago" 2>/dev/null || \
