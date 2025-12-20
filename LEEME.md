@@ -130,7 +130,7 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 
 Google/Gmail, Hotmail/Outlook: son mas estrictos: Requiere autenticación completa (SPF+DKIM+DMARC), para superar los filtros de entrada y que se entregue el correo.
 
-IP residencial: Las IP de casa suelen estar bloqueadas para envío SMTP, https://mxtoolbox.com/blacklists.aspx
+IP residencial: Las IP de casa suelen estar bloqueadas para envío SMTP: https://check.spamhaus.org/  https://mxtoolbox.com/blacklists.aspx
 
 El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos reputación
 
