@@ -6,6 +6,7 @@
 # simula verificaciones SPF, DKIN, DMARK
 # (R) hackingyseguridad.com 2025
 # @antonio_taboada solo con fines educativos
+# Puede dar ERROR, que tiene múltiples encabezados Message-ID en el mismo correo. Violación de la RFC 5322 - postix incluye un message-ID →otro servicio añade otro = conflicto
 ################################################
 #
 
