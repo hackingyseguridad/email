@@ -245,7 +245,7 @@ gnutls-cli mail.hackingyseguridad.com -p 25
 
 ***Postfx como servidor SMTP***
 
-[mail.cf.txt](https://github.com/hackingyseguridad/email/blob/main/mail.cf.txt)
+[main.cf](https://github.com/hackingyseguridad/email/blob/main/postfix_conf_localhost.txt)
 
 ***Agregar SMTP relay de  gmail Google a postfix:***
 
