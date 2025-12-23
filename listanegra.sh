@@ -29,5 +29,6 @@ for LIST in zen.spamhaus.org sbl.spamhaus.org xbl.spamhaus.org pbl.spamhaus.org;
 done
 echo "------------------------"
 echo "https://check.spamhaus.org/query/ip/$IP"
-
+echo "https://multirbl.valli.org/lookup/$IP"
+echo 
 
