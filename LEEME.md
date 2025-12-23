@@ -253,7 +253,7 @@ vim /etc/postfix/main.cf
 
 relayhost = IP_realy_smpt
 
-https://github.com/hackingyseguridad/email/blob/main/postfix_conf_relay_gmail.txt 
+[main.cf gmail relay](https://github.com/hackingyseguridad/email/blob/main/postfix_conf_relay_gmail.txt)
 
 ### Proveedores gratuitos de envio de email.
 
