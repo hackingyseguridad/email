@@ -20,7 +20,7 @@ La suplantación real de email, depende en gran medida de:
 
 3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas.
 
-4.- De Los DNS resolver, utilizados!  p.ej. algunos si hacen las verificaciones en los auth del dominio, pero otros DNS resolver no ..
+4.- De Los DNS resolver, utilizados!  p.ej. algunos si hacen las verificaciones en los auth del dominio, pero otros DNS resolver no.
 
 El engaño y phissing en email, depende de: las cabeceras X-Mail, servidores fake o manipulacon visual de caracteres.
 
@@ -245,7 +245,7 @@ gnutls-cli mail.hackingyseguridad.com -p 25
 
 ***Postfx como servidor SMTP***
 
-[mail.cf.txt](https://github.com/hackingyseguridad/email/blob/main/mail.cf.txt)
+[main.cf](https://github.com/hackingyseguridad/email/blob/main/postfix_conf_localhost.txt)
 
 ***Agregar SMTP relay de  gmail Google a postfix:***
 
@@ -253,7 +253,7 @@ vim /etc/postfix/main.cf
 
 relayhost = IP_realy_smpt
 
-[postfix_relay_gmail.txt](https://github.com/hackingyseguridad/email/blob/main/postfix_relay_gmail.txt)
+[main.cf gmail relay](https://github.com/hackingyseguridad/email/blob/main/postfix_conf_relay_gmail.txt)
 
 ### Proveedores gratuitos de envio de email.
 
@@ -280,8 +280,4 @@ https://temp-mail.org/es/
 http://www.hackingyseguridad.com/
 #
 ###
-
-
-
-
 
