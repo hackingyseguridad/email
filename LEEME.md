@@ -18,7 +18,7 @@ La suplantación real de email, depende en gran medida de:
 
 2.- De la posibilidad de modificar el valor del campo FRORM del email origen; El servidor de correo destino no siempre verifica la direccion email origen; 
 
-3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas.
+3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas. De las listas negras IPv4, en IPv6 no hay blaklist!
 
 4.- De Los DNS resolver, utilizados!  p.ej. algunos si hacen las verificaciones en los auth del dominio, pero otros DNS resolver no.
 
