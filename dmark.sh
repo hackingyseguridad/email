@@ -58,10 +58,9 @@ check_file() {
 
 main() {
     # Mostrar banner
-    echo "========================================="
-    echo "    Verificador DMARC - SpoofThatMail"
-    echo "    Versión simplificada"
-    echo "========================================="
+    echo "==============================================="
+    echo "   Verificador DMARC - hackingyseguridad.com   "
+    echo "==============================================="
     echo ""
 
     # Verificar argumentos
