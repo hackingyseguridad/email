@@ -18,3 +18,4 @@ service postfix restart
 echo
 echo "..."
 echo
+cat /etc/postfix/main.cf
