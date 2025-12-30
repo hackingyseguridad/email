@@ -4,6 +4,8 @@
 # hackingyseguridad.com
 # @antonio_taboada
 
+apt-get install openssl telnet expect
+
 chmod 777 *
 
 echo
