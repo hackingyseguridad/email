@@ -27,6 +27,10 @@ send_email_swaks() {
 send_email_swaks
 echo ""
 echo "Revisando cola de correo..."
+sleep 3
+mailq
+echo " .." 
+sleep 2
 postqueue -p
 echo ""
 echo "=== Últimos logs de Postfix ==="
