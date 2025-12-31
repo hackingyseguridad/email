@@ -1,4 +1,14 @@
+#!/bin/bash
+##################################################
+# Prueba de concepto POC, requiere smarks
+# suplanta a google.com
+# simula cabeceras X-Mailer modificadas
+# simula verificaciones SPF, DKIN, DMARK
+# (R) hackingyseguridad.com 2025
+# @antonio_taboada
+################################################
 
+# Borra cola de correos en SMTP localhost
 postsuper -d ALL
 
 send_email() {
@@ -27,7 +37,7 @@ X-Mailer: Google Mail
 X-Priority: 1
 Importance: high
 
-hola, esto es una prueba de envio de correo electronico
+hola, esto es una prueba de envio de correo electronico !!! en texto plano
 
 un saludo,
 
@@ -35,4 +45,6 @@ http://www.hackingyseguridad.com/"
 }
 
 send_email
+
+
 
