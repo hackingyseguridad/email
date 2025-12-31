@@ -47,4 +47,30 @@ http://www.hackingyseguridad.com/"
 send_email
 
 
+echo
+postqueue -f
+echo
+echo "-> Para limpiar la cola de envio del servidor SMTP en localhost: postsuper -d ALL"
+echo
+sleep 3
+mailq
+echo "..."
+echo
+
+echo "Ver ultimos logs Postfix . Vemos si nuestra IP esta lista negra de SPAM : "
+echo "========================================================================"
+    if command -v journalctl &>/dev/null; then
+        journalctl -u postfix -n 20 --since "1 minute ago" 2>/dev/null || \
+        tail -20 /var/log/mail.log 2>/dev/null || \
+        echo "[!] No se pudieron leer los logs. Revisa manualmente."
+    else
+        tail -30 /var/log/mail.log 2>/dev/null || \
+        echo "[!] Archivo de logs no accesible."
+    fi
+
+    echo "...."
+
+
+
+
 
