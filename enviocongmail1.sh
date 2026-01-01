@@ -3,6 +3,7 @@
 # Prueba de concepto POC, envio bash shell gmail
 # Script en Bash Shell 1.0 usando curl con heredo
 # Suplanta email, Spoff en el Form a google.com
+# El envelope sender (MAIL FROM en SMTP gmail) siempre será la cuenta real
 # (R) hackingyseguridad.com 2026
 # @antonio_taboada
 ################################################
