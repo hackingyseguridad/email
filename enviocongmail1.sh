@@ -12,11 +12,11 @@ real_sender="antonio.taboada@gmail.com"
 gapp="satk lnxi lpti vavv"
 
 # Cuenta suplantada que se muestra como remitente (spoofing)
-visible_sender="notificaciones@google.com"
-sub="notificaciones@google.com <notificaciones@google.com>"
+visible_sender="notificaciones@google.com <notificaciones@google.com>"
+sub="Notificaciones Google <notificaciones@google.com>"
 
 # Cuenta de destino:
-receiver="antonio.taboada@gmail.com"
+receiver="antonio.taboadallufriu@telefonica.com"
 
 body="prueba ed envio,
 
@@ -51,3 +51,5 @@ else
     echo "Error!"
     echo "Respuesta: $response"
 fi
+
+
