@@ -1,6 +1,6 @@
 # Ejemplo de configuracion servidor de correo Postfix mas asgresiva
 # con salida a internet, para envio de email mas permisivo aun !
-# (R) http://www.hackingyseguridad.com 2025
+# (R) http://www.hackingyseguridad.com 2026
 # @antonio_taboada
 
 # /etc/postfix/main.cf
@@ -54,3 +54,8 @@ mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
 inet_protocols = all
+
+smtpd_sender_restrictions = 
+disable_vrfy_command = yes
+
+
