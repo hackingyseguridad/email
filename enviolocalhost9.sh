@@ -55,7 +55,7 @@ postqueue -f
 echo
 echo "-> Para limpiar la cola de envio del servidor SMTP en localhost: postsuper -d ALL"
 echo
-sleep 3
+sleep 5
 mailq
 echo "..."
 echo
