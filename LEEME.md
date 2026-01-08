@@ -158,6 +158,15 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 **10º.- Uso de un servidor SMTP, que este en el SPF de otros dominios**, comparte infraestructura e IPs permitidas (diseño de la arquitectura de red).
 
+CONCLUSION: 
+
+El exito del envio de correo depende de:
+
+1º.- en origen: eliminar restricciones en la conf SMTP y como se construye el correo/Email.
+
+2º.- en destino: filtros y niveles de comrprovacion de las verificaciones en la entrada del email. p. ej.: gmail, hotmail, protonmail,..:  tienen nivele altos para evitar SPAM) 
+- En estos casos utilizando su mismo SMTP para enviar email, podremos modificar el FROM y simular en la descripciñon del email origen la cuenta suplantada.  
+- Otros muchos proveedores de correo sin niveles de comprobacion en los filtros de entrada, mas laxos para rececpcion, hacen facil el SPAM/Phissing email, desde SMTP propios o de terceros!
 
 ### Envio basico de email con telnet o netcat, conectado a SMTP
 
