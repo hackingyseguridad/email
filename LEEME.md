@@ -14,15 +14,15 @@
 
 La suplantación real de email, depende en gran medida de:
 
-1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio.
+1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio, de como se construye el correo, cabeceras X Mailer y si la IP origen esta ya en lista negra de SPAM.
 
 2.- De la posibilidad de modificar el valor del campo FRORM del email origen; El servidor de correo destino no siempre verifica la direccion email origen; 
 
-3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas. De las listas negras IPv4, en IPv6 no hay blacklist!
+3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas. De las cabeceras X Mailer y si la IP origen esta en listas negras IPv4, - en IPv6 no hay blacklist!
 
 4.- De Los DNS resolver, utilizados!  p.ej. algunos si hacen las verificaciones en los auth del dominio, pero otros DNS resolver no.
 
-El engaño y phissing en email, depende de: las cabeceras X-Mail, servidores fake o manipulacon visual de caracteres.
+El engaño y phissing en email, depende de: las cabeceras X-Mail, servidores fake o manipulacon visual de caracteres, formando palabras parecidos al suplandado.
 
 **Proceso de envio de correo :**
 
