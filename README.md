@@ -166,6 +166,12 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 - En estos casos utilizando su mismo SMTP para enviar email, podremos modificar el FROM y simular en la descripciñon del email origen la cuenta de email suplantada.  
 - Otros muchos proveedores de correo sin niveles de comprobacion en los filtros de entrada, mas laxos para rececpcion, hacen facil el SPAM/Phissing email, desde SMTP propios o de terceros!
 
+### ENVIO: Scripts de composición del correo eletronico y envio:
+
+1º.- con servidor SMTP de terceros ( smtp.gmail, otros,.. )
+
+2º.- con un servidor propio SMTP "localhost", DNS propio!
+
 ### Envio basico de email con telnet o netcat, conectado a SMTP
 
 # 
