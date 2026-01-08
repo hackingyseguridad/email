@@ -14,15 +14,15 @@
 
 La suplantación real de email, depende en gran medida de:
 
-1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio.
+1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio, de como se construye el correo, cabeceras X Mailer y si la IP origen esta ya en lista negra de SPAM.
 
 2.- De la posibilidad de modificar el valor del campo FRORM del email origen; El servidor de correo destino no siempre verifica la direccion email origen; 
 
-3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas. De las listas negras IPv4, en IPv6 no hay blacklist!
+3.- De los filtros, de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsas. De las cabeceras X Mailer y si la IP origen esta en listas negras IPv4, - en IPv6 no hay blacklist!
 
 4.- De Los DNS resolver, utilizados!  p.ej. algunos si hacen las verificaciones en los auth del dominio, pero otros DNS resolver no.
 
-El engaño y phissing en email, depende de: las cabeceras X-Mail, servidores fake o manipulacon visual de caracteres.
+El engaño y phissing en email, depende de: las cabeceras X-Mail, servidores fake o manipulacon visual de caracteres, formando palabras parecidos al suplandado.
 
 **Proceso de envio de correo :**
 
@@ -158,6 +158,13 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 **10º.- Uso de un servidor SMTP, que este en el SPF de otros dominios**, comparte infraestructura e IPs permitidas (diseño de la arquitectura de red).
 
+## CONCLUSION: El exito del envio de correo depende de:
+
+1º.- en origen: eliminar restricciones en la configuracion SMTP y como se construye el correo/Email.
+
+2º.- en destino: filtros y niveles de comrprovacion de las verificaciones en la entrada del email. p. ej.: gmail, hotmail, protonmail,..: tienen nivele altos para evitar SPAM;  
+- En estos casos utilizando su mismo SMTP para enviar email, podremos modificar el FROM y simular en la descripciñon del email origen la cuenta de email suplantada.  
+- Otros muchos proveedores de correo sin niveles de comprobacion en los filtros de entrada, mas laxos para rececpcion, hacen facil el SPAM/Phissing email, desde SMTP propios o de terceros!
 
 ### Envio basico de email con telnet o netcat, conectado a SMTP
 
