@@ -158,7 +158,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 **10º.- Uso de un servidor SMTP, que este en el SPF de otros dominios**, comparte infraestructura e IPs permitidas (diseño de la arquitectura de red).
 
-## CONCLUSION: El exito del envio de correo depende de:
+### CONCLUSION: El exito del envio de correo depende de:
 
 1º.- en origen: eliminar restricciones en la configuracion SMTP y como se construye el correo/Email.
 
