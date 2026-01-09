@@ -165,7 +165,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 1º.- en origen: eliminar restricciones en la configuracion SMTP y como se construye el correo/Email.
 
 2º.- en destino: filtros y niveles de comrprovacion de las verificaciones en la entrada del email. p. ej.: gmail, hotmail, protonmail,..: tienen nivele altos para evitar SPAM;  
-- En estos casos utilizando su mismo SMTP para enviar email, podremos solo modificar el FROM y simular en el nombre de la cuenta para mostrar en el "display-name" del email origen con la cuenta de email suplantada. Esos SMTP siempre imprimen el nombre real del email utilizada autenticado!   
+- En estos casos utilizando su mismo SMTP para enviar email, podremos solo modificar el FROM y simular en el nombre de la cuenta para mostrar suplantada en el "display-name" Nombre suplantado para mostrar <suplantada@suplantado.com> , porque estos SMTP suelen imprimir siempre la cuenta de email real utilizada, autenticada!   
 - Otros muchos proveedores de correo sin niveles de comprobacion en los filtros de entrada, mas laxos para rececpcion, hacen facil el SPAM/Phissing email, desde SMTP propios o de terceros!
 
 ### ENVIO: Scripts de composición del correo eletronico y envio:
@@ -295,4 +295,3 @@ https://temp-mail.org/es/
 http://www.hackingyseguridad.com/
 #
 ###
-
