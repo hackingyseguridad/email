@@ -14,7 +14,7 @@ real_sender="antonio.taboada@gmail.com"
 gapp="satk lnxi lpti vav"
 
 # Cuenta suplantada que se muestra como remitente (spoofing)  
-visible_sender="notificaciones@google.com <notificaciones@google.com>"
+display_name="notificaciones@google.com <notificaciones@google.com>"
 # Display-name , es aqui donde haceoms la simulacion  de otro origen
 
 sub="Asunto del email  "
@@ -35,7 +35,7 @@ response=$(curl -v --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
     --mail-rcpt "$receiver" \
     --user "$real_sender:$gapp" \
     -T /dev/stdin 2>&1 <<EOF
-From: $visible_sender
+From: $display_name
 To: $receiver
 Subject: $sub
 Date: $(date -R)
