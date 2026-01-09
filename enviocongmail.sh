@@ -12,7 +12,8 @@ sub="prueba de envio"
 body="hola!!, prueba de envio .. mas info en https://github.com/hackingyseguridad/email"
 
 # Display name para el remitente ,puedes modificarlo)!"display-name" y poner un nombre real o suplantado para mostrar y cuenta email <suplantada@suplantado.com> 
-display_name="Antonio Taboada <antonio.taboada@google.com"
+display_name="notificaciones <notificaciones@google.com> "
+#  AQUI es donde simumulamos suplantacion
 
 curl -v --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
     --mail-from "$sender" \
@@ -23,6 +24,10 @@ curl -v --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
 From: $display_name <$sender>
 To: $receiver
 Subject: $sub
+Date: $(date -R)
+Message-ID: <$(date +%s%N)@google.com>
+X-Google-Notification: 1
+X-Priority: 1
 
 $body
 EOF
@@ -32,3 +37,4 @@ if [ $? -eq 0 ]; then
 else
     echo "error ...!"
 fi
+
