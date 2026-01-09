@@ -10,7 +10,7 @@
 
 # Cuenta real autenticación SMP
 real_sender="antonio.taboada@gmail.com"
-gapp="satk lnxi lpti vavv"
+gapp="satk lnxi lpti vav"
 
 # Cuenta suplantada que se muestra como remitente (spoofing)  
 visible_sender="notificaciones@google.com <notificaciones@google.com>"
