@@ -1,9 +1,6 @@
 #!/bin/sh
 ##################################################
 # Prueba de concepto POC, envio bash shell gmail
-# suplanta a google.com
-#
-#
 # (R) hackingyseguridad.com 2026
 # @antonio_taboada
 ################################################
