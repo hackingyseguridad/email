@@ -7,12 +7,12 @@
 
 sender="antonio.taboada@gmail.com"
 receiver="antonio.taboada@telefonica.net"
-gapp="satk lnxi lpti vavv"
+gapp="satk lnxi lpti vav"
 sub="prueba de envio"
 body="hola!!, prueba de envio .. mas info en https://github.com/hackingyseguridad/email"
 
-# Display name para el remitente (puedes personalizarlo)
-display_name="Antonio Taboada "
+# Display name para el remitente ,puedes modificarlo)!"display-name" y poner un nombre real o suplantado para mostrar y cuenta email <suplantada@suplantado.com> 
+display_name="Antonio Taboada <antonio.taboada@google.com"
 
 curl -v --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
     --mail-from "$sender" \
