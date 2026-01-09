@@ -9,13 +9,15 @@
 ################################################
 
 # Cuenta real autenticación SMP
+
 real_sender="antonio.taboada@gmail.com"
 gapp="satk lnxi lpti vav"
 
 # Cuenta suplantada que se muestra como remitente (spoofing)  
 visible_sender="notificaciones@google.com <notificaciones@google.com>"
-# Display-name
-sub="Notificaciones Google <notificaciones@google.com>"
+# Display-name , es aqui donde haceoms la simulacion  de otro origen
+
+sub="Asunto del email  "
 
 # Cuenta de destino:
 receiver="antonio.taboadallufriu@telefonica.com"
