@@ -88,6 +88,8 @@ Tipos principales de registros DNS:
 
 **SPF, DKIM y DMARC** sirven para autentificar a los remitentes de correo electrónico y cerificar que los correos electrónicos proceden del dominio del que dicen proceder. Estos tres métodos de autenticación son importantes para evitar el spam, los ataques de phishing y otros riesgos de seguridad 
 
+<img style="float:left" alt="spf " src="https://github.com/hackingyseguridad/email/blob/main/spf.png">
+
 **SPF**, (Sender Policy Framework) es un tipo de resgistro en DNS autoritativo del dominio, donde se especifica los hostname o IP de los servidores de correo saliente, SMTP autorizados, para enviar con el nombre de ese dominio.
 
   $dig mx hackingyseguridad.com +short
@@ -163,7 +165,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 1º.- en origen: eliminar restricciones en la configuracion SMTP y como se construye el correo/Email.
 
 2º.- en destino: filtros y niveles de comrprovacion de las verificaciones en la entrada del email. p. ej.: gmail, hotmail, protonmail,..: tienen nivele altos para evitar SPAM;  
-- En estos casos utilizando su mismo SMTP para enviar email, podremos modificar el FROM y simular en la descripciñon del email origen la cuenta de email suplantada.  
+- En estos casos utilizando su mismo SMTP para enviar email, podremos solo modificar el FROM y simular en el nombre de la cuenta para mostrar en el "display-name" del email origen con la cuenta de email suplantada. Esos SMTP siempre imprimen el nombre real del email utilizada autenticado!   
 - Otros muchos proveedores de correo sin niveles de comprobacion en los filtros de entrada, mas laxos para rececpcion, hacen facil el SPAM/Phissing email, desde SMTP propios o de terceros!
 
 ### ENVIO: Scripts de composición del correo eletronico y envio:
@@ -293,3 +295,4 @@ https://temp-mail.org/es/
 http://www.hackingyseguridad.com/
 #
 ###
+
