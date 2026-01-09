@@ -32,6 +32,7 @@ class AdvancedEmailSpoofing:
 
         # Email que quieres suplantar
         self.spoofed_email = "hackingyseguridad@hackingyseguridad.com"
+        # Display-name
         self.spoofed_name = "Departamento de Seguridad Hacking <hackingyseguridad@hackingyseguridad.com>"
 
         # Destinatario
