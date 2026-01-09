@@ -9,7 +9,7 @@
 ################################################################################
 
 real_sender="antonio.taboada@gmail.com"
-gapp="satk lnxi lpti vavv"
+gapp="satk lnxi lpti vav"
 
 # simula suplantar en display_name , nombre que se muestra como remitente
 display_name="notificaciones@google.com <notificaciones@google.com>"
