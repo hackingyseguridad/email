@@ -1,8 +1,8 @@
 ##############################################################################
 # Simple Script en Python version 3, v1: Puerto 465 con SSL inmediato
 # envia correo con smtp.mail.com y spoof origen, en la descripcion del FORM:
-# simple Spoffing modificando el FORM del email
-# (R) hackingyseguridad.com 2025
+# simple simulacion del email de origen , en "display name" nombre a mostrar
+# (R) hackingyseguridad.com 2026
 ##############################################################################
 
 import smtplib
