@@ -11,13 +11,16 @@ gapp="satk lnxi lpti vavv"
 sub="prueba de envio"
 body="hola!!, prueba de envio .. mas info en https://github.com/hackingyseguridad/email"
 
+# Display name para el remitente (puedes personalizarlo)
+display_name="Antonio Taboada "
+
 curl -v --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
     --mail-from "$sender" \
     --mail-rcpt "$receiver" \
     --user "$sender:$gapp" \
     --mail-rcpt-allowfails \
     -T- <<EOF
-From: $sender
+From: $display_name <$sender>
 To: $receiver
 Subject: $sub
 
@@ -29,4 +32,3 @@ if [ $? -eq 0 ]; then
 else
     echo "error ...!"
 fi
-
