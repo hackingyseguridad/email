@@ -1,40 +1,22 @@
 #!/bin/sh
-##################################################
-# Prueba simple de envio en bash shell con gmail
+#####################################################
+# Prueba simple de envio con gmail en bash con swaks
 # (R) hackingyseguridad.com 2026
 # antonio_taboada
-################################################
-
-sender="antonio.taboada@gmail.com"
-receiver="antonio.taboada@telefonica.net"
-gapp="satk lnxi lpti vav"
-sub="prueba de envio"
-body="hola!!, prueba de envio .. mas info en https://github.com/hackingyseguridad/email"
-
-# Display name para el remitente ,puedes modificarlo)!"display-name" y poner un nombre real o suplantado para mostrar y cuenta email <suplantada@suplantado.com> 
-display_name="notificaciones <notificaciones@google.com> "
-#  AQUI es donde simumulamos suplantacion
-
-curl -v --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
-    --mail-from "$sender" \
-    --mail-rcpt "$receiver" \
-    --user "$sender:$gapp" \
-    --mail-rcpt-allowfails \
-    -T- <<EOF
-From: $display_name <$sender>
-To: $receiver
-Subject: $sub
-Date: $(date -R)
-Message-ID: <$(date +%s%N)@google.com>
-X-Google-Notification: 1
-X-Priority: 1
-
-$body
-EOF
-
-if [ $? -eq 0 ]; then
-    echo "enviado ...!"
-else
-    echo "error ...!"
-fi
-
+#####################################################
+#!/bin/sh
+real_sender="antonio.taboada@gmail.com"
+gapp_password="satk lnxi lpti vav"
+to_email="antonio.taboada@telefonica.net"
+subject="Asunto del email"
+body="Texo del correo "
+swaks \
+    --to "$to_email" \
+    --from "$real_sender" \
+    --server smtp.gmail.com:587 \
+    --auth LOGIN \
+    --auth-user "$real_sender" \
+    --auth-password "$gapp_password" \
+    --tls \
+    --h-Subject: "$subject" \
+    --body "$body"
