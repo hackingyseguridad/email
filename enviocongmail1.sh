@@ -20,7 +20,7 @@ display_name="notificaciones@google.com <notificaciones@google.com>"
 sub="Asunto del email  "
 
 # Cuenta de destino:
-receiver="antonio.taboadallufriu@telefonica.com"
+receiver="antonio.taboada@telefonica.net"
 
 body="prueba ed envio,
 
