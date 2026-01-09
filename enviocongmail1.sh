@@ -12,8 +12,9 @@
 real_sender="antonio.taboada@gmail.com"
 gapp="satk lnxi lpti vavv"
 
-# Cuenta suplantada que se muestra como remitente (spoofing)
+# Cuenta suplantada que se muestra como remitente (spoofing)  
 visible_sender="notificaciones@google.com <notificaciones@google.com>"
+# Display-name
 sub="Notificaciones Google <notificaciones@google.com>"
 
 # Cuenta de destino:
