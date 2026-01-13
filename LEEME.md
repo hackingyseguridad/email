@@ -10,15 +10,6 @@
 
 ### Email/SCAM/Spoofing/Phissing
 
-posibles formas, situaciones en las que sí se puede hacer suplantación:
-
-1º.- Dominios sin verificaciones SPF, DMARK, DKIM configuradas en sus DNS auth  - p.ej,  @google.com
-
-2º.- Sin filtros de entrada!, configuración laxa sin comprobar verificaciones o listas negras IP  en la recpeción del correo eletronico;
-     spoffing email, enviando desde SMTP de tercerlos ó un SMTP postfix propio en localhost, montado sobre Kali Linux, con scripts en bash shell, python
-
-3º,. Engaño usando el campo “display-name” como simulación visual del email origen cuando en destino hay niveles maximos de comrprovacion de las verificaciones de entrada y filtrado del email. p. ej.: gmail, hotmail, yahoo, protonmail,.
-
 **Introduccion :** 
 
 La suplantación real de email, depende en gran medida de:
