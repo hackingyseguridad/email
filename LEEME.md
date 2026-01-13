@@ -90,18 +90,6 @@ Tipos principales de registros DNS:
 
 **SPF**, (Sender Policy Framework) es un tipo de resgistro en DNS autoritativo del dominio, donde se especifica los hostname o IP de los servidores de correo saliente, SMTP autorizados, para enviar con el nombre de ese dominio.
 
-  $dig mx hackingyseguridad.com +short
-
-  $nslookup -type=txt hackingyseguridad.com 
-
-  $dig TXT hackingyseguridad.com | grep "spf
-
-  $dig txt hackingyseguridad.com +short
-
-  $nslookup -type=txt hackingyseguridad.com
-
-  $dig spf1 hackingyseguridad.com +short
-
 ***DKIN***, (DomainKeys Identified Mail) protocolo de identidad, integridad que inserta firma cifrada en la cabecera del email, que certifica al destinatario que es veridico.
 
 <img style="float:left" alt="Proceso de comprobacion del correo electronio " src="https://github.com/hackingyseguridad/email/blob/main/correo.png">
@@ -128,12 +116,11 @@ DMARC tiene 3 niveles de seguridad: 1º.- (No hacer nada / monitorizar) 2º.- (P
 
 **Limitaciones: ** 
 
-Google/Gmail, Hotmail/Outlook: son mas estrictos: Requiere autenticación completa (SPF+DKIM+DMARC), para superar los filtros de entrada y que se entregue el correo.
+Google/Gmail, Hotmail/Outlook p.ej: son mas estrictos: Requiere autenticación completa (SPF+DKIM+DMARC), para superar los filtros de entrada y que se entregue el correo.
 
 IP residencial: Las IP de casa suelen estar bloqueadas para envío SMTP: https://check.spamhaus.org/  https://mxtoolbox.com/blacklists.aspx
 
 El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos reputación
-
 
 ### Suplantar dirección de email, correo electronico . 10 tecnicas de SCAM/Spoofing/Phissing.
 
@@ -175,99 +162,11 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 2º.- con un servidor propio SMTP "localhost", DNS propio!
 
-### Envio basico de email con telnet o netcat, conectado a SMTP
-
-# 
-
-nc -v smtp.hackingyseguridad.com 25
-
-telnet smtp.hackingyseguridad.com 25
-
-helo smtp.hackingyseguridad.com
-
-starttls 
-
-AUTH LOGIN
-
-aGFja2luZ3lzZWd1cmlkYWRAaGFja2luZ3lzZWd1cmlkYWQuY29t
-
-UGFzc3dvcmQwMQ==
-
-MAIL FROM: <happyhacking@hackingandseguridad.com> 
-
-RCPT TO: antonio.taboada@telefonica.net
-
-data
-
-Subject: HappyHacking
-
-@antonio_taboada  - http://www.hackingyseguridad.com/ 
-
-.
-
-quit
-
-QUIT
-
-### Ordenaes para el servidor, conectado a SMTP
-
-**Ver correos en cola, pendientes de enviar**
-
-mailq
-
-postqueue -f
-
-**Borrar toda la cola**
-
-postsuper -d ALL
-
-### Leer email con telnet, desde consola
-
-telnet pop3.hackingyseguridad.com 110
-
-user antonio25
-
-pass Passwd01
-
-list
-
-1
-
-quit
-
-
-### Envio simple de email desde consola linux, con comandos basicos
-
-echo "This is the body of the email" | mail -s "This is the subject line" your_email_address
-
-echo -e 'Subject: prueba\n\nPrueba' | sendmail -v antonio.taboada@telefonica.net 
-
-swaks  --from admin@hackingyseguridad.com --to hackingyseguridad@hackingyseguridad.com --server 192.168.1.200
-
-swaks --to antonio.taboada@telefonica.net --from antonio.taboada@telefonica.net --body "Mensaje de prueba"
-
-echo "Hola_" | sendmail -t -oi destinatario@example.com
-
-swaks --to destinatario@example.com --from tucorreo@example.com --server smtp.example.com --body "Hola_" --h-Content-Type "text/html"
-
-nc -v smtp.hackingyseguridad.com 25
-
-openssl s_client -starttls smtp -connect mail.hackingyseguridad.com:587
-
-gnutls-cli mail.hackingyseguridad.com -p 25
-
-
 ## Configuraciones servidor SMTP Postfix
 
 ***Postfx como servidor SMTP***
 
 [main.cf](https://github.com/hackingyseguridad/email/blob/main/postfix_conf_localhost.txt)
-
-***Agregar SMTP relay de  gmail Google a postfix:***
-
-vim /etc/postfix/main.cf
-
-relayhost = IP_realy_smpt
 
 [main.cf gmail relay](https://github.com/hackingyseguridad/email/blob/main/postfix_conf_relay_gmail.txt)
 
