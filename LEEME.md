@@ -135,9 +135,9 @@ IP residencial: Las IP de casa suelen estar bloqueadas para envío SMTP: https:/
 El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos reputación
 
 
-### Suplantar dirección de email, correo electronico (tecnicas SCAM/Spoofing/Phissing).
+### Suplantar dirección de email, correo electronico . 10 tecnicas de SCAM/Spoofing/Phissing.
 
-**1º.- Manipulando el campo "From"**. del email, con script de envio.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente FORM.
+**1º.- Manipulando el campo "FROM"**. del email origen, con script de envio.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente FORM.
 [https://github.com/hackingyseguridad/email/blob/main/enviopythonsmtp.py ](https://github.com/hackingyseguridad/email/blob/main/envioconsmtp.py)
 
 **2º.- Modificación de cabeceras X-Mailer del correo** : cabeceras del email como: "From", "Reply-To" o "Return-Path",.. con scripts de envio ... [https://github.com/hackingyseguridad/email/blob/main/suplantacongmailcabeceras.py  ](https://github.com/hackingyseguridad/email/blob/main/enviocongmail3.py)
@@ -163,7 +163,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 1º.- en origen: eliminar restricciones en la configuracion SMTP y como se construye el correo/Email.
 
 2º.- en destino: filtros y niveles de comrprovacion de las verificaciones en la entrada del email. p. ej.: gmail, hotmail, yahoo, protonmail,..: tienen nivele altos para evitar SPAM;  
-- En estos casos utilizando sus mismos SMTP para enviar email, podremos solo modificar en el FROM el nombre a mostrar y simular en el nombre de la cuenta para mostrar suplantada en el "display-name" nombre suplantado para mostrar <suplantada@suplantado.com> , porque estos SMTP suelen imprimir siempre la cuenta de email real utilizada, autenticada!
+- En estos casos utilizando sus mismos SMTP para enviar email, podremos solo modificar en el FROM el "Display-name" nombre a mostrar y simular en el nombre de la cuenta para mostrar <suplantada@suplantado.com> ,porque estos SMTP suelen imprimir siempre la cuenta de email real autenticada utilizada!
   
   <img style="float:left" alt="simulacion con gmail" src="https://github.com/hackingyseguridad/email/blob/main/displayname.png">
   
