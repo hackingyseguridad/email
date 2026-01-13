@@ -14,7 +14,7 @@
 
 La suplantación real de email, depende en gran medida de:
 
-1.- La configuración de verificaciones SPF, DKIN y DMARK, del SMTP origen y registros TXT en los DNS autoritativos del dominio, de como se construye el correo, cabeceras X Mailer y si la IP origen esta ya en lista negra de SPAM.
+1.- Dominios sin verificaciones SPF, DMARK, DKIM configuradas en sus DNS autoritativos, de como se construye el correo, cabeceras X Mailer y si la IP origen esta ya en lista negra (Blacklist) de SPAM.
 
 2.- De la posibilidad de modificar el valor del campo FRORM del email origen; El servidor de correo destino no siempre verifica la direccion email origen; 
 
