@@ -26,7 +26,7 @@ La suplantación real de email, depende en gran medida de:
 
 1. Composición del Correo: cliente de correo ( outlook, thunderbird, "pesado", cliente Web "ligero" ó con  script en pythom, Bash Shell,..
    
-   FORM: “display-name nombre a mostrar" <cuenta.origen@dominio1.com>, por defecto lo imprime el servidor SMTP .
+   FORM: “display-name nombre a mostrar" < cuenta.origen@dominio1.com >  **email origen**
 
    TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**,
 
@@ -195,3 +195,4 @@ https://temp-mail.org/es/
 http://www.hackingyseguridad.com/
 #
 ###
+@antonio_taboada
