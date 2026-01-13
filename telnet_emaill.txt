@@ -32,3 +32,17 @@ postqueue -f
 
 Borrar toda la cola
 postsuper -d ALL
+
+# Leer correo eletronico con telnet 
+
+telnet pop3.hackingyseguridad.com 110
+
+user antonio25
+
+pass Passwd01
+
+list
+
+1
+
+quit
