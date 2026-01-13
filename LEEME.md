@@ -22,6 +22,8 @@ La suplantación real de email, depende en gran medida de:
 
 4.- De Los DNS resolver, utilizados!  p.ej. algunos si hacen las verificaciones en los auth del dominio, pero otros DNS resolver no.
 
+5.- Engaño usando el campo “display-name” como simulación visual del email origen cuando en destino hay niveles maximos de comrprovacion de las verificaciones de entrada y filtrado del email. p. ej.: gmail, hotmail, yahoo, protonmail,.
+
 El engaño y phissing en email, depende de: las cabeceras X-Mail, servidores fake o manipulacon visual de caracteres, formando palabras parecidos al suplandado.
 
 **Proceso de envio de correo :**
