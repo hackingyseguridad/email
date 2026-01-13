@@ -1,3 +1,5 @@
+enviar email con telnet
+
 openssl s_client -starttls smtp -crlf -connect smtp.servidor.com:587
 
 telnet smtp.servidor.net 25
