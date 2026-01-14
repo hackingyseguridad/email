@@ -8,7 +8,7 @@
 ╚══════╝╚═╝      ╚═════╝  ╚═════╝ ╚═╝         ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
 ```
 
-## Resumen Ejecutivo
+### Resumen Ejecutivo
 
 La **suplantación de identidad (spoofing) en el correo electrónico** sigue siendo una de las amenazas más prevalentes y efectivas en el panorama de la ciberseguridad actual, facilitando ataques de phishing, spam y compromisos de seguridad. Este documento técnico analiza en profundidad los fundamentos de este vector de ataque, basándose en una revisión exhaustiva de los mecanismos de funcionamiento del protocolo de correo electrónico, los puntos débiles intrínsecos en su diseño y las técnicas de explotación documentadas. Se examinan los mecanismos de verificacion diseñados para mitigar estos riesgos —SPF, DKIM y DMARC—, asi como sus limitaciones practicas. 
 
@@ -17,9 +17,7 @@ La **suplantación de identidad (spoofing) en el correo electrónico** sigue sie
 El **correo electrónico**, basado en el **Simple Mail Transfer Protocol (SMTP)**, fue diseñado en una era donde la confianza en la red era implícita. Su arquitectura original carecía de mecanismos robustos para **verificar la autenticidad del remitente**. Esta deficiencia fundamental ha sido explotada continuamente, permitiendo que actores maliciosos falsifiquen el campo `FROM` para hacer que un mensaje parezca originarse en una entidad legítima (como un banco, una compañía de servicios o un contacto conocido).
 Este tipo de ataque, denominado genéricamente **email spoofing**, es la puerta de entrada primaria para campañas de **phishing**, **Business Email Compromise (BEC)** y distribución de **malware**. Su efectividad radica no solo en la ingeniería social aplicada al contenido del mensaje, sino también en la capacidad de burlar las defensas técnicas mediante la explotación de configuraciones laxas o la comprensión insuficiente de los controles de autenticación existentes.
 
-### Email/SCAM/Spoofing/Phissing
-
-**Introduccion :** 
+## Email/SCAM/Spoofing/Phissing
 
 La suplantación real de email, depende en gran medida de:
 
