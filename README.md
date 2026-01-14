@@ -46,12 +46,7 @@ El proceso de entrega de un correo electrónico involucra múltiples componentes
 7.  **Verificación en Destino**: El servidor receptor ejecuta políticas de filtrado y verificación (listas negras, autenticación).
 8.  **Entrega**: Si se superan las verificaciones, el mensaje se almacena en el buzón del destinatario, accesible vía **POP3** o **IMAP**.
 
-### 2.2. Puntos críticos de falla para la suplantacion
-El éxito del spoofing depende de la explotación de fallos en origen, destino o en la ruta de transmisión:
-
-*   **En el Origen**: La posibilidad de modificar el campo `FROM` en el propio correo o de utilizar servidores SMTP (**Open Relays**) o scripts que no exigen una autenticación válida o que no validan la consistencia del remitente.
-*   **En la Transmisión**: La ausencia de **verificaciones obligatorias** en el protocolo SMTP base para confirmar que la dirección declarada en `FROM` corresponde realmente al remitente autorizado.
-*   **En el Destino**: Políticas de filtrado laxas o mal configuradas en el servidor de correo entrante que no aplican de manera estricta los mecanismos de autenticación disponibles (**SPF, DKIM, DMARC**) o que no consultan listas negras de IPs conocidas por spam (**blacklists** como Spamhaus).
+### 3.- Puertos y servicios
 
 **SMTP (Simple Mail Transfer Protocol)** es un protocolo de comunicación estándar de Internet para dar salida, enviar correos electrónicos (email).
 
@@ -69,8 +64,7 @@ El éxito del spoofing depende de la explotación de fallos en origen, destino o
 
 ***IMAP***  (Internet Message Access Protocol): 143, 993 con SSL/TLS
 
-
-### Registros DNS de seguridad, protocolos y firmas; para evitar suplantacion SCAM/Spoofing/Phissing
+### 4.- Registros DNS de seguridad, protocolos y firmas; para evitar suplantacion SCAM/Spoofing/Phissing
 
 [DNS](https://github.com/hackingyseguridad/dns) autoritativos; son los servidores maestros que contienen la información oficial y definitiva de un dominio.
 
@@ -124,7 +118,7 @@ IP residencial: Las IP de casa suelen estar bloqueadas para envío SMTP: https:/
 
 El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos reputación
 
-### Suplantar dirección de email, correo electronico . 10 tecnicas de SCAM/Spoofing/Phissing.
+### 5.- Suplantar dirección de email, correo electronico . 10 tecnicas de SCAM/Spoofing/Phissing.
 
 **1º.- Manipulando el campo "FROM"**. del email origen, con script de envio.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente FORM.
 [https://github.com/hackingyseguridad/email/blob/main/enviopythonsmtp.py ](https://github.com/hackingyseguridad/email/blob/main/envioconsmtp.py)
