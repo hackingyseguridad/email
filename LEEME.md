@@ -8,9 +8,16 @@
 ╚══════╝╚═╝      ╚═════╝  ╚═════╝ ╚═╝         ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝
 ```
 
-### Email/SCAM/Spoofing/Phissing
+### Resumen ejecutivo
 
-**Introduccion :** 
+La **suplantación de identidad (spoofing) en el correo electrónico** sigue siendo una de las amenazas más prevalentes y efectivas en el panorama de la ciberseguridad actual, facilitando ataques de phishing, spam y compromisos de seguridad. Este documento técnico analiza en profundidad los fundamentos de este vector de ataque, basándose en una revisión exhaustiva de los mecanismos de funcionamiento del protocolo de correo electrónico, los puntos débiles intrínsecos en su diseño y las técnicas de explotación documentadas. Se examinan los mecanismos de verificacion diseñados para mitigar estos riesgos —SPF, DKIM y DMARC—, asi como sus limitaciones practicas. 
+
+### 1. Introducción y antecedentes
+
+El **correo electrónico**, basado en el **Simple Mail Transfer Protocol (SMTP)**, fue diseñado en una era donde la confianza en la red era implícita. Su arquitectura original carecía de mecanismos robustos para **verificar la autenticidad del remitente**. Esta deficiencia fundamental ha sido explotada continuamente, permitiendo que actores maliciosos falsifiquen el campo `FROM` para hacer que un mensaje parezca originarse en una entidad legítima (como un banco, una compañía de servicios o un contacto conocido).
+Este tipo de ataque, denominado genéricamente **email spoofing**, es la puerta de entrada primaria para campañas de **phishing**, **Business Email Compromise (BEC)** y distribución de **malware**. Su efectividad radica no solo en la ingeniería social aplicada al contenido del mensaje, sino también en la capacidad de burlar las defensas técnicas mediante la explotación de configuraciones laxas o la comprensión insuficiente de los controles de autenticación existentes.
+
+### Email/SCAM/Spoofing/Phissing
 
 La suplantación real de email, depende en gran medida de:
 
@@ -18,44 +25,34 @@ La suplantación real de email, depende en gran medida de:
 
 2.- De la posibilidad de modificar el valor del campo FRORM del email origen; El servidor de correo destino no siempre verifica la direccion email origen; 
 
-3.- filtros de entrada!, configuración laxa sin comprobar verificaciones; de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsisifcadas o sin verificar listas negras IP en la recpeción del correo eletronico; . Se podria hacer spoffing email, enviando desde SMTP de tercerlos ó un SMTP postfix propio en localhost, montado sobre Kali Linux, con scripts en bash shell, python. De las cabeceras X Mailer y si la IP origen esta en listas negras IPv4, - en IPv6 no hay blacklist!
+3.- Sin filtros de entrada!, configuración laxa sin comprobar verificaciones; de la política DMARK (permitir, cuarentena o denegar) en el servidor de entrada en destino, con verificaciones falsisifcadas o sin verificar listas negras IP en la recpeción del correo eletronico; . Se podria hacer spoffing email, enviando desde SMTP de tercerlos ó un SMTP postfix propio en localhost, montado sobre Kali Linux, con scripts en bash shell, python. De las cabeceras X Mailer y si la IP origen esta en listas negras IPv4, - en IPv6 no hay blacklist!
 
 4.- Engaño usando el campo “display-name” como simulación visual del email origen cuando en destino hay niveles maximos de comrprovacion de las verificaciones de entrada y filtrado del email. p. ej.: gmail, hotmail, yahoo, protonmail,.  o con simulacion visual de caracteres, formando palabras parecidos al suplandado.
 
-**Proceso de envio de correo :**
+### 2. Fundamentos técnicos del envío de correo y puntos de falla
 
-1. Composición del Correo: cliente de correo ( outlook, thunderbird, "pesado", cliente Web "ligero" ó con  script en pythom, Bash Shell,..
-   
-   FORM: “display-name nombre a mostrar" < cuenta.origen@dominio1.com >  **email origen**
+El proceso de entrega de un correo electrónico involucra múltiples componentes interconectados, cada uno de los cuales puede representar un punto potencial de explotación si no está correctamente configurado.
 
-   TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**,
+### 2.1. Proceso de envío 
 
-   Subject: asunto del email
-
-   Texto: correo electronico ..  
-
-3. Conexión con el servidor de correo saliente SMTP, antes de "enviar", autenticado con cuenta de usuario y password; cuenta.origen@dominio1.com.
-
-4. Consultas al DNS: 
-Consulta el dominio origen: registro MX, el registro A que apunta a la IP.
-Consulta el dominio destino: consulta MX: el servidor SMTP pregunta al DNS: registro MX. El DNS responde con uno o más fqdn de servidores de correo. Consulta A/AAAA: para obtener la dirección IP del servidor destino;
-
-3. Verificaciones DNS: El servidor SMTP realiza varias consultas, verificaciones para asegurar la entrega e impedir la suplanación/spam.
-Registro TXT, SPF (Sender Policy Framework): El servidor del destino verifica en el DNS del dominio origen si la IP del servidor SMTP que está enviando el correo está autorizada para enviar correos en nombre de dominio1.com. Esto genera una verficiacion SPF, para evitar la suplantación de identidad (spoofing).
-Registro TXT, DKIM (DomainKeys Identified Mail): Es una "firma digital" del mensaje que también se verifica contra un registro DNS del dominio origen, garantiza la integridad.
-Registro TXT, DMARC (Domain-based Message Authentication, Reporting & Conformance): Política publicada en DNS que le dice al receptor qué hacer si fallan SPF o DKIM (ej: rechazar el correo).
-
-4. Envio del email, protocolo SMTP; una vez tiene la IP del servidor de destino, el servidor SMTP envia email al servidor de entrada de destino. 
-
-5. Entrega y almacena en la caperta de la cuenta de destino; El servidor de destino POP3, IMAP de entrada si su politica permite: acepta el mensaje, lo pone en cuarentena o elimina; - Si pasa la politica de entrada, guarda el email en la caperta de entrada del buzón del destinatario. El destinatario al autenticarse con su cuenta.destino@dominio2.com y abrir su cliente de correo, descargará o verá el email. 
-
-**SMTP (Simple Mail Transfer Protocol)** es un protocolo de comunicación estándar de Internet para dar salida, enviar correos electrónicos (email).
-
+1.  **Composición**: Un cliente (Outlook, Thunderbird, script Python/Bash..) define los campos `FROM` (que incluye un "display-name" y una dirección de email origen), `TO`, `Subject` y          cuerpo.  FORM: “display-name nombre a mostrar" < cuenta.origen@dominio1.com >  **email origen**  TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**,        Subject: asunto del email y yexto: correo electronico ..  
+3.  **Conexión SMTP**: El cliente conecta y se autentica con un servidor SMTP saliente.
+4.  **Resolución DNS**: El servidor SMTP consulta los registros **MX (Mail Exchanger)** del dominio destino para identificar su servidor IP/fqdn de correo entrante destino.
+   Verificaciones DNS: El servidor SMTP realiza varias consultas, verificaciones para asegurar la entrega e impedir la suplanación/spam.
+   Registro TXT, SPF (Sender Policy Framework): El servidor del destino verifica en el DNS autoritativo del dominio origen si la IP del servidor SMTP que está enviando el correo está            autorizada para enviar correos en nombre de dominio1.com. Esto genera una verficiacion SPF, para evitar la suplantación de identidad (spoofing).
+   Registro TXT, DKIM (DomainKeys Identified Mail): Es una "firma digital" del mensaje que también se verifica contra un registro DNS del dominio origen, garantiza la integridad.
+   Registro TXT, DMARC (Domain-based Message Authentication, Reporting & Conformance): Política publicada en DNS que le dice al receptor qué hacer si fallan SPF o DKIM (ej: rechazar el correo).
+6.  **Entrega y almacena en la caperta de la cuenta de destino**: Se establece una conexión directa con el servidor POP3, IMAP de destino y se transfiere el mensaje usando el protocolo SMTP/ESMTP.
+7.  **Verificación en destino**: El servidor receptor ejecuta políticas de filtrado y verificación (listas negras IP, blacklist).
+8.  **Entrega**: Si se superan las verificaciones, el mensaje se almacena en el buzón del destinatario, accesible vía **POP3** o **IMAP**.
 
 <img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
 
+### 3.- Puertos y servicios
 
-### Puertos usuales TCP:  25, 587, 465, 110, 143, 995, 993
+**SMTP (Simple Mail Transfer Protocol)** es un protocolo de comunicación estándar de Internet para dar salida, enviar correos electrónicos (email).
+
+**Puertos usuales TCP:  25, 587, 465, 110, 143, 995, 993**
 
 ***SMTP*** Simple Mail Trasport Protocol. el servicio en un servidor activo, normalmente usa el puerto TCP: 25, 587 y 465 con SSL/TLS, 2525, 25025 
 
@@ -67,8 +64,7 @@ Registro TXT, DMARC (Domain-based Message Authentication, Reporting & Conformanc
 
 ***IMAP***  (Internet Message Access Protocol): 143, 993 con SSL/TLS
 
-
-### Registros DNS de seguridad, protocolos y firmas; para evitar suplantacion SCAM/Spoofing/Phissing
+### 4.- Registros DNS de seguridad, protocolos y firmas; para evitar suplantacion SCAM/Spoofing/Phissing
 
 [DNS](https://github.com/hackingyseguridad/dns) autoritativos; son los servidores maestros que contienen la información oficial y definitiva de un dominio.
 
@@ -122,7 +118,7 @@ IP residencial: Las IP de casa suelen estar bloqueadas para envío SMTP: https:/
 
 El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos reputación
 
-### Suplantar dirección de email, correo electronico . 10 tecnicas de SCAM/Spoofing/Phissing.
+### 5.- Suplantar dirección de email, correo electronico . 10 tecnicas de SCAM/Spoofing/Phissing.
 
 **1º.- Manipulando el campo "FROM"**. del email origen, con script de envio.- algunos servidores SMTP (Simple Mail Transfer Protocol) no verifican el remitente FORM.
 [https://github.com/hackingyseguridad/email/blob/main/enviopythonsmtp.py ](https://github.com/hackingyseguridad/email/blob/main/envioconsmtp.py)
@@ -137,7 +133,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 **6º.- Uso de herramientas automatizadas** : scripts (como PHPMailer o programas de envío masivo) que facilitan la falsificación de correos. 
 
-**7º.- Uso de un dominio muy parecido** ; que visualmente sea disficil de notar que existe un caracter distinto.
+**7º.- Uso de un dominio muy parecido** ; (Typosquatting) Registro de dominios visualmente parecidos al legítimo, que visualmente sea disficil de notar que existe un caracter distinto.
 
 **8º.- Uso de un servidor SMTP, DNS, propio**, ad hoc que simule las cuentas, dominio, falsifique registros y verificaciones: SPF, DKIM, DMARK. (DMARK modo, dejar pasar). https://github.com/hackingyseguridad/email/blob/main/enviolocalhostdnark2.py
 
@@ -145,7 +141,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 **10º.- Uso de un servidor SMTP, que este en el SPF de otros dominios**, comparte infraestructura e IPs permitidas (diseño de la arquitectura de red).
 
-### CONCLUSION: El exito del envio de correo depende de:
+### 6.- CONCLUSION: El exito del envio de correo depende de:
 
 1º.- en origen: eliminar restricciones en la configuracion SMTP y como se construye el correo/Email.
 
@@ -156,7 +152,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
   
 - Otros muchos proveedores de correo sin niveles de comprobacion en los filtros de entrada, mas laxos para rececpcion, hacen facil el SPAM/Phissing email, desde SMTP propios o de terceros!
 
-### ENVIO: Scripts de composición del correo eletronico y envio:
+### 7.- ENVIO: Scripts de composición del correo eletronico y envio:
 
 1º.- con servidor SMTP de terceros ( smtp.gmail, otros,.. )
 
@@ -170,7 +166,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 [main.cf gmail relay](https://github.com/hackingyseguridad/email/blob/main/postfix_conf_relay_gmail.txt)
 
-### Proveedores gratuitos de envio de email.
+### 9.- Proveedores gratuitos de envio de email.
 
 ***Yahoo :***    		smtp.mail.yahoo.com:587
 
@@ -182,15 +178,15 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 ***Microsoft Office 365 :***	smtp.office365.com:587	
 
-### Tracear un email con "ver correo original" en Gmail
+### 19.- Tracear un email con "ver correo original" en Gmail
 
 https://support.google.com/mail/answer/29436?hl=es
 
-### Temporal email para pruebas
+### 10.- Temporal email para pruebas
 
 https://temp-mail.org/es/ 
 
-###
+### 11.- By
 #
 http://www.hackingyseguridad.com/
 #
