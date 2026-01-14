@@ -33,7 +33,8 @@ La suplantación real de email, depende en gran medida de:
 
 El proceso de entrega de un correo electrónico involucra múltiples componentes interconectados, cada uno de los cuales puede representar un punto potencial de explotación si no está correctamente configurado.
 
-### 2.1. Proceso de envío y componentes clave
+### 2.1. Proceso de envío 
+
 1.  **Composición**: Un cliente (Outlook, Thunderbird, script Python/Bash..) define los campos `FROM` (que incluye un "display-name" y una dirección de email origen), `TO`, `Subject` y          cuerpo.  FORM: “display-name nombre a mostrar" < cuenta.origen@dominio1.com >  **email origen**  TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**,        Subject: asunto del email y yexto: correo electronico ..  
 3.  **Conexión SMTP**: El cliente conecta y se autentica con un servidor SMTP saliente.
 4.  **Resolución DNS**: El servidor SMTP consulta los registros **MX (Mail Exchanger)** del dominio destino para identificar su servidor IP/fqdn de correo entrante destino.
