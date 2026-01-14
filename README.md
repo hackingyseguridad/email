@@ -45,13 +45,13 @@ El proceso de entrega de un correo electrónico involucra múltiples componentes
 7.  **Verificación en destino**: El servidor receptor ejecuta políticas de filtrado y verificación (listas negras IP, blacklist).
 8.  **Entrega**: Si se superan las verificaciones, el mensaje se almacena en el buzón del destinatario, accesible vía **POP3** o **IMAP**.
 
+<img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
+
 ### 3.- Puertos y servicios
 
 **SMTP (Simple Mail Transfer Protocol)** es un protocolo de comunicación estándar de Internet para dar salida, enviar correos electrónicos (email).
 
-<img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
-
-### Puertos usuales TCP:  25, 587, 465, 110, 143, 995, 993
+**Puertos usuales TCP:  25, 587, 465, 110, 143, 995, 993**
 
 ***SMTP*** Simple Mail Trasport Protocol. el servicio en un servidor activo, normalmente usa el puerto TCP: 25, 587 y 465 con SSL/TLS, 2525, 25025 
 
