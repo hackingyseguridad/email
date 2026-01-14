@@ -29,7 +29,7 @@ La suplantación real de email, depende en gran medida de:
 
 4.- Engaño usando el campo “display-name” como simulación visual del email origen cuando en destino hay niveles maximos de comrprovacion de las verificaciones de entrada y filtrado del email. p. ej.: gmail, hotmail, yahoo, protonmail,.  o con simulacion visual de caracteres, formando palabras parecidos al suplandado.
 
-### 2. Fundamentos técnicos del envío de Correo y puntos de falla
+### 2. Fundamentos técnicos del envío de correo y puntos de falla
 
 El proceso de entrega de un correo electrónico involucra múltiples componentes interconectados, cada uno de los cuales puede representar un punto potencial de explotación si no está correctamente configurado.
 
