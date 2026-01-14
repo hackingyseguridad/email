@@ -42,7 +42,7 @@ El proceso de entrega de un correo electrónico involucra múltiples componentes
    Registro TXT, DKIM (DomainKeys Identified Mail): Es una "firma digital" del mensaje que también se verifica contra un registro DNS del dominio origen, garantiza la integridad.
    Registro TXT, DMARC (Domain-based Message Authentication, Reporting & Conformance): Política publicada en DNS que le dice al receptor qué hacer si fallan SPF o DKIM (ej: rechazar el correo).
 6.  **Entrega y almacena en la caperta de la cuenta de destino**: Se establece una conexión directa con el servidor POP3, IMAP de destino y se transfiere el mensaje usando el protocolo SMTP/ESMTP.
-7.  **Verificación en Destino**: El servidor receptor ejecuta políticas de filtrado y verificación (listas negras, autenticación).
+7.  **Verificación en destino**: El servidor receptor ejecuta políticas de filtrado y verificación (listas negras IP, blacklist).
 8.  **Entrega**: Si se superan las verificaciones, el mensaje se almacena en el buzón del destinatario, accesible vía **POP3** o **IMAP**.
 
 ### 3.- Puertos y servicios
