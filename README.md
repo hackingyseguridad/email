@@ -46,7 +46,7 @@ El proceso de entrega de un correo electrónico involucra múltiples componentes
 7.  **Verificación en Destino**: El servidor receptor ejecuta políticas de filtrado y verificación (listas negras, autenticación).
 8.  **Entrega**: Si se superan las verificaciones, el mensaje se almacena en el buzón del destinatario, accesible vía **POP3** o **IMAP**.
 
-### 2.2. Puntos Críticos de Falla para el Spoofing
+### 2.2. Puntos críticos de falla para la suplantacion
 El éxito del spoofing depende de la explotación de fallos en origen, destino o en la ruta de transmisión:
 
 *   **En el Origen**: La posibilidad de modificar el campo `FROM` en el propio correo o de utilizar servidores SMTP (**Open Relays**) o scripts que no exigen una autenticación válida o que no validan la consistencia del remitente.
