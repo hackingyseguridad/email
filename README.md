@@ -29,6 +29,25 @@ La suplantación real de email, depende en gran medida de:
 
 4.- Engaño usando el campo “display-name” como simulación visual del email origen cuando en destino hay niveles maximos de comrprovacion de las verificaciones de entrada y filtrado del email. p. ej.: gmail, hotmail, yahoo, protonmail,.  o con simulacion visual de caracteres, formando palabras parecidos al suplandado.
 
+### 2. Fundamentos Técnicos del Envío de Correo y Puntos de Falla
+
+El proceso de entrega de un correo electrónico involucra múltiples componentes interconectados, cada uno de los cuales puede representar un punto potencial de explotación si no está correctamente configurado.
+
+### 2.1. Proceso de Envío y Componentes Clave
+1.  **Composición**: Un cliente (Outlook, Thunderbird, script Python/Bash) define los campos `FROM` (que incluye un "display-name" y una dirección), `TO`, `Subject` y cuerpo.
+2.  **Conexión SMTP**: El cliente se autentica (idealmente) con un servidor SMTP saliente usando credenciales.
+3.  **Resolución DNS**: El servidor SMTP consulta los registros **MX (Mail Exchanger)** del dominio destino para identificar su servidor de correo entrante.
+4.  **Transferencia**: Se establece una conexión directa con el servidor de destino (vía TCP en puertos como 25, 587, 465) y se transfiere el mensaje usando el protocolo SMTP/ESMTP.
+5.  **Verificación en Destino**: El servidor receptor ejecuta políticas de filtrado y verificación (listas negras, autenticación).
+6.  **Entrega**: Si se superan las verificaciones, el mensaje se almacena en el buzón del destinatario, accesible vía **POP3** o **IMAP**.
+
+### 2.2. Puntos Críticos de Falla para el Spoofing
+El éxito del spoofing depende de la explotación de fallos en origen, destino o en la ruta de transmisión:
+
+*   **En el Origen**: La posibilidad de modificar el campo `FROM` en el propio correo o de utilizar servidores SMTP (**Open Relays**) o scripts que no exigen una autenticación válida o que no validan la consistencia del remitente.
+*   **En la Transmisión**: La ausencia de **verificaciones obligatorias** en el protocolo SMTP base para confirmar que la dirección declarada en `FROM` corresponde realmente al remitente autorizado.
+*   **En el Destino**: Políticas de filtrado laxas o mal configuradas en el servidor de correo entrante que no aplican de manera estricta los mecanismos de autenticación disponibles (**SPF, DKIM, DMARC**) o que no consultan listas negras de IPs conocidas por spam (**blacklists** como Spamhaus).
+
 **Proceso de envio de correo :**
 
 1. Composición del Correo: cliente de correo ( outlook, thunderbird, "pesado", cliente Web "ligero" ó con  script en pythom, Bash Shell,..
