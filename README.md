@@ -29,17 +29,16 @@ La suplantación real de email, depende en gran medida de:
 
 4.- Engaño usando el campo “display-name” como simulación visual del email origen cuando en destino hay niveles maximos de comrprovacion de las verificaciones de entrada y filtrado del email. p. ej.: gmail, hotmail, yahoo, protonmail,.  o con simulacion visual de caracteres, formando palabras parecidos al suplandado.
 
-### 2. Fundamentos técnicos del Envío de Correo y puntos de falla
+### 2. Fundamentos técnicos del envío de Correo y puntos de falla
 
 El proceso de entrega de un correo electrónico involucra múltiples componentes interconectados, cada uno de los cuales puede representar un punto potencial de explotación si no está correctamente configurado.
 
-### 2.1. Proceso de Envío y Componentes Clave
-1.  **Composición**: Un cliente (Outlook, Thunderbird, script Python/Bash) define los campos `FROM` (que incluye un "display-name" y una dirección), `TO`, `Subject` y cuerpo.
-   FORM: “display-name nombre a mostrar" < cuenta.origen@dominio1.com >  **email origen**  TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**, Subject:        asunto del email y yexto: correo electronico ..  
-3.  **Conexión SMTP**: El cliente se autentica (idealmente) con un servidor SMTP saliente usando credenciales.
-4.  **Resolución DNS**: El servidor SMTP consulta los registros **MX (Mail Exchanger)** del dominio destino para identificar su servidor IP/fqdn de correo entrante.
+### 2.1. Proceso de envío y componentes clave
+1.  **Composición**: Un cliente (Outlook, Thunderbird, script Python/Bash..) define los campos `FROM` (que incluye un "display-name" y una dirección de email origen), `TO`, `Subject` y          cuerpo.  FORM: “display-name nombre a mostrar" < cuenta.origen@dominio1.com >  **email origen**  TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**,        Subject: asunto del email y yexto: correo electronico ..  
+3.  **Conexión SMTP**: El cliente conecta y se autentica con un servidor SMTP saliente.
+4.  **Resolución DNS**: El servidor SMTP consulta los registros **MX (Mail Exchanger)** del dominio destino para identificar su servidor IP/fqdn de correo entrante destino.
    Verificaciones DNS: El servidor SMTP realiza varias consultas, verificaciones para asegurar la entrega e impedir la suplanación/spam.
-   Registro TXT, SPF (Sender Policy Framework): El servidor del destino verifica en el DNS del dominio origen si la IP del servidor SMTP que está enviando el correo está autorizada para         enviar correos en nombre de dominio1.com. Esto genera una verficiacion SPF, para evitar la suplantación de identidad (spoofing).
+   Registro TXT, SPF (Sender Policy Framework): El servidor del destino verifica en el DNS autoritativo del dominio origen si la IP del servidor SMTP que está enviando el correo está            autorizada para enviar correos en nombre de dominio1.com. Esto genera una verficiacion SPF, para evitar la suplantación de identidad (spoofing).
    Registro TXT, DKIM (DomainKeys Identified Mail): Es una "firma digital" del mensaje que también se verifica contra un registro DNS del dominio origen, garantiza la integridad.
    Registro TXT, DMARC (Domain-based Message Authentication, Reporting & Conformance): Política publicada en DNS que le dice al receptor qué hacer si fallan SPF o DKIM (ej: rechazar el correo).
 6.  **Entrega y almacena en la caperta de la cuenta de destino**: Se establece una conexión directa con el servidor POP3, IMAP de destino y se transfiere el mensaje usando el protocolo SMTP/ESMTP.
