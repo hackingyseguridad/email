@@ -1,4 +1,4 @@
-# Documento Técnico: Vulnerabilidades de Spoofing en el Protocolo de Correo Electrónico: Mecanismos, Técnicas y Estrategias de Mitigación
+# Spoofing Email en el Protocolo de Correo Electrónico: Mecanismos, SMTP Técnicas y Estrategias de Mitigación
 
 **Fecha:** 1 de enero de 2026
 **Autor:**  `hackingyseguridad/email`
