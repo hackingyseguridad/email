@@ -1,4 +1,4 @@
-# Suplantacion de correo elctronico. Técnicas y Estrategias de Mitigación
+# Suplantacion de correo elctronico. Técnicas 
 
 **Fecha:** 1 de enero de 2026
 **Autor:**  `hackingyseguridad/email`
