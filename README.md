@@ -141,7 +141,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 **10º.- Uso de un servidor SMTP, que este en el SPF de otros dominios**, comparte infraestructura e IPs permitidas (diseño de la arquitectura de red).
 
-### CONCLUSION: El exito del envio de correo depende de:
+### 6.- CONCLUSION: El exito del envio de correo depende de:
 
 1º.- en origen: eliminar restricciones en la configuracion SMTP y como se construye el correo/Email.
 
@@ -152,7 +152,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
   
 - Otros muchos proveedores de correo sin niveles de comprobacion en los filtros de entrada, mas laxos para rececpcion, hacen facil el SPAM/Phissing email, desde SMTP propios o de terceros!
 
-### ENVIO: Scripts de composición del correo eletronico y envio:
+### 7.- ENVIO: Scripts de composición del correo eletronico y envio:
 
 1º.- con servidor SMTP de terceros ( smtp.gmail, otros,.. )
 
@@ -166,7 +166,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 [main.cf gmail relay](https://github.com/hackingyseguridad/email/blob/main/postfix_conf_relay_gmail.txt)
 
-### Proveedores gratuitos de envio de email.
+### 9.- Proveedores gratuitos de envio de email.
 
 ***Yahoo :***    		smtp.mail.yahoo.com:587
 
@@ -178,15 +178,15 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 
 ***Microsoft Office 365 :***	smtp.office365.com:587	
 
-### Tracear un email con "ver correo original" en Gmail
+### 19.- Tracear un email con "ver correo original" en Gmail
 
 https://support.google.com/mail/answer/29436?hl=es
 
-### Temporal email para pruebas
+### 10.- Temporal email para pruebas
 
 https://temp-mail.org/es/ 
 
-###
+### 11.- By
 #
 http://www.hackingyseguridad.com/
 #
