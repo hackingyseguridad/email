@@ -1,4 +1,4 @@
-# Spoofing Email en el Protocolo de Correo Electrónico SMTP. Técnicas y Estrategias de Mitigación
+# Suplantacion de correo elctronico. Técnicas y Estrategias de Mitigación
 
 **Fecha:** 1 de enero de 2026
 **Autor:**  `hackingyseguridad/email`
