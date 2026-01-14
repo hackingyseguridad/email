@@ -35,11 +35,16 @@ El proceso de entrega de un correo electrónico involucra múltiples componentes
 
 ### 2.1. Proceso de Envío y Componentes Clave
 1.  **Composición**: Un cliente (Outlook, Thunderbird, script Python/Bash) define los campos `FROM` (que incluye un "display-name" y una dirección), `TO`, `Subject` y cuerpo.
-2.  **Conexión SMTP**: El cliente se autentica (idealmente) con un servidor SMTP saliente usando credenciales.
-3.  **Resolución DNS**: El servidor SMTP consulta los registros **MX (Mail Exchanger)** del dominio destino para identificar su servidor de correo entrante.
-4.  **Transferencia**: Se establece una conexión directa con el servidor de destino (vía TCP en puertos como 25, 587, 465) y se transfiere el mensaje usando el protocolo SMTP/ESMTP.
-5.  **Verificación en Destino**: El servidor receptor ejecuta políticas de filtrado y verificación (listas negras, autenticación).
-6.  **Entrega**: Si se superan las verificaciones, el mensaje se almacena en el buzón del destinatario, accesible vía **POP3** o **IMAP**.
+   FORM: “display-name nombre a mostrar" < cuenta.origen@dominio1.com >  **email origen**  TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**, Subject:        asunto del email y yexto: correo electronico ..  
+3.  **Conexión SMTP**: El cliente se autentica (idealmente) con un servidor SMTP saliente usando credenciales.
+4.  **Resolución DNS**: El servidor SMTP consulta los registros **MX (Mail Exchanger)** del dominio destino para identificar su servidor IP/fqdn de correo entrante.
+   Verificaciones DNS: El servidor SMTP realiza varias consultas, verificaciones para asegurar la entrega e impedir la suplanación/spam.
+   Registro TXT, SPF (Sender Policy Framework): El servidor del destino verifica en el DNS del dominio origen si la IP del servidor SMTP que está enviando el correo está autorizada para         enviar correos en nombre de dominio1.com. Esto genera una verficiacion SPF, para evitar la suplantación de identidad (spoofing).
+   Registro TXT, DKIM (DomainKeys Identified Mail): Es una "firma digital" del mensaje que también se verifica contra un registro DNS del dominio origen, garantiza la integridad.
+   Registro TXT, DMARC (Domain-based Message Authentication, Reporting & Conformance): Política publicada en DNS que le dice al receptor qué hacer si fallan SPF o DKIM (ej: rechazar el correo).
+6.  **Entrega y almacena en la caperta de la cuenta de destino**: Se establece una conexión directa con el servidor POP3, IMAP de destino y se transfiere el mensaje usando el protocolo SMTP/ESMTP.
+7.  **Verificación en Destino**: El servidor receptor ejecuta políticas de filtrado y verificación (listas negras, autenticación).
+8.  **Entrega**: Si se superan las verificaciones, el mensaje se almacena en el buzón del destinatario, accesible vía **POP3** o **IMAP**.
 
 ### 2.2. Puntos Críticos de Falla para el Spoofing
 El éxito del spoofing depende de la explotación de fallos en origen, destino o en la ruta de transmisión:
@@ -48,38 +53,9 @@ El éxito del spoofing depende de la explotación de fallos en origen, destino o
 *   **En la Transmisión**: La ausencia de **verificaciones obligatorias** en el protocolo SMTP base para confirmar que la dirección declarada en `FROM` corresponde realmente al remitente autorizado.
 *   **En el Destino**: Políticas de filtrado laxas o mal configuradas en el servidor de correo entrante que no aplican de manera estricta los mecanismos de autenticación disponibles (**SPF, DKIM, DMARC**) o que no consultan listas negras de IPs conocidas por spam (**blacklists** como Spamhaus).
 
-**Proceso de envio de correo :**
-
-1. Composición del Correo: cliente de correo ( outlook, thunderbird, "pesado", cliente Web "ligero" ó con  script en pythom, Bash Shell,..
-   
-   FORM: “display-name nombre a mostrar" < cuenta.origen@dominio1.com >  **email origen**
-
-   TO: cuenta.destino@dominio2.com, indicamos la **dirección de email del destinatario**,
-
-   Subject: asunto del email
-
-   Texto: correo electronico ..  
-
-3. Conexión con el servidor de correo saliente SMTP, antes de "enviar", autenticado con cuenta de usuario y password; cuenta.origen@dominio1.com.
-
-4. Consultas al DNS: 
-Consulta el dominio origen: registro MX, el registro A que apunta a la IP.
-Consulta el dominio destino: consulta MX: el servidor SMTP pregunta al DNS: registro MX. El DNS responde con uno o más fqdn de servidores de correo. Consulta A/AAAA: para obtener la dirección IP del servidor destino;
-
-3. Verificaciones DNS: El servidor SMTP realiza varias consultas, verificaciones para asegurar la entrega e impedir la suplanación/spam.
-Registro TXT, SPF (Sender Policy Framework): El servidor del destino verifica en el DNS del dominio origen si la IP del servidor SMTP que está enviando el correo está autorizada para enviar correos en nombre de dominio1.com. Esto genera una verficiacion SPF, para evitar la suplantación de identidad (spoofing).
-Registro TXT, DKIM (DomainKeys Identified Mail): Es una "firma digital" del mensaje que también se verifica contra un registro DNS del dominio origen, garantiza la integridad.
-Registro TXT, DMARC (Domain-based Message Authentication, Reporting & Conformance): Política publicada en DNS que le dice al receptor qué hacer si fallan SPF o DKIM (ej: rechazar el correo).
-
-4. Envio del email, protocolo SMTP; una vez tiene la IP del servidor de destino, el servidor SMTP envia email al servidor de entrada de destino. 
-
-5. Entrega y almacena en la caperta de la cuenta de destino; El servidor de destino POP3, IMAP de entrada si su politica permite: acepta el mensaje, lo pone en cuarentena o elimina; - Si pasa la politica de entrada, guarda el email en la caperta de entrada del buzón del destinatario. El destinatario al autenticarse con su cuenta.destino@dominio2.com y abrir su cliente de correo, descargará o verá el email. 
-
 **SMTP (Simple Mail Transfer Protocol)** es un protocolo de comunicación estándar de Internet para dar salida, enviar correos electrónicos (email).
 
-
 <img style="float:left" alt="smtp " src="https://github.com/hackingyseguridad/email/blob/main/smtp.png">
-
 
 ### Puertos usuales TCP:  25, 587, 465, 110, 143, 995, 993
 
