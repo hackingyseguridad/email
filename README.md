@@ -187,8 +187,7 @@ https://support.google.com/mail/answer/29436?hl=es
 https://temp-mail.org/es/ 
 
 ### 11.- By
-#
+
 http://www.hackingyseguridad.com/
+
 #
-###
-@antonio_taboada
