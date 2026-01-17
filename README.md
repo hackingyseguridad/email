@@ -21,7 +21,7 @@ Este tipo de ataque, denominado genéricamente **email spoofing**, es la puerta 
 
 La suplantación real de email, depende en gran medida de:
 
-1.- Dominios **sin registros TXT**: SPF, DMARK, DKIM, configurados en su DNS autoritativos **(verficaciones)** ; De como se construye el correo, cabeceras X Mailer y si la IP origen esta ya en lista negra (Blacklist) de SPAM.
+1.- Dominios **sin registros TXT**: SPF, DMARK, DKIM, configurados en su DNS autoritativos **(verficaciones)** ; De como se construye el correo, cabeceras X Mailer y de si la IP  origen esta en lista negra (Blacklist) de SPAM.
 
 2.- De la posibilidad de **modificar el valor del campo FRORM del email origen**; El servidor de correo destino no siempre verifica la direccion email origen; 
 
