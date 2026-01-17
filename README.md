@@ -23,7 +23,7 @@ La suplantación real de email, depende en gran medida de:
 
 1.- De la posibilidad de **modificar el valor del campo FRORM del email origen**; El servidor de correo destino no siempre verifica la direccion email origen; 
 
-2.- Dominios **sin registros TXT**: SPF, DMARK, DKIM, configurados en su DNS autoritativos **(verficaciones)** ; De como se construye el correo, cabeceras X Mailer y de si la IP  origen esta en lista negra (Blacklist) de SPAM.
+2.- Dominios **sin registros TXT**: SPF, DMARK, DKIM, configurados en su DNS autoritativos **(verficaciones)** ; De como se construye el correo, cabeceras X Mailer y de si la IP  origen esta en listas negras (Blacklist) de SPAM.
 
 3.- **Sin filtros de entrada !!**, configuración laxa sin comprobar **verificaciones**; de la política DMARK (permitir, cuarentena o denegar) **en el servidor de entrada en destino**, con verificaciones falsisifcadas o sin verificar listas negras IP en la recpeción del correo eletronico; . Se podria hacer spoffing email, enviando desde SMTP de tercerlos ó un SMTP postfix propio en localhost, montado sobre Kali Linux, con scripts en bash shell, python. De las cabeceras X Mailer y si la IP origen no esta en listas negras IPv4, - ** en IPv6 no hay blacklist!**
 
