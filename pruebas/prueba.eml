@@ -1,0 +1,60 @@
+Return-Path: <notificaciones@google.com>
+Delivered-To: antonio.taboada@telefonica.net
+Received: from dovector02.e.movistar.es ([86.109.103.1])
+	by lda06.e.movistar.es (Dovecot) with LMTP id Y6DiDfNGYWkYewAAdnA+5w
+	for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 19:20:35 +0100
+Received: from asavin02.e.movistar.es ([86.109.103.1])
+	by dovector02.e.movistar.es with LMTP
+	id SMSzDfNGYWkN7SUAGjyguQ
+	(envelope-from <notificaciones@google.com>)
+	for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 19:20:35 +0100
+Received: from relayin02.e.movistar.es (ha-1-vl2754-bal01-02.acens.net [86.109.103.1])
+	by asavin02.e.movistar.es (Postfix) with ESMTP id 4dnqnt5KtCzCs6y
+	for <antonio.taboada@telefonica.net>; Fri,  9 Jan 2026 19:20:34 +0100 (CET)
+X-Tnet-ASAV: Yes
+Received: from hacking (128.red-217-127-199.staticip.rima-tde.net [217.127.199.128])
+	(using TLSv1.2 with cipher ADH-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by relayin02.e.movistar.es (Postfix) with ESMTPS id 4dnqnt4k2Hz11M7f
+	for <antonio.taboada@telefonica.net>; Fri,  9 Jan 2026 19:20:34 +0100 (CET)
+Received: from hacking (localhost [IPv6:::1])
+	by hacking (Postfix) with ESMTP id 7410921F110
+	for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 19:20:34 +0100 (CET)
+Date: Fri, 09 Jan 2026 19:20:34 +0100
+To: antonio.taboada@telefonica.net
+From: Google Notificaciones <notificaciones@google.com>
+Subject: Notificación importante de Google
+Message-Id: <20260109192034.134851@hacking>
+X-Mailer: swaks v20240103.0 jetmore.org/john/code/swaks/
+X-Mailer: Google Mail
+X-Priority: 1
+Importance: high
+Precedence: bulk
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 09 Jan 2026 19:20:34 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=google2048; h=from:to:subject:date:message-id; bh=; b=
+Authentication-Results: mail.google.com; dkim=pass (signature verified) header.d=google.com; spf=pass (google.com: domain of notificaciones@google.com designates 142.250.0.0 as permitted sender) smtp.mailfrom=notificaciones@google.com; dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Received-SPF: pass (google.com: domain of notificaciones@google.com designates 142.250.0.0 as permitted sender) client-ip=142.250.0.0;
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20230601; t=1767982834; h=from:to:subject:date:message-id:feedback-id; bh=; b=
+X-TnetIn-SenderInfo: IP: 217.127.199.128 | Country: ES | SPF: 
+X-VADETIN-SPAMSTATE: clean
+X-VADETIN-SPAMSCORE: 5
+X-VADETIN-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgeefgedrtddtgddutdelheduucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuteevgffpufdquedvveenuceurghilhhouhhtmecufedttdenucgotffhvedqqdfjughrqdfuuhhsphgvtghtqdhlohifucdlhedmnecujfgurhepfffvhffukffooffrkghpgggtffeshhdtredtredtjeenucfhrhhomhepifhoohhglhgvucfpohhtihhfihgtrggtihhonhgvshcuoehnohhtihhfihgtrggtihhonhgvshesghhoohhglhgvrdgtohhmqeenucggtffrrghtthgvrhhnpedufeehheeltdehieelhfduvddvveevjedvffduieekkeekheefveektedtheekkeenucffohhmrghinhephhgrtghkihhnghihshgvghhurhhiuggrugdrtghomhenucfkphepvddujedruddvjedrudelledruddvkeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepihhnvghtpedvudejrdduvdejrdduleelrdduvdekpdhhvghlohephhgrtghkihhnghdpmhgrihhlfhhrohhmpehnohhtihhfihgtrggtihhonhgvshesghhoohhglhgvrdgtohhmpdhnsggprhgtphhtthhopedupdhrtghpthhtoheprghnthhonhhiohdrthgrsghorggurgesthgvlhgvfhhonhhitggrrdhnvght
+X-TnetIn-Information: AntiSPAM and AntiVIRUS on asavin02
+X-TnetIn-MsgID: 4dnqnt5KtCzCs6y.A4593
+X-TnetIn-SpamCheck: no es spam, clean DKIM_NONE SPF_NONE
+X-TnetIn-From: notificaciones@google.com
+X-Spam-Status: No
+
+Estimado usuario,
+
+Haga clic en el siguiente enlace: https://www.hackingyseguridad.com/secure/index2.htm
+
+Atentamente,
+Equipo de Seguridad
+
+Este es un correo de prueba con verificaciones de seguridad suplantadas. ;)
+
+http://www.hackingyseguridad.com/
+

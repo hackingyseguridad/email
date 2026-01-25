@@ -1,0 +1,71 @@
+Return-Path: <antonio.taboada@gmail.com>
+Delivered-To: antonio.taboada@telefonica.net
+Received: from dovector01.e.movistar.es ([86.109.103.1])
+	by lda06.e.movistar.es (Dovecot) with LMTP id qyHPAlv6YGlHNQAAdnA+5w
+	for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 13:53:47 +0100
+Received: from asavin04.e.movistar.es ([86.109.103.1])
+	by dovector01.e.movistar.es with LMTP
+	id UAKmAlv6YGnpiywAPBbRZA
+	(envelope-from <antonio.taboada@gmail.com>)
+	for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 13:53:47 +0100
+Received: from relayin02.e.movistar.es (ha-1-vl2754-bal01-02.acens.net [86.109.103.1])
+	by asavin04.e.movistar.es (Postfix) with ESMTP id 4dnhXp47qtz1N2K
+	for <antonio.taboada@telefonica.net>; Fri,  9 Jan 2026 13:53:46 +0100 (CET)
+X-Tnet-ASAV: Yes
+Received: from mail-wm1-f53.google.com (mail-wm1-f53.google.com [209.85.128.53])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by relayin02.e.movistar.es (Postfix) with ESMTPS id 4dnhXp3Z4jz11M7f
+	for <antonio.taboada@telefonica.net>; Fri,  9 Jan 2026 13:53:46 +0100 (CET)
+Received: by mail-wm1-f53.google.com with SMTP id 5b1f17b1804b1-4775e891b5eso20120815e9.2
+        for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 04:53:46 -0800 (PST)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1767963225; x=1768568025;
+        h=message-id:date:subject:to:from:x-gm-gg:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=gSsy7dAz3XkQliYwSko3lpjjFeYaa9jqFe88RFf34As=;
+        b=cJOcto3go+Y76WxFvcshgRMASCqCo/3CB5Y6KOigHiQMhJoGcUZOKFuVUY1du3eHTI
+         P1sShF6FUb7Bx6klgDMaJiBoNLQbzlv0XTeiWN01XiyeJVdyIHmqSc0ic63gkwiSKmjD
+         cAD1G7JjgMzmCMRtLXg0WBmc7naPyTagbo3gPgDKa0DTTswchX08wwHTgq0KAIELt6nM
+         afrqfwM4EUhoJP5wTc5aJO7tRri4PO0DV53Wt4hJ6Q8GgYzH+Rj3tHi7QnmQ4o1W+3bY
+         1Ex09TII2wRMOvprO714WJd9Yn+4lx256nhXf4D28cCuqH+0spj00wstTKwc/niJ5X5G
+         5YDw==
+X-Gm-Message-State: AOJu0YxZ75z6EnJsseMiU9PR+3dYSbAw4oeYW1pNBFA0ZQFfJp1oNK7/
+	4mnFU8ECj80l4Q9L7ivN76wMvlsa9bDyLjKkdCx8xuvm4f4lQhl1P0sVoZeQ1Q==
+X-Gm-Gg: AY/fxX7RW0hNZ7Y1In3w9GLgRSTYc/XkYrB+TM428pB0JV0wdiYgfVvs8NjJrEsUqZM
+	qFrz5w+Hu7GWKFO8bnpF2YavFrR9BEb68si/dWcnDqTdqZ8LUrD7w904EcaqAnXLQDnGqsTkVqO
+	nAn+itg5ULI3FlDjXxYkElnTXIhl1uATL6GGO1RvHzYPOQHErnRkORYo1fnnws670cq+MIVAFAS
+	rV7loaC8zWxa5DJN4zHL4Xtge32lkMNJO9Ox5b2LBwOyrgHsGJg8jHFEUfoNqjUNVbSuEi6hbyx
+	zf2vCajrXekZtjz/AmOpySSCafWHIFgnPb0rr5dXDScDi1p8cQ2TGxZbcwAd1UxEaFXNlDN2Fre
+	iAjiWyjgP034nZ+GJycPTit5UOeVUbPFylEXqVLl/+jWRKJl5C/Fcvdtkuoh6SuQJdKNNlkow2U
+	sdNutlFRiURC9smujDD870P7K6ew3qxb8KG/cAykgEa2e4oeuB4+WUJpipD2GcytcGWmRw4VuVU
+	8MKKjujCW5OWNrqO2ybgEzr/feK7u01AO89XE//HV+oKVewys3SX9pORg==
+X-Google-Smtp-Source: AGHT+IEA+ol9s2Ilg0LnbN4iWSrVJzR+FiBYA7HW1Fg+dPeA9wHG1ai4zImZ7v6DI/kS7gvs8ZsvGQ==
+X-Received: by 2002:a05:600c:444c:b0:477:9f34:17b8 with SMTP id 5b1f17b1804b1-47d84b0a9e5mr113318815e9.1.1767963225496;
+        Fri, 09 Jan 2026 04:53:45 -0800 (PST)
+Received: from hacking (2a02-9140-3c01-3c00-f24d-a2ff-fef7-5586.red-2a02-914.customerbaf.ipv6.rima-tde.net. [2a02:9140:3c01:3c00:f24d:a2ff:fef7:5586])
+        by smtp.gmail.com with ESMTPSA id 5b1f17b1804b1-47d8678cad8sm66627405e9.3.2026.01.09.04.53.44
+        for <antonio.taboada@telefonica.net>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 09 Jan 2026 04:53:45 -0800 (PST)
+From: notificaciones <notificaciones@google.com>  <antonio.taboada@gmail.com>
+To: antonio.taboada@telefonica.net
+Subject: prueba de envio
+Date: Fri, 09 Jan 2026 13:53:44 +0100
+Message-ID: <1767963224404710707@google.com>
+X-Google-Notification: 1
+X-Priority: 1
+X-TnetIn-SenderInfo: IP: 209.85.128.53 | Country: US | SPF: pass
+X-VADETIN-SPAMSTATE: spam:low
+X-VADETIN-SPAMSCORE: 129
+X-VADETIN-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgeefgedrtddtgddutdekkeeiucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuteevgffpufdquedvveenuceurghilhhouhhtmecufedttdenucgouegrugdqhfhrohhmucdlkedtmdenogetvdekhedqtdejucdlgeelmdenucfjughrpefhvffufffkrfestddtredttddttdenucfhrhhomhepnhhothhifhhitggrtghiohhnvghsuceonhhothhifhhitggrtghiohhnvghssehgohhoghhlvgdrtghomhequccuoegrnhhtohhnihhordhtrggsohgruggrsehgmhgrihhlrdgtohhmqeenucggtffrrghtthgvrhhnpefhffehvedtveegjedvueefjeehgfdtledvhffgkeejvdfhgeeugeejiedugfejudenucffohhmrghinhepghhithhhuhgsrdgtohhmnecukfhppedvtdelrdekhedruddvkedrheefpddvrgdtvdemledugedtmeeftgdtudemfegttddtmehfvdegugemrgdvfhhfmehfvghfjeemheehkeeinecuvehluhhsthgvrhfuihiivgepudenucfrrghrrghmpehinhgvthepvddtledrkeehrdduvdekrdehfedphhgvlhhopehmrghilhdqfihmuddqfhehfedrghhoohhglhgvrdgtohhmpdhmrghilhhfrhhomheprghnthhonhhiohdrthgrsghorggurgesghhmrghilhdrtghomhdpnhgspghrtghpthhtohepuddprhgtphhtthhopegrnhhtohhnihhordhtrggsohgruggrsehtvghlvghfohhnihgtrgdrnhgvth
+X-TnetIn-Information: AntiSPAM and AntiVIRUS on asavin04
+X-TnetIn-MsgID: 4dnhXp47qtz1N2K.A8128
+X-TnetIn-SpamCheck: spam, 6, spam:low DKIM_NONE SPF_PASS
+X-TnetIn-SpamScore: ssssss
+X-TnetIn-From: antonio.taboada@gmail.com
+X-TnetIn-Spam-Type: Low
+X-Spam-Status: Yes
+
+hola!!, prueba de envio .. mas info en https://github.com/hackingyseguridad/email
+

@@ -1,0 +1,48 @@
+Return-Path: <notificacion@google.es>
+Delivered-To: antonio.taboada@telefonica.net
+Received: from dovector01.e.movistar.es ([86.109.103.1])
+	by lda06.e.movistar.es (Dovecot) with LMTP id Q3kZI6wCVGkEFAAAdnA+5w
+	for <antonio.taboada@telefonica.net>; Tue, 30 Dec 2025 17:49:48 +0100
+Received: from asavin01.e.movistar.es ([86.109.103.1])
+	by dovector01.e.movistar.es with LMTP
+	id IAThIqwCVGnoRREAPBbRZA
+	(envelope-from <notificacion@google.es>)
+	for <antonio.taboada@telefonica.net>; Tue, 30 Dec 2025 17:49:48 +0100
+Received: from relayin03.e.movistar.es (ha-1-vl2754-bal01-02.acens.net [86.109.103.1])
+	by asavin01.e.movistar.es (Postfix) with ESMTP id 4dgfFm2G5PzwQCK
+	for <antonio.taboada@telefonica.net>; Tue, 30 Dec 2025 17:49:48 +0100 (CET)
+X-Tnet-ASAV: Yes
+Received: from hacking (62.red-88-3-118.dynamicip.rima-tde.net [88.3.118.62])
+	(using TLSv1.2 with cipher ADH-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by relayin03.e.movistar.es (Postfix) with ESMTPS id 4dgfFm1mfgz15JT1
+	for <antonio.taboada@telefonica.net>; Tue, 30 Dec 2025 17:49:48 +0100 (CET)
+Received: from hackingyseguridad (localhost [IPv6:::1])
+	by hacking (Postfix) with ESMTP id 0CAC140D88
+	for <antonio.taboada@telefonica.net>; Tue, 30 Dec 2025 17:49:48 +0100 (CET)
+Date: Tue, 30 Dec 2025 17:49:47 +0100
+To: antonio.taboada@telefonica.net
+From: Notificaciones <notificacion@google.es>
+Subject: Prueba de entrega desde google.es
+Message-Id: <20251230174948.010410@hackingyseguridad>
+X-Mailer: swaks v20240103.0 jetmore.org/john/code/swaks/
+X-Priority: 3
+Importance: normal
+X-Domain: google.es
+Message-ID: <fe3c825406ddf7272963f57a94a7a3be@google.es>
+X-TnetIn-SenderInfo: IP: 88.3.118.62 | Country: ES | SPF: 
+X-VADETIN-SPAMSTATE: clean
+X-VADETIN-SPAMSCORE: 5
+X-VADETIN-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgeefgedrtddtgdektdehgecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucetvefgpffuqdeuvdevnecuuegrihhlohhuthemuceftddtnecuogfthfevqddqjfgurhdqufhushhpvggtthdqlhhoficuldehmdenucfjughrpeffvffhuffkoffrkgfksedttdhjtdertddtnecuhfhrohhmpefpohhtihhfihgtrggtihhonhgvshcuoehnohhtihhfihgtrggtihhonhesghhoohhglhgvrdgvsheqnecuggftrfgrthhtvghrnheptedtjeffheeuledtgfeuvefhkeeuiefghfdufeegjeeujefhveevleejieetffeknecuffhomhgrihhnpehhrggtkhhinhhghihsvghguhhrihgurggurdgtohhmnecukfhppeekkedrfedruddukedriedvnecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehinhgvthepkeekrdefrdduudekrdeivddphhgvlhhopehhrggtkhhinhhgpdhmrghilhhfrhhomhepnhhothhifhhitggrtghiohhnsehgohhoghhlvgdrvghspdhnsggprhgtphhtthhopedupdhrtghpthhtoheprghnthhonhhiohdrthgrsghorggurgesthgvlhgvfhhonhhitggrrdhnvght
+X-TnetIn-Information: AntiSPAM and AntiVIRUS on asavin01
+X-TnetIn-MsgID: 4dgfFm2G5PzwQCK.A6F2F
+X-TnetIn-SpamCheck: no es spam, clean DKIM_NONE SPF_NONE
+X-TnetIn-From: notificacion@google.es
+X-Spam-Status: No
+
+Este es un correo electrónico de prueba simple.
+
+Dominio de origen: google.es
+
+Puedes ver más información en: http://www.hackingyseguridad.com/
+

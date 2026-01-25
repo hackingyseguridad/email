@@ -1,0 +1,51 @@
+Return-Path: <notificaciones@google.com>
+Delivered-To: antonio.taboada@telefonica.net
+Received: from dovector04.e.movistar.es ([86.109.103.1])
+	by lda06.e.movistar.es (Dovecot) with LMTP id CxsvEsNXVWkbRgAAdnA+5w
+	for <antonio.taboada@telefonica.net>; Wed, 31 Dec 2025 18:05:07 +0100
+Received: from asavin05.e.movistar.es ([86.109.103.1])
+	by dovector04.e.movistar.es with LMTP
+	id EJgTEsNXVWmpSAMAw8zUEg
+	(envelope-from <notificaciones@google.com>)
+	for <antonio.taboada@telefonica.net>; Wed, 31 Dec 2025 18:05:07 +0100
+Received: from relayin03.e.movistar.es (ha-1-vl2754-bal01-02.acens.net [86.109.103.1])
+	by asavin05.e.movistar.es (Postfix) with ESMTP id 4dhGXx69W0znTVb
+	for <antonio.taboada@telefonica.net>; Wed, 31 Dec 2025 18:05:05 +0100 (CET)
+X-Tnet-ASAV: Yes
+Received: from hacking (62.red-88-3-118.dynamicip.rima-tde.net [88.3.118.62])
+	(using TLSv1.2 with cipher ADH-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by relayin03.e.movistar.es (Postfix) with ESMTPS id 4dhGXx5bp2z15JVc
+	for <antonio.taboada@telefonica.net>; Wed, 31 Dec 2025 18:05:05 +0100 (CET)
+Received: from hackingyseguridad (localhost [IPv6:::1])
+	by hacking (Postfix) with ESMTP id 252E94002D
+	for <antonio.taboada@telefonica.net>; Wed, 31 Dec 2025 18:05:05 +0100 (CET)
+Date: Wed, 31 Dec 2025 18:05:04 +0100
+To: antonio.taboada@telefonica.net
+From: Notificaciones <notificaciones@google.com>
+Subject: Prueba de envio local con Postfix
+Message-Id: <20251231180504.003769@hackingyseguridad>
+X-Mailer: Postfix Local Sender
+Message-ID: <@localhost>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+X-Priority: 1
+Importance: high
+X-TnetIn-SenderInfo: IP: 88.3.118.62 | Country: ES | SPF: 
+X-VADETIN-SPAMSTATE: clean
+X-VADETIN-SPAMSCORE: 76
+X-VADETIN-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgeefgedrtddtgdekfeeghecutefuodetggdotefrodftvfcurfhrohhfihhlvgemucetvefgpffuqdeuvdevnecuuegrihhlohhuthemuceftddtnecuogfthfevqddqgfhmphhthifkffculdehuddmnegotffhvedqqdfjughrqdfuuhhsphgvtghtqdhlohifucdlhedmnegotffhvedqqdfjughrqdfuuhhsphgvtghtucdlvddtmdenucfjughrpeffvffhuffkoffkgggtrfgksehttdertdertdejnecuhfhrohhmpefpohhtihhfihgtrggtihhonhgvshcuoehnohhtihhfihgtrggtihhonhgvshesghhoohhglhgvrdgtohhmqeenucggtffrrghtthgvrhhnpeeugfduveeuveeuveefhedtheegkeeghedviedviedtveeivddtveffueeludffudenucffohhmrghinhephhgrtghkihhnghihshgvghhurhhiuggrugdrtghomhenucfkphepkeekrdefrdduudekrdeivdenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepihhnvghtpeekkedrfedruddukedriedvpdhhvghlohephhgrtghkihhnghdpmhgrihhlfhhrohhmpehnohhtihhfihgtrggtihhonhgvshesghhoohhglhgvrdgtohhmpdhnsggprhgtphhtthhopedupdhrtghpthhtoheprghnthhonhhiohdrthgrsghorggurgesthgvlhgvfhhonhhitggrrdhnvght
+X-TnetIn-Information: AntiSPAM and AntiVIRUS on asavin05
+X-TnetIn-MsgID: 4dhGXx69W0znTVb.AB5FC
+X-TnetIn-SpamCheck: no es spam, clean DKIM_NONE SPF_NONE
+X-TnetIn-From: notificaciones@google.com
+X-Spam-Status: No
+
+Hola,
+
+Esta es una prueba de envío local a través de Postfix en localhost.
+
+No se usa relay externo, por lo que no hay riesgo de bounces por IP no autorizada.
+
+http://www.hackingyseguridad.com/
+

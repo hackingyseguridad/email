@@ -1,0 +1,84 @@
+Return-Path: <antonio.taboada@gmail.com>
+Delivered-To: antonio.taboada@telefonica.net
+Received: from dovector02.e.movistar.es ([86.109.103.1])
+	by lda06.e.movistar.es (Dovecot) with LMTP id UV7WCgAdYWlHNQAAdnA+5w
+	for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 16:21:36 +0100
+Received: from asavin02.e.movistar.es ([86.109.103.1])
+	by dovector02.e.movistar.es with LMTP
+	id WBPDOgAdYWmwKCIAGjyguQ
+	(envelope-from <antonio.taboada@gmail.com>)
+	for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 16:21:36 +0100
+Received: from relayin04.e.movistar.es (ha-1-vl2754-bal01-02.acens.net [86.109.103.1])
+	by asavin02.e.movistar.es (Postfix) with ESMTP id 4dnlqN53bszCrqT
+	for <antonio.taboada@telefonica.net>; Fri,  9 Jan 2026 16:21:36 +0100 (CET)
+X-Tnet-ASAV: Yes
+Received: from mail-wm1-f50.google.com (mail-wm1-f50.google.com [209.85.128.50])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by relayin04.e.movistar.es (Postfix) with ESMTPS id 4dnlqN4Q5lzXddK
+	for <antonio.taboada@telefonica.net>; Fri,  9 Jan 2026 16:21:36 +0100 (CET)
+Received: by mail-wm1-f50.google.com with SMTP id 5b1f17b1804b1-477770019e4so34603315e9.3
+        for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 07:21:36 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1767972096; x=1768576896; darn=telefonica.net;
+        h=message-id:date:subject:to:from:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=3YM7GR4S8ahie5R+1wLaszTZAmrMBp1TmG8eQwpbTw0=;
+        b=CZomOuHmiAJzjkJfcNI8EMqxuG5EQXCF0M8OdcCVfXQCfTzsMPaUuspR1v9XeGNdQn
+         lwXg/6a+LuLFGekRr1GPC+dKKdsEiwmxt/5mHJXDlG/HW53lopxedSYKc664wDK6Niee
+         YegOAD5ffh+YuvBG/1qX58zqX/kkbDVdj7lkSBG0YzL6b7V2D9UavsQ8yQ39aM9g28uh
+         Z0J+VHmS/KrtAHQX6Cmnexs5GYpAis4KoTMeaRhFNXBGOl5TNIaf4uycJt7ZCTcij6JE
+         HmxFmqHEoSv0DmFaMUArrrXafMLF+kK2rYso8A4p2qjhdJTa6V8QIi1qoLYabwvqQncY
+         wgDA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1767972096; x=1768576896;
+        h=message-id:date:subject:to:from:x-gm-gg:x-gm-message-state:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=3YM7GR4S8ahie5R+1wLaszTZAmrMBp1TmG8eQwpbTw0=;
+        b=dMU5safn1b6EN7SJAdUqGGUYVPXk6vc/X0zPlCDloKe5y9q6tjWMaNMW0b0Mcwviv9
+         sfxFRx6cLwIlMrhAby9kSlXw799xb13ppirS1WYlhhPq4ZPMqlXfOlbgSp9aE48H/j3X
+         KH0PhyXkOqK88K8NbLDeHgCtYJ4/febNv0GAvVwL/jGnuciEuVRbI8YyojhcVo6o1lPr
+         TJeQ02vEAgjh2kEzItvq5l2gmCXNylZa0BBFhP3WmlbIAV4qpTUD/cj4/rK5F1Lbby+o
+         I37y3+fQ+grN+Rd3hNf0kGVZcHxGorh0GfiAYtdYdP89BEa3cAlR5CEJZ60Xead8n0Fe
+         3vrw==
+X-Gm-Message-State: AOJu0Yy8DtiVXBdV83y1ryXY1qk3vm/HNz09yXm5Luwh/YuEPKPFtbYB
+	/jysHE2Miv7k7e/0JFbyIByQ1z4mfBhAeKHwafEVPUjxxL14j7CDQ6vE3CbWZA==
+X-Gm-Gg: AY/fxX4uZi5mYx8gJTmhfxw1r54vFaW44tyfOcenDKSQleNCC4pO8bv35G7tEYCZLwh
+	7+Pysjz9X7ff7BCuhN6moDmc7qwR61IhRD1ZssR8BFyeJZQWr2HEG3s768NlcvZGJbFqjVzlgs7
+	cpeVgzl7M6j/DXhkYjOgIjhCMAQgGBdk2quRzknLzXxrmYt9npbIG3ar9Wtb8x2XNt81krqJY7d
+	EOoihzXWfipzpg44r4zZ3129+wkRfZFixkBVUtSDQalYWu+GechX7QfseyH0KGW/LGt4EpPizMK
+	mvr2MWahmYETU/JiKZ0f3sWECTWSZKEQ2IO2DEBiL+DQQoMOG16YC8mps2BSDjDgkBuwIkpBqu4
+	pjTAo8+WvUQ/2qeJPanAtzHeoAHAJxlRcatMhJ/1nSgVCQVx6rfvQIebNeIrtJpCJa+JKafjlva
+	2DWosGFWJ7+7l7zNXANS6Yr79PGv9RcBRUgL9DemQyUAb4qTi4D4jkHSTOS60DtVdR2Jzh5W9vU
+	PPxKbr+8L3F7qImyihwzBtHxRN8pDDtzGntW0JEYUnk
+X-Google-Smtp-Source: AGHT+IEuS6ZnlkczDnsuXUDAyR6D+hAmVwP8ea0FjEd3m2n7KksJusnyi61H3IbKWHjdhXIul4J2VQ==
+X-Received: by 2002:a05:600c:1f13:b0:477:98f7:2aec with SMTP id 5b1f17b1804b1-47d84b086d7mr109758455e9.3.1767972095204;
+        Fri, 09 Jan 2026 07:21:35 -0800 (PST)
+Received: from stdin (2a02-9140-3c01-3c00-f24d-a2ff-fef7-5586.red-2a02-914.customerbaf.ipv6.rima-tde.net. [2a02:9140:3c01:3c00:f24d:a2ff:fef7:5586])
+        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-432bd5df90dsm22808437f8f.20.2026.01.09.07.21.33
+        for <antonio.taboada@telefonica.net>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 09 Jan 2026 07:21:34 -0800 (PST)
+From: "notificaciones@google.com" <antonio.taboada@gmail.com>
+X-Google-Original-From: notificaciones@google.com <notificaciones@google.com>
+To: antonio.taboada@telefonica.net
+Subject: Asunto del email  
+Date: Fri, 09 Jan 2026 16:21:33 +0100
+Message-ID: <1767972093180554695@google.com>
+X-Google-Notification: 1
+X-Priority: 1
+X-TnetIn-SenderInfo: IP: 209.85.128.50 | Country: US | SPF: pass
+X-VADETIN-SPAMSTATE: clean
+X-VADETIN-SPAMSCORE: 20
+X-VADETIN-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgeefgedrtddtgddutdeludeiucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuteevgffpufdquedvveenuceurghilhhouhhtmecufedttdenucgoteeftdelqddtudculddvtddmnecujfgurhephffvufffkffrsedttdertddttddtnecuhfhrohhmpedfnhhothhifhhitggrtghiohhnvghssehgohhoghhlvgdrtghomhdfuceorghnthhonhhiohdrthgrsghorggurgesghhmrghilhdrtghomheqnecuggftrfgrthhtvghrnhepuedvveehffethfdvjeeutdekgfdtkeejudfggefgveefvdevueefuefhfeeggeegnecuffhomhgrihhnpehgihhthhhusgdrtghomhenucfkphepvddtledrkeehrdduvdekrdehtddpvdgrtddvmeeludegtdemfegttddumeeftgdttdemfhdvgegumegrvdhffhemfhgvfhejmeehheekieenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepihhnvghtpedvtdelrdekhedruddvkedrhedtpdhhvghlohepmhgrihhlqdifmhduqdhfhedtrdhgohhoghhlvgdrtghomhdpmhgrihhlfhhrohhmpegrnhhtohhnihhordhtrggsohgruggrsehgmhgrihhlrdgtohhmpdhnsggprhgtphhtthhopedupdhrtghpthhtoheprghnthhonhhiohdrthgrsghorggurgesthgvlhgvfhhonhhitggrrdhnvght
+X-TnetIn-Information: AntiSPAM and AntiVIRUS on asavin02
+X-TnetIn-MsgID: 4dnlqN53bszCrqT.AE211
+X-TnetIn-SpamCheck: no es spam, clean DKIM_NONE SPF_PASS
+X-TnetIn-From: antonio.taboada@gmail.com
+X-Spam-Status: No
+
+prueba ed envio,
+
+esto es una prueba de concepto POC - mas informacion en:
+https://github.com/hackingyseguridad/email/
+
