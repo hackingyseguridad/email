@@ -1,9 +1,10 @@
 #!/bin/bash
 
 ##################################################
-# Prueba de concepto POC - Google Suplantacion
-# Añade cabeceras X-Mailer modificadas
+# Prueba de concepto POC - Google Suplantacion +++
+# Añade cabeceras X-Mailer modificadas, 
 # Añade verificaciones SPF, DKIM, DMARC suplantadas
+# - suplanta verficiones OK
 # (R) hackingyseguridad.com 2025
 # @antonio_taboada
 ##################################################
