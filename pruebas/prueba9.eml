@@ -1,81 +1,125 @@
-Return-Path: <antonio.taboada@gmail.com>
-Delivered-To: antonio.taboada@telefonica.net
-Received: from dovector01.e.movistar.es ([86.109.103.1])
-	by lda06.e.movistar.es (Dovecot) with LMTP id wQTOC/UdYWlHNQAAdnA+5w
-	for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 16:25:41 +0100
-Received: from asavin02.e.movistar.es ([86.109.103.1])
-	by dovector01.e.movistar.es with LMTP
-	id 8D7bLPUdYWn9ky8APBbRZA
-	(envelope-from <antonio.taboada@gmail.com>)
-	for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 16:25:41 +0100
-Received: from relayin04.e.movistar.es (ha-1-vl2754-bal01-02.acens.net [86.109.103.1])
-	by asavin02.e.movistar.es (Postfix) with ESMTP id 4dnlw52SLpzCs81
-	for <antonio.taboada@telefonica.net>; Fri,  9 Jan 2026 16:25:41 +0100 (CET)
-X-Tnet-ASAV: Yes
-Received: from mail-wr1-f53.google.com (mail-wr1-f53.google.com [209.85.221.53])
-	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
-	(No client certificate requested)
-	by relayin04.e.movistar.es (Postfix) with ESMTPS id 4dnlw51ndrzXdsn
-	for <antonio.taboada@telefonica.net>; Fri,  9 Jan 2026 16:25:41 +0100 (CET)
-Received: by mail-wr1-f53.google.com with SMTP id ffacd0b85a97d-42fb0fc5aa4so3244706f8f.1
-        for <antonio.taboada@telefonica.net>; Fri, 09 Jan 2026 07:25:41 -0800 (PST)
+Delivered-To: antonio.taboada@gmail.com
+Received: by 2002:a05:6850:2c19:b0:70d:772a:a574 with SMTP id de25csp915816nnb;
+        Sun, 25 Jan 2026 09:19:51 -0800 (PST)
+X-Received: by 2002:a05:6512:3b06:b0:59b:7185:757d with SMTP id 2adb3069b0e04-59df3a5024fmr660031e87.50.1769361591265;
+        Sun, 25 Jan 2026 09:19:51 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1769361591; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=EO1KQURphFkk4T3OIElW7dWc8j9vsfFGuBJFtrGsbEMpfJFPNcdYnSlAe8m5GQMRcf
+         q8HFD9/8BG5PkhT0UZ41By0fdrwZqTldfjTUXp+e1vnQWBN/NHk78BIYVC0t/w0reyBX
+         xjNKvqpcZ25cTZ1IZnlzLruFuBQ5o11z5ISLFQ46oBjlzMSg9alBeNnERJk5oFcKmPVf
+         wbz02BD381a+FQpWNjVX+/o3l5SZaBGNPwL82zu6U320tjH6Qi7ATADd8Ozo98ymQqEA
+         opv7GvI2Evk3DBpt0e5uAUQsltxVjBlO0+oPVE2vAeuwNc2+OphPITba1BncNdD6FFb0
+         Ru5g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=3E41s3KcnMWCL/k7vf+xXL1gH0ZEWaXRgTfwL81Nky8=;
+        fh=kw+9OTJejQlo7aooHuZRlVGkSJ4eafMo6SDcldYivqc=;
+        b=XyFyt8J6Bs+KE5L/2y0lsfUJV3udsh7gbeuuVFfofGXYonk6ONBjVh/0MY0Z2vNPSr
+         IAunJTIjgrla5WmvXyJRgTjmScVQWpVml/0L+xf22QQMYYymdaYSFrp6zN2DGyFG6PB4
+         pTP/EAuHGZ6qeaj/GcoHx+ZCqC0oFoKj4IGfSshir1pYBTTkIkiBPpdU5JJBjIYXaQeL
+         jOaJTkeqUu82C8HhzAlZHaHbu4TO/vCO7LqiGaNRM6yaXJ5Lzay7bXtCN2HWmjJQ37+V
+         oDE1YicnnkKm/nk+FMolj23VJihBTJaxZLVGxqjhDfVZbfhevEjsECUEEJAdUc8KXxDz
+         HW2A==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=bXcODtcS;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of bootpc.es@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=bootpc.es@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <bootpc.es@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 2adb3069b0e04-59de48eac0bsor615092e87.9.2026.01.25.09.19.51
+        for <antonio.taboada@gmail.com>
+        (Google Transport Security);
+        Sun, 25 Jan 2026 09:19:51 -0800 (PST)
+Received-SPF: pass (google.com: domain of bootpc.es@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=bXcODtcS;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of bootpc.es@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=bootpc.es@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1769361590; cv=none;
+        d=google.com; s=arc-20240605;
+        b=EBginSkVFJjWBFG+Xsi/q0ecIkRjnGOK1E6bFwg46hTdUDPr3/Unv8NvqZZ5uju0PD
+         LR76qwk8PaTe4C+XeCq9dNgIDMEwy/dsHga5OAeuxHUxMVa3PuAIaHNmuSoX0nSm5XbO
+         olkBJ/r2aTq2kEVTDfKlNZvCtcqnr4SGenw9z6dFkUfWZrni3/COxpbBmv01duooUiyk
+         IGIU9VqYQwy3Q7QrkSMCZCxpmX/OvgiCpb+a535s3YaPi2dQrZTgzpxWgz2RzBGI8ajI
+         KoLdr9NaWFIE7n37bCTp09RPJtSXUpsUAB8Uq0WaoAUMIE+lOskzzuvfKTPZIKlfdtwF
+         v2UQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=3E41s3KcnMWCL/k7vf+xXL1gH0ZEWaXRgTfwL81Nky8=;
+        fh=kw+9OTJejQlo7aooHuZRlVGkSJ4eafMo6SDcldYivqc=;
+        b=iUnf5YPube3T/FM7GytssYBvXcSzsP68Q8LqtjmCse+XO7SjdMdvEjXAZDBLTc5bbl
+         Q9iCFm2xDRSffSejH33xnxyZrUfHVoZQi9baDhDhi1SkaoXg7RNBrDOwxMICvhqaR9jC
+         eoH5UDMP8ZEKLlLiRKT0eDdszpsxWU4cnDiN7CpDgBpTMGfK2e0UsVJxi3HMYoSTeP+a
+         owFTVmxSEAoC/KTQtw64FlvMqoxMsIqQLx7ya5TbcjIg5hyEoTGwqnWcr33/Ghf6PAke
+         Zf3sugDRm7zrbgLRzeFLCXGmfHi4HVLF6pkn+9JdpbOpzSHlCeiRqSK5jOOmfeeOyeMZ
+         pEEA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20230601; t=1767972340; x=1768577140; darn=telefonica.net;
-        h=message-id:date:subject:to:from:from:to:cc:subject:date:message-id
-         :reply-to;
-        bh=p3cbiwwqt9H/ZeCf4iS76wVKpxSIF3jIlpz0T8grBpI=;
-        b=I2AqII6v6mMimaZl3m4jiRL0Kss+gHj81pn8EBgKtPxbE2oXf+ZN3WcMio2uTX/o/8
-         fnc0L3VP8R1fUvZkzjF9n8HumsqAGPzgGGnzqgSHajoGdUSGws6dXGqfPySg4x4uLvqC
-         zHjFbPi6RAKX1DT7n7DS3egIJGCQpvTsIWbN1hS0SldBLcqM5tN4SoZ5NJ6J4Scncie4
-         r/VvudqJZk+ZlDHTT0qq1wD0X4Ed2Q2w3AE3pFFzOC3UP/MshoHm170Kgiq6HaXGUi+/
-         yBFBqa4QYpqYrF09aKfZdOcpUZPwEeGdyU7fZ/RMxbwUiUJ0+o5h0XtuvDUvv/2FrvCX
-         amtw==
+        d=gmail.com; s=20230601; t=1769361590; x=1769966390; dara=google.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=3E41s3KcnMWCL/k7vf+xXL1gH0ZEWaXRgTfwL81Nky8=;
+        b=bXcODtcSxQeoKCyJl5/ut+oB9YnLPPtQcUhVCKXPL1pz2sS7NaDqvb74fnjPc8S2Ui
+         IEAo6rdbPSACurNRksnu3KC4mqDqHVwcXxAu+ODmBHK0w9uPArX5ID0bUZRxofAUEkVw
+         lIouSW6hz6tzuuSabz2dm21BQgVO+hMOYQSk6iFw3S5DV0R+V5lGQLnbiKF5cT9zesKM
+         WHr5+KM2Vf8qd/sKM6+BZXDnOZ8Wmjv83RXO5ZH1hrNl70OBELErRxDfn+iKFnBTyNvi
+         63zhowUTMHQ3Bq4v+SFqDoDf6QOJ2yRSFrXEdEj/0DlMNjx5u5f/GqLl8/4RLidTGhf0
+         sZ/A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20230601; t=1767972340; x=1768577140;
-        h=message-id:date:subject:to:from:x-gm-gg:x-gm-message-state:from:to
-         :cc:subject:date:message-id:reply-to;
-        bh=p3cbiwwqt9H/ZeCf4iS76wVKpxSIF3jIlpz0T8grBpI=;
-        b=VdJo2A3bX4JFAQHmOgH9SpJThpXPcjwtkWCS+1cVgcFZo6c/BTv26u4ehhEMqGd3FJ
-         RAnNf1QJnN1t47AlLl+WQ6x0+Tv7DKgnOhewDBKmeh70H674LdayDbifgznzama+tkZD
-         caHYQnxA05qLScQfkVzzFG/9drGH6UVSCzuBSqwWE1gg+rVihE8VR6h2lQM5CxO4Gmpk
-         Tu6QPn3z+lUwZxztGKGOMjVtRzwuQc1+kxqr+cvMEFesWGvPlYCZK0qyJNHci5Vo0Pz9
-         sK3EH5zwtjAWLXlt3B6+wjF3Ogi5di9dVzUwvkW2Zk3S4JPPJl5vmQRQt4SIdpDrCKOO
-         /yQQ==
-X-Gm-Message-State: AOJu0YyiRf5V3sz4DRKJsxqVo4ukU0w7gc9TIOFT44CKw3COLT1b+Ttl
-	R+H4ahdNpOsOpZpRuIMD0qwGx267de+iksoDIFqEPmBduMNvP48C0KpGdZyK+w==
-X-Gm-Gg: AY/fxX6cZghpVolZIJEZ8Saue/Z+8DMpeELnCxoqPfQVHxae5YogEYAnf0VeuMxyIH1
-	uHgXx11kHRiaBSKxoGzE2UtpexfVq/9uI00CMhgiHMnt03AX5+2KDTfZbb8vdhRs+ZmqyMptH46
-	/ADHCTnjLKbFtD75h5c2xgicUIf+EshF6unoZbOmhcDZivZj5Misq1PBblNv4+uYaFOe5P71t0u
-	DIkZFF0hxJzSstGVe1Rld8a/msS46N80F7rtah83j4WxYUGTlJNLMl7DY7tlt0r4MZ9FRljwc5r
-	bJGmwz7hUUUyyUHll6EyTVNVc2y8xIk3Ekj0S2PVdLfOD6XjQ/ONwrCFF+48klJDuF1iAwEm6g9
-	tlh+0CTRI5ly3Kki0xI4l46sv9dBDoKxmYG2mKRrUfAyn01lZKI2+t6Y64a4/4YV88qZwVxD5AB
-	N3qWe1mBx2N6YN3aYxFCTMHx55Bx592+/RbMbNoHqLVroZRg+3xIsjzwZ3qnyQtv0vDEN5z8gF9
-	ADVsO+e3p3iawLaj1ovW/3V8CsTQIzHtywAoPzoN9fH
-X-Google-Smtp-Source: AGHT+IECjD0WZjPSz7oMFp6qtJgEZLbqeFu+WkL3UKqJoj1M62EmWYpmwtnIb1jPA6zTOUtn8a2dMw==
-X-Received: by 2002:a05:6000:1a8b:b0:42f:b707:56f0 with SMTP id ffacd0b85a97d-432c379520cmr12972643f8f.37.1767972340186;
-        Fri, 09 Jan 2026 07:25:40 -0800 (PST)
-Received: from stdin (2a02-9140-3c01-3c00-f24d-a2ff-fef7-5586.red-2a02-914.customerbaf.ipv6.rima-tde.net. [2a02:9140:3c01:3c00:f24d:a2ff:fef7:5586])
-        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-432bd5df939sm22614159f8f.21.2026.01.09.07.25.39
-        for <antonio.taboada@telefonica.net>
-        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
-        Fri, 09 Jan 2026 07:25:39 -0800 (PST)
-From: "notificaciones@google.com" <antonio.taboada@gmail.com>
-X-Google-Original-From: notificaciones@google.com <notificaciones@google.com>
-To: antonio.taboada@telefonica.net
-Subject: Asunto del email  
-Date: Fri, 09 Jan 2026 16:25:39 +0100
-Message-ID: <1767972339103119794@google.com>
-X-Google-Notification: 1
-X-Priority: 1
-X-TnetIn-SenderInfo: IP: 209.85.221.53 | Country: US | SPF: pass
-X-VADETIN-SPAMSTATE: clean
-X-VADETIN-SPAMSCORE: 69
-X-VADETIN-SPAMCAUSE: gggruggvucftvghtrhhoucdtuddrgeefgedrtddtgddutdeludejucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuteevgffpufdquedvveenuceurghilhhouhhtmecufedttdenucgoteeftdelqddtudculddvtddmnegotedvkeehqddtjeculdegledmnecujfgurhephffvufffkffrsedttdertddttddtnecuhfhrohhmpedfnhhothhifhhitggrtghiohhnvghssehgohhoghhlvgdrtghomhdfuceorghnthhonhhiohdrthgrsghorggurgesghhmrghilhdrtghomheqnecuggftrfgrthhtvghrnhepuedvveehffethfdvjeeutdekgfdtkeejudfggefgveefvdevueefuefhfeeggeegnecuffhomhgrihhnpehgihhthhhusgdrtghomhenucfkphepvddtledrkeehrddvvddurdehfedpvdgrtddvmeeludegtdemfegttddumeeftgdttdemfhdvgegumegrvdhffhemfhgvfhejmeehheekieenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepihhnvghtpedvtdelrdekhedrvddvuddrheefpdhhvghlohepmhgrihhlqdifrhduqdhfheefrdhgohhoghhlvgdrtghomhdpmhgrihhlfhhrohhmpegrnhhtohhnihhordhtrggsohgruggrsehgmhgrihhlrdgtohhmpdhnsggprhgtphhtthhopedupdhrtghpthhtoheprghnthhonhhiohdrthgrsghorggurgesthgvlhgvfhhonhhitggrrdhnvght
-X-TnetIn-Information: AntiSPAM and AntiVIRUS on asavin02
-X-TnetIn-MsgID: 4dnlw52SLpzCs81.A7D17
-X-TnetIn-SpamCheck: no es spam, clean DKIM_NONE SPF_PASS
-X-TnetIn-From: antonio.taboada@gmail.com
-X-Spam-Status: No
+        d=1e100.net; s=20230601; t=1769361590; x=1769966390;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=3E41s3KcnMWCL/k7vf+xXL1gH0ZEWaXRgTfwL81Nky8=;
+        b=hccSEgg/Jqpj3y8VsbKigFjkl8P8i6HEIaXHBH5R6f3x6UtMaJNPsVOUAEl50pw0M3
+         U+C8qZzZ4dj8Opmyc3bXIqRrheXCIju0cg6TRcoIp3nzLjrfFFDSwqOaFZG41jSEIo2U
+         7aaLL2SZ44bJWUKHWHZH0OZrRx+Q1bHHb2ZSCJbJOa3dVXSJoNyfFKKQI0nNRI2rSLiM
+         ftIgy3NU12toxHmtGtg7gCY8gwt/Sekw1KSBT5yNv7OWF103r1qNyddea/mr5HEHX6yH
+         ACQRtWKgfNESsKJWckki6Xa2REtlLVHdByJ5v9+H4qmICcLfgR2GXClXGBWZcgMv35jC
+         e5WA==
+X-Gm-Message-State: AOJu0Yx/5WNe9VHpndtPbXzmoRJ2FXH8xdKIzjxPbeEfOLZm10tmRkbw
+	BF6ioqARk4H3IN0RTw5zneMizFr/pXjh6ktyYqpYPYjXXUctCyje29c7H88tY6jolI2RZoJu9i3
+	0GPdmy50LeYPxtsFDrWhipI/jKxXtvtyghryM
+X-Gm-Gg: AZuq6aKhXqwD8JGx+sywR5a1CBmkoxVXeK5mUdxT+bNj946thtn3QGHlGef8meOtdn+
+	fYGO9C5lxGSduNXFESZp4mMZbpwk9gAl5mTA0s3cRLSwv46EmikKDojKbzNo4awVVwN7XSGHTXo
+	2uexgubZQc9NXDxwLR/w3Hvcmm//9luJyNklIAHFdFQ07yFy4WwwAOwGVJ6uZFZbrSX8+T6sK3+
+	O9c7nOkyHTFIV8KtHxfZZSlx6LK3r4myZ325roZX+JT1uAHCTcDoNR/kGBIBos7jK8v
+X-Received: by 2002:a05:6512:3b29:b0:597:d6f0:8816 with SMTP id
+ 2adb3069b0e04-59df360b05fmr599749e87.7.1769361590235; Sun, 25 Jan 2026
+ 09:19:50 -0800 (PST)
+MIME-Version: 1.0
+From: BootPC ES <bootpc.es@gmail.com>
+Date: Sun, 25 Jan 2026 18:19:39 +0100
+X-Gm-Features: AZwV_Qjfh12CARKL8Irg7jQu0S8W_S4WVh7lDLCJ0d0Ube_jq7HxO1XVZ2ACKo0
+Message-ID: <CAHd4-XLqGu9SWEkOQW+c8pmfTT3CNRQf5KN9P+n-EC=NrsghKA@mail.gmail.com>
+Subject: prueba de envio desde gmail...
+To: Antonio Taboada <antonio.taboada@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000010b7fd06493999ae"
 
-prueba ed envio, esto es una prueba de concepto POC - mas informacion en: https://github.com/hackingyseguridad/email/
+--00000000000010b7fd06493999ae
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+con destino a otra cuenta de gmail ... te=C3=B3ricamente se deber=C3=ADa cu=
+mplir
+todas verificaciones y datos ok correctos del env=C3=ADo, sin ser identific=
+ado
+como suplantaci=C3=B3n ...
+
+--00000000000010b7fd06493999ae
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">con destino a otra cuenta de gmail ... te=C3=B3ricamente s=
+e deber=C3=ADa=C2=A0cumplir todas verificaciones y datos ok correctos del e=
+nv=C3=ADo, sin ser identificado como suplantaci=C3=B3n=C2=A0...<div><br></d=
+iv><div><br></div></div>
+
+--00000000000010b7fd06493999ae--
 
