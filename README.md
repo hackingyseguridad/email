@@ -124,6 +124,7 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
 [https://github.com/hackingyseguridad/email/blob/main/enviopythonsmtp.py ](https://github.com/hackingyseguridad/email/blob/main/envioconsmtp.py)
 
 **2º.- Modificación de cabeceras X-Mailer del correo** : cabeceras del email como: "From", "Reply-To" o "Return-Path",.. con scripts de envio ... [https://github.com/hackingyseguridad/email/blob/main/suplantacongmailcabeceras.py  ](https://github.com/hackingyseguridad/email/blob/main/enviocongmail3.py)
+[https://github.com/hackingyseguridad/email/blob/main/enviolocalhost8.sh  ](https://github.com/hackingyseguridad/email/blob/main/enviolocalhost8.sh)
 
 **3º.- Uso de servidores SMTP Open Relay (sin autenticación), no seguros**: pueden usarse estos servidores de correo mal configurados o comprometidos para enviar emails, de forma libre, modificando el FROM y/o cabeceras X-Mailer 
 
