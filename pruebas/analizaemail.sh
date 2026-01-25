@@ -1,6 +1,8 @@
 #!/bin/sh
 # analizaemail.sh - Analizador forense de cabeceras email
 # Compatible con sh / bash antiguos (POSIX)
+# hackingyseguridad.com 2026
+# @antonio_taboada
 
 FILE="$1"
 
@@ -112,22 +114,22 @@ echo "[DMARC] Resultado: $DMARC_RESULT ($DMARC_REASON)"
 # -------------------------
 
 echo
-echo "=========== FALSIFICACION =========="
+echo "======= POSIBLE FALSIFICACION ======="
 
 SPOOF="NO"
 
 if [ "$FROM_DOMAIN" != "$RETURN_DOMAIN" ]; then
-    echo "⚠️  From ≠ Return-Path"
+    echo " From ≠ Return-Path"
     SPOOF="SI"
 fi
 
 if [ -n "$DKIM_DOMAIN" ] && [ "$DKIM_DOMAIN" != "$FROM_DOMAIN" ]; then
-    echo "⚠️  DKIM no alineado con From"
+    echo " DKIM no alineado con From"
     SPOOF="SI"
 fi
 
 if [ "$SPF_RESULT" = "FAIL" ] && [ "$DKIM_RESULT" = "FAIL" ]; then
-    echo "⚠️  SPF y DKIM fallan simultáneamente"
+    echo " SPF y DKIM fallan simultáneamente"
     SPOOF="SI"
 fi
 
@@ -135,7 +137,7 @@ fi
 if [ -n "$SMTP_SERVER" ] && [ -n "$FROM_DOMAIN" ]; then
     echo "$SMTP_SERVER" | grep -qi "$FROM_DOMAIN"
     if [ $? -ne 0 ]; then
-        echo "⚠️  Servidor SMTP no coincide con dominio From"
+        echo "-- Servidor SMTP no coincide con dominio From"
         SPOOF="SI"
     fi
 fi
@@ -143,9 +145,8 @@ fi
 if [ "$SPOOF" = "NO" ]; then
     echo "✔ No se detecta falsificación evidente"
 else
-    echo "🚨 POSIBLE EMAIL FALSIFICADO"
+    echo "-- POSIBLE EMAIL FALSIFICADO"
 fi
-
 echo
-echo "============= FIN =================="
+echo "===================================="
 
