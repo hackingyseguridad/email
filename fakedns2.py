@@ -1,3 +1,7 @@
+# DNS falso 2, haremos que resuelva en local, los registros en el Script
+# configuraremos en /etc/resolv.conf solo la IP 127.0.0.1
+# Lo que no resuelve en local, lo busca e la IP del resolver en localhost, sin salir a intenret
+
 #!/usr/bin/env python3
 from dnslib import *
 from dnslib.server import DNSServer, DNSLogger
