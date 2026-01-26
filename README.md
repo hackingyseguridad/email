@@ -153,6 +153,8 @@ El dominio usado debe tener DNS configurados . Los dominios nuevos tienen menos 
   
 - Otros muchos proveedores de correo sin niveles de comprobacion en los filtros de entrada, mas laxos para rececpcion, hacen facil el SPAM/Phissing email, desde SMTP propios o de terceros!
 
+<img style="float:left" alt="suplantacion orgien google!" src="https://github.com/hackingyseguridad/email/blob/main/suplantacion.png">
+
 ### 7.- ENVIO: Scripts de composición del correo eletronico y envio:
 
 1º.- con servidor SMTP de terceros ( smtp.gmail, otros,.. )
