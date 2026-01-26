@@ -1,4 +1,6 @@
-
+# DNS falso, haremos que resuelva en local, los registros en el Script
+# Lo que no resuelve en local, lo busca e la IP del resolver en internet 
+# configuraremos en /etc/resolv.conf solo la IP 127.0.0.1
 
 #!/usr/bin/env python3
 from dnslib import *
