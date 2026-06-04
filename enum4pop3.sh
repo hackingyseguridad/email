@@ -1,5 +1,4 @@
 #!/bin/sh
-# 
 # enumeración POP3 de usuarios usando telnet 
 # diccionario usuarios.txt donde tendremos las cuentas de email a probar
 # @antonio_taboada
@@ -16,7 +15,6 @@ while IFS= read -r user; do
 
     printf "[*] %-35s " "$user"
 
-    # Usar telnet con timeout
     result=$( (echo "USER $user"; sleep 1; echo "PASS wrongpass"; sleep 1; echo "QUIT") | \
               timeout 5 telnet $TARGET $PORT 2>/dev/null | \
               grep -i "err\|ok" | head -2 )
@@ -29,7 +27,5 @@ while IFS= read -r user; do
         echo "? ($result)"
     fi
 
-    sleep 1
+    sleep 3
 done < "$USERFILE"
-
-
