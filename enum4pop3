@@ -1,0 +1,35 @@
+#!/bin/sh
+# 
+# enumeración POP3 de usuarios usando telnet 
+# diccionario usuarios.txt donde tendremos las cuentas de email a probar
+# @antonio_taboada
+
+TARGET="pop3.servidor.com"
+PORT=110
+USERFILE="usuarios.txt"
+
+echo "=== POP3 enumeration de cuentas de email ==="
+
+while IFS= read -r user; do
+    user=$(echo "$user" | tr -d '\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+    [ -z "$user" ] && continue
+
+    printf "[*] %-35s " "$user"
+
+    # Usar telnet con timeout
+    result=$( (echo "USER $user"; sleep 1; echo "PASS wrongpass"; sleep 1; echo "QUIT") | \
+              timeout 5 telnet $TARGET $PORT 2>/dev/null | \
+              grep -i "err\|ok" | head -2 )
+
+    if echo "$result" | grep -qi "authentication\|login\|password"; then
+        echo "EXISTS ✓"
+    elif echo "$result" | grep -qi "unknown\|not found\|invalid"; then
+        echo "NOT EXISTS ✗"
+    else
+        echo "? ($result)"
+    fi
+
+    sleep 1
+done < "$USERFILE"
+
+
