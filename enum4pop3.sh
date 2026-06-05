@@ -60,7 +60,7 @@ while IFS= read -r username; do
     total=$((total + 1))
     printf "[%d/%d] %-35s " $total $total "$username"
 
-    # Probar usuario
+    # Prueba cuenta
     response=$(test_pop3_user "$username")
 
     # Analizar respuesta POP3 según RFC 1939
