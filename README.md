@@ -190,7 +190,7 @@ https://support.google.com/mail/answer/29436?hl=es
 https://temp-mail.org/es/ 
 
 # 
-### SKILL IA email 
+### SKILL email / correo (IA) hacking
 
 https://github.com/hackingyseguridad/IA/tree/main/claude/skills/email
 #
